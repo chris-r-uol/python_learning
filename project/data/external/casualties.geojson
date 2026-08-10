@@ -1,0 +1,6062 @@
+{
+ "type": "FeatureCollection",
+ "source": "STATS19, (c) Crown copyright, Open Government Licence v3.0",
+ "retrieved_for_years": [
+  2022,
+  2023
+ ],
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.895301,
+     52.497152
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "17/09/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.903161,
+     52.499774
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "15/02/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.847739,
+     52.518217
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "26/03/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.847739,
+     52.518217
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "26/03/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.902016,
+     52.484823
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "06/12/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.888744,
+     52.492039
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "28/01/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 40
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.868431,
+     52.488261
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "30/05/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.87037,
+     52.504768
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "30/06/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.890135,
+     52.489523
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "16/12/2022",
+    "mode": "pedestrian",
+    "severity": "fatal",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.86896,
+     52.488423
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "29/09/2022",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.880321,
+     52.518677
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "19/02/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.845015,
+     52.488116
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "09/06/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.852017,
+     52.512478
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "30/09/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.886204,
+     52.512021
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "11/07/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.856881,
+     52.503
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "14/03/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 40
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.899758,
+     52.53868
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "16/05/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.880243,
+     52.563797
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "20/08/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.850219,
+     52.508287
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "28/05/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 40
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.873786,
+     52.531382
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "26/08/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.905358,
+     52.49173
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "03/10/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.902721,
+     52.512423
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "15/12/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.87753,
+     52.536843
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "25/11/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.890945,
+     52.513563
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "12/02/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.893958,
+     52.479647
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "18/10/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.891687,
+     52.487151
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "14/11/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.843838,
+     52.521368
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "04/05/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.898252,
+     52.482078
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "30/05/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.844087,
+     52.496511
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "11/05/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.897608,
+     52.512212
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "05/03/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.896834,
+     52.496434
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "02/11/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.899451,
+     52.479256
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "27/09/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.888511,
+     52.508509
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "11/03/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.882858,
+     52.556887
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "02/06/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.878963,
+     52.514046
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "04/02/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.892932,
+     52.483718
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "19/12/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.897584,
+     52.535334
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "06/02/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.887353,
+     52.477384
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "10/12/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.845258,
+     52.490282
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "02/02/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.904616,
+     52.487675
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "17/08/2022",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.85725,
+     52.548498
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "21/06/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.843926,
+     52.496457
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "10/06/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.895877,
+     52.496541
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "28/07/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.898773,
+     52.518182
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "16/03/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.859348,
+     52.524111
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "16/03/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.850423,
+     52.543779
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "05/07/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.88372,
+     52.554289
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "16/12/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.895067,
+     52.502455
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "13/02/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.85311,
+     52.511904
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "27/05/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.889912,
+     52.508204
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "21/09/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.893464,
+     52.483144
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "04/01/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.874098,
+     52.551079
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "22/06/2022",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.877368,
+     52.52094
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "24/11/2022",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.893452,
+     52.481795
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "14/12/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.887917,
+     52.510315
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "07/04/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.856041,
+     52.516699
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "21/11/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.901476,
+     52.515388
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "04/07/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.885687,
+     52.512336
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "03/09/2022",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.89747,
+     52.539712
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "20/09/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.896265,
+     52.481923
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "10/02/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.845294,
+     52.522134
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "14/06/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.877646,
+     52.50554
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "19/02/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.847338,
+     52.53181
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "07/03/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.889185,
+     52.492633
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "13/03/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.897338,
+     52.482626
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "24/03/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.893938,
+     52.481939
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "30/03/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.883001,
+     52.552787
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "11/05/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.901329,
+     52.508574
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "12/07/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.901384,
+     52.517213
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "31/07/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 40
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.874352,
+     52.487952
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "15/01/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.907056,
+     52.510628
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "26/01/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.871914,
+     52.54135
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "17/12/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.883854,
+     52.497878
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "25/11/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.866107,
+     52.545551
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "01/10/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.905382,
+     52.508227
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "04/01/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.893044,
+     52.486326
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "05/07/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.903574,
+     52.526583
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "23/01/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.893222,
+     52.479502
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "10/06/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.883988,
+     52.553184
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "30/05/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.884526,
+     52.477409
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "04/07/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.8991,
+     52.491024
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "14/10/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.899822,
+     52.504078
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "16/06/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.878692,
+     52.484019
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "22/10/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.900955,
+     52.518013
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "14/02/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.846266,
+     52.488351
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "22/04/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.869858,
+     52.54854
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "07/05/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.854258,
+     52.489898
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "07/05/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.895677,
+     52.512588
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "15/06/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.858789,
+     52.491414
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "19/09/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.897528,
+     52.540332
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "16/09/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.898436,
+     52.485288
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "07/05/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.859025,
+     52.509925
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "03/06/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.858846,
+     52.528884
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "13/10/2022",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.858131,
+     52.531337
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "23/09/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.905455,
+     52.487927
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "28/09/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.880502,
+     52.533655
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "27/10/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.907266,
+     52.51587
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "10/06/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.898479,
+     52.575501
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "17/07/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.874041,
+     52.550549
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "21/07/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.876834,
+     52.479666
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "09/02/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.856058,
+     52.516151
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "24/05/2022",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.847164,
+     52.492946
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "12/05/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.884981,
+     52.551486
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "16/04/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.889366,
+     52.508303
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "13/05/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.859803,
+     52.492036
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "12/12/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.872921,
+     52.478565
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "20/09/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.900861,
+     52.480777
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "18/01/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.906972,
+     52.550804
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "16/07/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.901954,
+     52.512404
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "11/08/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.851085,
+     52.526726
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "07/01/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.851041,
+     52.496106
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "23/12/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.892808,
+     52.486424
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "03/07/2022",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.862611,
+     52.507996
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "12/07/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 40
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.857777,
+     52.517744
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "24/08/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.892631,
+     52.486451
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "05/12/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.884983,
+     52.579175
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "18/02/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.905487,
+     52.500325
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "19/11/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.863729,
+     52.532414
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "07/03/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.857786,
+     52.487224
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "25/01/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.898294,
+     52.502431
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "15/02/2022",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.891797,
+     52.514427
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "01/08/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.880828,
+     52.494711
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "13/01/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.858595,
+     52.487593
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "13/09/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.857086,
+     52.503297
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "07/02/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.902573,
+     52.512459
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "15/01/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.858813,
+     52.548311
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "02/04/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.900962,
+     52.521267
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "06/06/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.899839,
+     52.503026
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "23/09/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.848947,
+     52.483877
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "09/11/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.848947,
+     52.483877
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "09/11/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.900333,
+     52.479877
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "08/01/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.904058,
+     52.500225
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "01/06/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.904839,
+     52.493555
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "27/06/2022",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.898993,
+     52.492696
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "21/02/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.88328,
+     52.553237
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "27/04/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.887378,
+     52.502143
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "13/05/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.858763,
+     52.522789
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "22/01/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.896137,
+     52.485987
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "30/10/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.884653,
+     52.547081
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "08/12/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.848966,
+     52.543076
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "01/02/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.880901,
+     52.538716
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "11/10/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.892602,
+     52.486388
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "09/10/2022",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.892366,
+     52.480383
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "20/10/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.874322,
+     52.48797
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "18/10/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.86074,
+     52.493871
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "12/12/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.863597,
+     52.532342
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "21/05/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.846375,
+     52.529165
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "22/09/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.883369,
+     52.55321
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "24/09/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.873671,
+     52.545829
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "18/02/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.902305,
+     52.486927
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "09/12/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.859231,
+     52.509979
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "11/02/2022",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.899742,
+     52.480893
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "07/05/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.906291,
+     52.489393
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "14/03/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.88325,
+     52.498003
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "24/03/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.874339,
+     52.492429
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "13/05/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.884103,
+     52.498229
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "23/08/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.898337,
+     52.502665
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "15/02/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.897636,
+     52.480963
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "12/09/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.901489,
+     52.489776
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "18/09/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.852448,
+     52.537983
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "25/05/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.890627,
+     52.49908
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "29/10/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.853456,
+     52.527349
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "08/06/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.901662,
+     52.504718
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "06/04/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 40
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.880534,
+     52.483617
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "15/07/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.854981,
+     52.511871
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "17/10/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.869731,
+     52.556549
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "09/08/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.894088,
+     52.505592
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "27/02/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.846045,
+     52.492585
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "04/05/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.893664,
+     52.479593
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "20/12/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.844366,
+     52.521917
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "30/12/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.850627,
+     52.52286
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "03/02/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.870868,
+     52.495761
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "10/04/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.876907,
+     52.479909
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "18/12/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.892276,
+     52.493418
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "03/02/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.879664,
+     52.489396
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "24/01/2022",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.8999,
+     52.4827
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "12/10/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.851634,
+     52.47739
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "15/05/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.897142,
+     52.497063
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "19/10/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.856076,
+     52.54651
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "18/10/2022",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.856333,
+     52.517572
+    ]
+   },
+   "properties": {
+    "year": 2022,
+    "date": "25/10/2022",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.852669,
+     52.489357
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "15/08/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.894247,
+     52.482012
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "13/02/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.879553,
+     52.567842
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "02/03/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.902715,
+     52.501491
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "21/02/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.87776,
+     52.490878
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "19/11/2023",
+    "mode": "pedestrian",
+    "severity": "fatal",
+    "speed_limit": 40
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.859132,
+     52.550244
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "11/01/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.859132,
+     52.550244
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "11/01/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.900567,
+     52.513329
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "30/07/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.90339,
+     52.482487
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "23/10/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.883155,
+     52.483628
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "03/05/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.876862,
+     52.480143
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "04/05/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 40
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.872676,
+     52.5378
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "17/02/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.867034,
+     52.546163
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "23/01/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.867987,
+     52.54318
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "09/10/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.905853,
+     52.508245
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "23/05/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.902907,
+     52.501482
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "04/01/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.856916,
+     52.510336
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "08/12/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 50
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.901891,
+     52.481371
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "09/05/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.880901,
+     52.538716
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "24/10/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.90204,
+     52.487116
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "20/10/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.844721,
+     52.492224
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "03/11/2023",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.859818,
+     52.492036
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "04/01/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.893071,
+     52.499568
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "29/11/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 40
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.890974,
+     52.513608
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "12/07/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.85111,
+     52.488843
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "09/01/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.859157,
+     52.491558
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "15/07/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.893609,
+     52.502373
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "16/12/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.868257,
+     52.477392
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "23/03/2023",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.891532,
+     52.508152
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "22/09/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.857127,
+     52.490918
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "23/09/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.899446,
+     52.481576
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "25/06/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.893132,
+     52.486362
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "28/05/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.878217,
+     52.506745
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "13/01/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.847318,
+     52.478005
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "04/03/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.855762,
+     52.49391
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "16/06/2023",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.891334,
+     52.499171
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "25/04/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.859185,
+     52.524246
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "27/01/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.901315,
+     52.514993
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "03/08/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.899903,
+     52.481306
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "20/09/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.892505,
+     52.50818
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "20/03/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.873853,
+     52.492519
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "08/09/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.856105,
+     52.501516
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "08/09/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 40
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.900346,
+     52.513311
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "29/07/2023",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.848772,
+     52.513508
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "27/06/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.881331,
+     52.510282
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "15/07/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.87987,
+     52.516618
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "17/05/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.898375,
+     52.518388
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "01/06/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.859065,
+     52.51121
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "31/05/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.890872,
+     52.531156
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "20/09/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 40
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.861169,
+     52.516733
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "28/09/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.894296,
+     52.529119
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "04/12/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.848538,
+     52.482987
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "19/06/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.857209,
+     52.551869
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "17/05/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.903695,
+     52.545371
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "04/01/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.883385,
+     52.552851
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "23/05/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.879837,
+     52.512429
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "05/01/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.847179,
+     52.522559
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "26/10/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.862075,
+     52.542768
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "02/10/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.877728,
+     52.534362
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "16/12/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.894931,
+     52.479054
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "21/06/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.879518,
+     52.478204
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "07/10/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.902102,
+     52.512404
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "25/06/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.878276,
+     52.506701
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "21/12/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.857209,
+     52.520108
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "20/07/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.85093,
+     52.489912
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "09/02/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.878397,
+     52.484262
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "07/03/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.901277,
+     52.499027
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "05/01/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.870584,
+     52.522434
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "29/05/2023",
+    "mode": "pedestrian",
+    "severity": "fatal",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.900481,
+     52.512124
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "13/11/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.85139,
+     52.488825
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "27/12/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.884403,
+     52.541138
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "30/08/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.896228,
+     52.503724
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "02/06/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.899333,
+     52.479598
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "06/08/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.901714,
+     52.554198
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "05/12/2023",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.845159,
+     52.480708
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "11/06/2023",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.892353,
+     52.558181
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "26/09/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.845741,
+     52.529155
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "07/12/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.880348,
+     52.552281
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "19/08/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.849023,
+     52.513418
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "11/07/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.857421,
+     52.490954
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "25/01/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.890623,
+     52.488706
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "15/01/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 40
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.902036,
+     52.515326
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "17/05/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.880245,
+     52.552084
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "17/11/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.90129,
+     52.48645
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "30/12/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.891787,
+     52.554675
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "12/05/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.888767,
+     52.482906
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "15/05/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.890891,
+     52.481442
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "27/04/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.892781,
+     52.47934
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "03/01/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.902566,
+     52.502489
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "15/07/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.897058,
+     52.527089
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "09/09/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 40
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.876245,
+     52.47989
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "05/10/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.847264,
+     52.519125
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "28/03/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.89878,
+     52.502234
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "16/09/2023",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.857395,
+     52.503459
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "16/02/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.895483,
+     52.482552
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "02/05/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.902193,
+     52.477838
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "26/10/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.891725,
+     52.513861
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "25/08/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.895736,
+     52.481177
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "16/08/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 20
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.901429,
+     52.483744
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "02/11/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.891537,
+     52.530195
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "28/11/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.864358,
+     52.505418
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "17/10/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.903547,
+     52.498399
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "07/09/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.895426,
+     52.506402
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "13/08/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.906311,
+     52.507922
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "26/05/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.858948,
+     52.52465
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "30/08/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.902249,
+     52.512386
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "04/10/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.880937,
+     52.514426
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "31/01/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.887967,
+     52.502179
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "30/06/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.902549,
+     52.54333
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "09/05/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.877952,
+     52.506727
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "22/12/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.885477,
+     52.542056
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "09/03/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.898853,
+     52.50271
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "05/06/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.874392,
+     52.536058
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "13/04/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.896125,
+     52.503841
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "13/06/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.863239,
+     52.54303
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "13/09/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.880419,
+     52.515333
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "12/03/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.879557,
+     52.517984
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "04/03/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.852017,
+     52.512469
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "16/04/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.902008,
+     52.481407
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "07/12/2023",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.853353,
+     52.491884
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "31/01/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.903967,
+     52.521917
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "28/12/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.843911,
+     52.488042
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "31/03/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.902408,
+     52.486945
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "23/07/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.853834,
+     52.538021
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "10/11/2023",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.86643,
+     52.492529
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "30/11/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.896664,
+     52.537661
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "06/06/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.886422,
+     52.541778
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "20/12/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.857696,
+     52.533441
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "13/06/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.856862,
+     52.490809
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "07/12/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.864092,
+     52.543858
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "10/01/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.901889,
+     52.515308
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "02/06/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.901956,
+     52.484931
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "24/01/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.900739,
+     52.502595
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "23/10/2023",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.899347,
+     52.479571
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "21/02/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.875929,
+     52.492611
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "01/08/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.894302,
+     52.508181
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "29/11/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.894302,
+     52.508181
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "29/11/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.859261,
+     52.523545
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "14/08/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.875012,
+     52.53551
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "19/12/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.887673,
+     52.548486
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "20/04/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.88284,
+     52.485965
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "14/06/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.889493,
+     52.534158
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "13/10/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.856901,
+     52.510443
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "24/02/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 50
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.904747,
+     52.488286
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "01/10/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.900583,
+     52.519343
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "17/11/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.88613,
+     52.540636
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "11/05/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.906999,
+     52.502906
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "08/02/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.852973,
+     52.495497
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "01/07/2023",
+    "mode": "pedestrian",
+    "severity": "fatal",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.89809,
+     52.482195
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "25/02/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.856503,
+     52.47896
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "27/12/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.850602,
+     52.490981
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "27/06/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.895813,
+     52.492531
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "26/10/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.867976,
+     52.492432
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "06/03/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.904695,
+     52.485203
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "15/05/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.880812,
+     52.533421
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "11/10/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.859134,
+     52.526394
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "20/05/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.853181,
+     52.508326
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "05/09/2023",
+    "mode": "cyclist",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.853724,
+     52.490994
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "15/09/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.883385,
+     52.485759
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "29/05/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.864372,
+     52.543895
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "16/06/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.889076,
+     52.53582
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "28/02/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.843872,
+     52.478279
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "07/06/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.851001,
+     52.508018
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "28/09/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 40
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.889097,
+     52.509975
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "17/03/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.874499,
+     52.513835
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "07/11/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.885702,
+     52.512336
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "11/04/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.880036,
+     52.542347
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "29/07/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.895628,
+     52.49592
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "29/11/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.895628,
+     52.49592
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "29/11/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.87076,
+     52.492462
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "10/02/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.847718,
+     52.533024
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "23/08/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.849947,
+     52.549388
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "04/12/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.902185,
+     52.481362
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "13/12/2023",
+    "mode": "cyclist",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.890899,
+     52.555699
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "25/07/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.851888,
+     52.515786
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "24/08/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.891857,
+     52.484059
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "24/03/2023",
+    "mode": "pedestrian",
+    "severity": "serious",
+    "speed_limit": 30
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.872125,
+     52.534716
+    ]
+   },
+   "properties": {
+    "year": 2023,
+    "date": "24/10/2023",
+    "mode": "pedestrian",
+    "severity": "slight",
+    "speed_limit": 30
+   }
+  }
+ ]
+}

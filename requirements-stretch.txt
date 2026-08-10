@@ -1,0 +1,12 @@
+# Week 5 stretch goal only - the small web app. Not needed for the project.
+#
+#     pip install -r requirements-stretch.txt
+#     streamlit run app.py
+#
+# Install this only if you are building the app. It is a large install and it is
+# not marked.
+
+-r requirements.txt
+
+streamlit>=1.37
+plotly>=5.22

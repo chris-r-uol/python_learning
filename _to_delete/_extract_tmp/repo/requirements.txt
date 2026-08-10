@@ -1,0 +1,6 @@
+# Week 1-2
+numpy>=1.26
+matplotlib>=3.8
+
+# Week 3 onwards - see COURSE_DESIGN.md open question on pandas
+pandas>=2.1

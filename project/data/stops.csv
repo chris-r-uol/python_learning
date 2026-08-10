@@ -1,0 +1,19 @@
+stop_id,stop_name,lat,lon,sequence
+S001,Cathedral Square,52.482349,-1.899509,1
+S002,Market Street,52.488073,-1.896629,2
+S003,Rivergate,52.494775,-1.893018,3
+S004,Bridge Foot,52.500643,-1.890836,4
+S005,Wellington Road,52.506113,-1.888648,5
+S006,Albion Park,52.512771,-1.885277,6
+S007,Hollow Lane,52.518623,-1.882262,7
+S008,St Chad's,52.52454,-1.879823,8
+S009,Northgate Retail,52.530843,-1.876506,9
+S010,Fairfield Avenue,52.537188,-1.873026,10
+S011,The Locks,52.542943,-1.87087,11
+S012,Brunswick Road,52.549074,-1.868275,12
+S013,Queen's Hospital,52.555136,-1.865292,13
+S014,Sandpits,52.561916,-1.863042,14
+S015,Ashcroft Green,52.567201,-1.859753,15
+S016,University West,52.574154,-1.856346,16
+S017,Beckhampton Road,52.579823,-1.853981,17
+S018,Longmoor Terminus,52.585729,-1.851633,18
