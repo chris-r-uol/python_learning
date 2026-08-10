@@ -4,11 +4,11 @@
 terminal, explain what a virtual environment is for, change a value in a
 script and see the effect, and read an error message.
 
-The session has three parts. First we cover four ideas — they are short, and
-everything else this week depends on them. Then we work through a real script
-together. Then you do the tasks, in class, with the instructor and the TA
-circulating. This document covers all three parts, so you can also use it to
-review, or to catch up if you missed the session.
+The session has three parts. First we cover four ideas — everything else this
+week depends on them. Then we work through a real script together. Then you
+do the tasks, in class, with the instructor and the TA circulating. This
+document covers all three parts in full, so you can also use it to review, or
+to catch up if you missed the session.
 
 **Before the session:** complete the setup guide for your machine (see
 `setup/`), run `check_setup.py` from the top of this repository, and submit
@@ -21,11 +21,18 @@ useful to us.
 
 ### 1. A program is a text file
 
-A Python program is a plain text file containing instructions. When you run
-it, a program called the *interpreter* reads your file from the top to the
-bottom, one line at a time, and carries out each instruction in order. There
-is nothing hidden: everything the program will do is written in the file, in
-the order it will happen.
+A Python program is a plain text file. That is the whole of it. You could
+open one in Notepad and read every character. VS Code, the editor you
+installed, is a text editor with conveniences added — colouring, underlining
+of likely mistakes, a built-in terminal — but the file it saves contains
+nothing except the text you typed.
+
+The file does nothing on its own. To make it do something, you hand it to a
+second program called the **interpreter** — that is what Python actually is.
+When you type `python first_script.py`, you are saying: *run the program
+called `python`, and give it my file to work through.* The interpreter reads
+your file from the top, carries out each line in turn, and stops when it
+reaches the end — or when it hits a line it cannot carry out.
 
 Here is a complete four-line program:
 
@@ -36,19 +43,46 @@ seconds = length_m / (speed_kph * 1000 / 3600)
 print(seconds)
 ```
 
-The first two lines store values under names. The third calculates a new
-value from them. The fourth prints the result to the screen — without that
-line, the program would calculate the answer and then end silently.
+Walk through it the way the interpreter does. Line 1: store the value 48
+under the name `speed_kph`. Line 2: store 1200 under `length_m`. Line 3:
+convert the speed to metres per second, divide the length by it, and store
+the result under `seconds`. Line 4: display the value of `seconds` on the
+screen.
 
-The working method for this whole course is a loop with three steps:
-**edit → run → look.** Change one thing, run the program, look carefully at
-what changed. Programmers with twenty years of experience still work this
-way; they have simply become faster at the loop.
+That last line matters more than it looks. A program only shows you what you
+ask it to show. Without `print`, the interpreter would still compute
+`seconds` — correctly — and then finish in silence. When one of your
+programs runs and appears to do nothing, this is usually why: it worked, and
+nobody asked it to report.
+
+If you are used to spreadsheets, notice one deep difference. A spreadsheet
+is *alive*: change one cell, and everything that depends on it recalculates
+instantly. A program is not alive. It runs once, from top to bottom, and
+finishes. If you change the file, nothing happens until you run it again.
+This is why the working method for the whole course is a loop of three
+steps — **edit → run → look** — and why "did you re-run it after the
+change?" is a serious debugging question, not a joke. Programmers with
+twenty years of experience still work in this loop; they have simply become
+fast at it.
+
+One consequence of top-to-bottom reading: a name must be given its value
+*above* the place it is used. The interpreter does not read ahead. If line 3
+mentions `speed_kph` and nothing above line 3 has defined it, the program
+stops there with an error, regardless of what line 10 says.
 
 ### 2. The terminal, and where you are standing
 
-The terminal is a window where you type commands instead of clicking. You
-need very little of it — three commands cover this course:
+The terminal is a window where you type commands instead of clicking. It
+looks old-fashioned. It has survived because text has two properties that
+clicking does not: a command can be *written down exactly* — in a guide like
+this one, in your notes, in a report someone else must reproduce — and a
+command can be *repeated exactly*. Every piece of professional data work
+leans on both.
+
+The mechanics are plain. The terminal shows a *prompt*, which means "type
+here". You type one command and press Enter. The computer carries it out,
+prints any response, and shows the prompt again. Three commands cover this
+course:
 
 | Command | What it does |
 |---|---|
@@ -56,42 +90,79 @@ need very little of it — three commands cover this course:
 | `ls` (macOS) / `dir` (Windows) | List what is in the current folder |
 | `python script.py` | Run a script with Python |
 
-The important idea behind these commands is the **working directory**. At any
-moment, your terminal is "standing" in exactly one folder, and every command
-you type is interpreted from that position. When a script says
-`open("data/site_counts_small.csv")`, Python does not search your computer
-for that file — it looks for a folder called `data` *inside the folder your
-terminal is standing in*, and nowhere else.
+The idea underneath them is the **working directory**. At every moment, your
+terminal is "standing" in exactly one folder — most terminals print its name
+as part of the prompt — and every command is interpreted from that position.
+`ls` lists *this* folder. `cd data` moves into a folder called `data` *inside
+this one*. It is the same idea as having one folder open in File Explorer or
+Finder, except that nothing on the screen reminds you visually, so you must
+hold the position in your head — or ask, with `ls` or `dir`, which is what
+experienced people actually do.
 
-This explains the most common error of week 1. If you see
-`FileNotFoundError`, the file almost always exists — you are standing in the
-wrong folder. Check with `ls` or `dir`, move with `cd`, and run again.
+Files are found by their **path** — the file's address. An *absolute* path
+gives the address from the very top of the disk:
+`C:\Users\you\python_learning\week1_setup\data\site_counts_small.csv`. A
+*relative* path gives it from where you are standing:
+`data/site_counts_small.csv`, meaning "the folder `data`, right here, and
+the file inside it". Scripts almost always use relative paths, because the
+project may be copied to another machine where the absolute address would be
+wrong — but a relative path only works if you are standing in the right
+place when you run the script.
+
+That single fact explains the most common error of week 1. When a script
+says `open("data/site_counts_small.csv")` and you see `FileNotFoundError`,
+the file almost always exists. The problem is your position: Python looked
+for a `data` folder inside the folder your terminal was standing in, did not
+find one, and reported the full path it tried. Read that path, run `ls` or
+`dir` to see where you actually are, `cd` to the right place, and run the
+script again.
+
+Finally, take apart the command you will type most: `python first_script.py`.
+The first word names the program to run — the Python interpreter. The second
+is handed to that program as its input — the path to your file, relative to
+where you stand. Two words, both of them now meaningful.
 
 ### 3. Virtual environments
 
-Imagine two projects on one machine. Project A needs version 1 of a library;
-project B needs version 2. If both projects share one Python, they cannot
-both work. This is not a rare situation — it is the normal condition of any
-machine used for real work.
+When your code says `import numpy`, it is asking to use a **library** — a
+collection of code written by someone else and published for reuse. NumPy
+does not come with Python; before your machine can import it, it must be
+*installed*, which means downloaded from a public archive and saved into
+your Python's folders. The installing tool is called `pip`, and you used it
+in the setup guide: `pip install -r requirements.txt` means "install
+everything named in this list".
 
-A **virtual environment** solves it: a private copy of Python that belongs to
-one project, with its own installed libraries that cannot interfere with
-anything else. You met the three commands in the setup guide:
+Now the problem. Suppose everything you install lands in the one Python on
+your machine. This term, project A needs version 1 of some library. Next
+year, project B needs version 2, so you upgrade — and project A quietly
+breaks, and you find out months later, when you reopen it the night before
+you need it. One shared Python means every project can damage every other.
+This is not a rare misfortune; it is the natural fate of any machine used
+for real work over several years.
 
-1. Create it, once per project: `python -m venv .venv`
-2. Activate it, once per terminal session — the command differs by operating
-   system; it is in your setup guide.
-3. Install into it: `pip install -r requirements.txt`
+A **virtual environment** removes the problem by giving each project its own
+private Python. Concretely, it is nothing more than a folder — ours is
+called `.venv`, sitting inside the project — containing a copy of the
+interpreter and its own separately installed libraries. **Activation**, the
+step you do each session, tells your current terminal window: *while this
+window is open, when I say `python`, use the one in this project's `.venv`.*
+Nothing outside the window, and nothing outside the project, is affected.
 
-The one people forget is activation. It applies to the terminal window you
-ran it in, and to nothing else. New window, new activation. If your prompt
-does not show `(.venv)`, you are not in the environment.
+Two practical consequences. First, activation is per terminal window: a new
+window knows nothing about it, which is why the `(.venv)` marker in your
+prompt is worth glancing at before you run anything. Second, an environment
+is cheap and disposable. If one ever breaks or confuses you, delete the
+`.venv` folder and rebuild it — create, activate, install, three commands
+from the setup guide, two minutes. Nothing of value lives inside it; your
+code and data live outside. You never need to be afraid of it.
 
 ### 4. How to read an error message
 
-When a program fails, Python prints a report called a **traceback**. It looks
-alarming. It is actually the most helpful thing on your screen, if you read
-it in the right order:
+When a program fails, Python prints a report called a **traceback**. It
+looks alarming, and most beginners' instinct is to look away and re-read
+their code. Resist that. The traceback is the most informative thing on the
+screen, and it is written for you — the name means it *traces back* from the
+failure to show where the program was when it stopped.
 
 ```
 Traceback (most recent call last):
@@ -100,14 +171,28 @@ Traceback (most recent call last):
 IndexError: list index out of range
 ```
 
-Read the **last line first**. It has two parts: the kind of error
-(`IndexError`) and a description (`list index out of range`). Then read the
-line above it: the file name and the **line number** where the failure
-happened, with the failing line printed underneath. What went wrong, and
-where. That is most of debugging.
+Read it in this order. **Last line first**: the kind of error
+(`IndexError`) and a plain description (`list index out of range` — you
+asked a list for a position it does not have). Then the line above: the file
+and the **line number** where execution stopped, with the offending line
+printed underneath. What went wrong, and where. With those two facts you can
+go to line 61 and look at it with a specific question in mind, instead of
+re-reading the whole file with a vague sense of dread.
+
+Two further things sharpen the diagnosis. First, an error stops the program
+at that line: everything *above* it ran; nothing *below* it did. If your
+script printed three things and then failed, those three prints are
+evidence about what was true just before the failure. Second, there are two
+moments an error can happen, and they mean different things. Most errors
+happen *while the program runs*, at the line reported. But Python reads your
+whole file before starting, to check that it is well-formed — and a file
+that is not well-formed fails *before any line runs at all*. `SyntaxError`
+and `IndentationError` are this second kind: the program never started, so
+there is no point looking at what it printed, because it printed nothing.
+You will meet exactly this in the tasks.
 
 The kind of error is itself information. Six kinds cover almost everything
-you will meet this term:
+you will see this term:
 
 | Error | What it means |
 |---|---|
@@ -115,11 +200,16 @@ you will meet this term:
 | `TypeError` | You combined two things whose types do not fit — often text where a number was needed |
 | `IndexError` | You asked a list for a position it does not have |
 | `FileNotFoundError` | The file is not where the program looked — usually a working-directory problem |
-| `IndentationError` | The lines are not lined up the way Python requires |
+| `IndentationError` | The lines do not line up the way Python requires — the program never started |
 | `ZeroDivisionError` | Something divided by zero — often an empty input nobody planned for |
 
-You do not need to memorise this table. You need to know it exists, and to
-read the last line of every traceback before doing anything else.
+You do not need to memorise the table. You need to know it exists, and to
+read the last line of every traceback before doing anything else. One more
+thing, said once because it matters: an error message is not an accusation
+and not a grade. It is the machine reporting, precisely and without any
+opinion of you, the exact place it could not continue. People who progress
+fastest in this course are not the ones who make fewer errors; they are the
+ones who read them.
 
 ---
 
