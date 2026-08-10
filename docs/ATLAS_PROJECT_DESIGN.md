@@ -131,19 +131,22 @@ scoring); the verification checklist's "this is what is marked" closing
 becomes "this is what you keep"; the instructor rubric is retired with a
 notice; the delivery notes and design docs get aligned.
 
-## What remains to prepare before delivery
+## Delivery preparation — status
 
-- **Cached fallbacks.** The brief promises a committed fallback for every
-  source. Done: STATS19 (Leeds box, 729 active-mode casualties 2022–23, in
-  `project/data/external/`). To fetch and commit: NaPTAN 450, the IMD
-  national file, one Nomis TS045 extract, the PCT West Yorkshire network, an
-  Overpass amenities pull for Leeds, and one year of open-meteo Leeds
-  weather. All verified endpoints; an hour of instructor time.
-- **The Leeds demonstrator chapters 1–2**, pre-built, as the live-coding
-  safety net.
-- **Instructor materials referencing the corridor as "the project"**
-  (reference solution, hidden check, delivery notes weeks 4–5) need
-  re-labelling as week 3 support material.
+- **Cached fallbacks: done (10 August 2026).** All seven sources committed
+  in `project/data/external/`, Leeds-sized, with a provenance manifest
+  (`SOURCES.md`): STATS19 (729 casualties), NaPTAN (1,324 stops), IMD (482
+  Leeds LSOAs), Census TS045 (2,440 rows), PCT (3,552 segments), OSM (290
+  amenities), open-meteo (a year of hourly weather). Regenerate per cohort
+  with `instructor/demonstrator/fetch_fallbacks.py`.
+- **The Leeds demonstrator: done, all seven chapters.**
+  `instructor/demonstrator/leeds_atlas.py` builds seven figures and
+  `output/index.html` from the fallbacks, offline. Chapters 1–2 are still
+  built live in session; the committed output is the safety net and the
+  reference for Leeds-patch students. See `instructor/demonstrator/README.md`.
+- **Still open:** instructor materials referencing the corridor as "the
+  project" (reference solution, hidden check, delivery notes weeks 4–5) are
+  annotated as week 3 support material but could be tidied further.
 
 ## Risks
 
