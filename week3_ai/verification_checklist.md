@@ -77,14 +77,16 @@ ask for the next one.
 
 ---
 
-## What you submit
+## What you keep
 
-For the week 3 task, and again for the project, you submit:
+For the week 3 task, and again for every chapter of the project, keep three
+things together:
 
 1. The code.
 2. The prompts you used.
 3. **Evidence that the code is correct** — your hand-worked case, and what
    happened on each of the awkward cases above.
 
-The evidence is what is marked. A partial solution with proof scores higher
-than a complete solution without it.
+The evidence is the part with lasting value. A partial solution with proof is
+worth more than a complete solution without it — in this course, where nobody
+is grading either, and afterwards, where nobody is checking either.

@@ -180,11 +180,12 @@ cd week2_programming/drills
 python drills.py
 ```
 
-Nine out of twelve is a pass. The three marked with a star are harder and
-optional. You are not expected to know any of this from memory: look things
-up, reread Part 1, reread the worked example, ask the person next to you,
-ask the TA. The one approach that teaches you nothing is copying a finished
-answer — the struggle in the middle is what the practice is for.
+Aim to finish the nine unstarred drills; the three marked with a star are
+harder and entirely optional. You are not expected to know any of this from
+memory: look things up, reread Part 1, reread the worked example, ask the
+person next to you, ask the TA. The one approach that teaches you nothing is
+copying a finished answer — the struggle in the middle is what the practice
+is for.
 
 ### Task 2 — Reproduce the figure
 

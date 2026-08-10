@@ -110,15 +110,14 @@ demonstration passed while being wrong.
 ## Part 3 — The task
 
 [`task.md`](task.md) — build a journey time tool, with AI assistance, against
-the project's real data. You do it in class, with the instructor and the TA
-circulating; it is the first time this course asks you to use an assistant,
-a specification, and the checklist together on data that has real problems
-in it.
+data that has real problems in it. You do it in class, with the instructor
+and the TA circulating; it is the first time this course asks you to use an
+assistant, a specification, and the checklist together.
 
-You submit three things: the code, the prompts you used, and **evidence that
-the code is correct**. The evidence carries 60% of the mark. A partial tool
-with thorough verification scores higher than a complete tool with none —
-that weighting is deliberate, and it is how the project weeks are marked too.
+You produce three things: the code, the prompts you used, and **evidence that
+the code is correct**. Nothing is graded — the evidence matters because it is
+the part the assistant cannot do for you, and because the project weeks ask
+you to repeat exactly this pattern, at volume, on your own project.
 
 ## What you are allowed to use
 

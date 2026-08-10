@@ -37,7 +37,7 @@ so that nobody spends class time watching an installer.
 | `week1_setup/` | Your first scripts, and the traceback exercises |
 | `week2_programming/` | The worked example and the practice drills |
 | `week3_ai/` | The verification checklist and the AI-assisted task |
-| `project/` | The corridor reliability brief, the data, and the data source catalogue |
+| `project/` | Your Patch — the individual transport atlas, and the data source catalogue |
 
 ## Three rules that apply all course
 

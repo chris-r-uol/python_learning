@@ -2,6 +2,12 @@
 
 Not for students. Do not commit this folder to a repo they can read.
 
+> **Status (10 August 2026):** the course is now an ungraded learning module,
+> and weeks 4–5 are the individual transport atlas
+> (`docs/ATLAS_PROJECT_DESIGN.md`). The corridor dataset and its solutions
+> below now support the **week 3 task only**; the marking rubric is retired;
+> `hidden_check.py` survives as an optional self-check on the week 3 data.
+
 | Path | What it is |
 |---|---|
 | `run_sheets/delivery_notes.md` | What to say, what goes wrong, what to cut when running late |

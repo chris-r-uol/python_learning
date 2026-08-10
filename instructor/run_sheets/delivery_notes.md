@@ -73,8 +73,10 @@ line count. Stage 3 is 15 lines. Stage 5 is 3. Then say the important part:
 new version against my old one. That is the entire idea of week 3, three weeks
 early."*
 
-**Marking the drills:** 9 of 12 is a pass. The three starred ones separate the
-students who will carry their group in week 4.
+**The drills are ungraded** — the marker in the file is self-checking, not
+assessment. Encourage at least the nine unstarred; the three starred ones
+identify who will move fastest in the project weeks and can absorb stretch
+chapters.
 
 ---
 
@@ -126,6 +128,10 @@ project data. Not a finished tool.
 ---
 
 ## Weeks 4–5
+
+> **Superseded:** the notes below describe the retired group corridor studio.
+> Weeks 4–5 are now the individual transport atlas — structure and studio
+> flow in `docs/ATLAS_PROJECT_DESIGN.md`.
 
 **Form the groups yourself.** Do not let them self-select — you will get one
 group of four strong students and one group of four who are all hoping someone
