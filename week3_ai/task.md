@@ -1,10 +1,17 @@
-# Week 3 homework — build something, then prove it works
+# Week 3 task — build something, then prove it works
 
-**Time: about 2 hours. Due before week 4.**
+**Done in class, under supervision. About 2 hours of work. Anything
+unfinished at the end of the session, finish before week 4 — the project
+assumes it.**
 
 You are going to build a small tool with AI assistance. Building the tool is
 the easy part. The submission is graded on whether you can show that it is
 correct.
+
+The instructor and the TA are circulating, and this task is designed to make
+you need them at least once. Try for ten minutes, then ask — and note that
+"how do I check this?" is a better question to bring than "why is this
+broken?", though both are welcome.
 
 ---
 

@@ -9,7 +9,7 @@ Not for students. Do not commit this folder to a repo they can read.
 | `marking/hidden_check.py` | Ground truth + automated check of a group's cleaned data |
 | `solutions/week1/` | Fixed versions of the six traceback exercises |
 | `solutions/week2/drills_solutions.py` | All twelve drills solved |
-| `solutions/week2/make_target_figure.py` | Regenerates the homework target figure + marking key |
+| `solutions/week2/make_target_figure.py` | Regenerates the task 2 target figure + marking key |
 | `solutions/project/reference_solution.py` | Worked core requirements, recovers the planted bottleneck |
 | `data_generator.py` | Seeded generator for every dataset in the course |
 

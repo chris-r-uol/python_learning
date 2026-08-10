@@ -89,4 +89,4 @@ Write the request again, properly. A usable specification names the columns
 and their types, states what `-1` means and what to do with it, and describes
 the output you expect. The difference between the lazy prompt and that
 specification is the whole of this week — and the first specification you
-write for yourself is the homework.
+write for yourself is this week's task.

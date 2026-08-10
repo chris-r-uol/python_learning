@@ -4,6 +4,17 @@
 **Shape:** 5 weeks · 8h contact total · ~2–3h homework per week (~20h total commitment).
 **Environment:** local VS Code + venv, Google Colab as a no-questions-asked fallback.
 
+> **Delivery model update (August 2026).** The course now runs fully
+> supervised: each week is structured as *teaching → instructor-led
+> demonstration → tasks done in class*, with a TA circulating. The
+> "homework" framing below is retired — what the run sheets call homework is
+> now in-session task time, and the student-facing week READMEs carry the
+> teaching content in written form (concepts first, then the demonstration,
+> then the tasks). Contact time grows accordingly; weeks 4–5 are 3h each
+> (see `WEEKS_4_5_DESIGN.md`). The task content, marking, and weights are
+> unchanged. The timed run sheets below predate this change and need
+> rebalancing before delivery.
+
 ---
 
 ## 1. What "competent" means here — and what it doesn't

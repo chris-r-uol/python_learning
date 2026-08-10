@@ -58,7 +58,7 @@ Priority order if you lose time:
 1. Protect the figure (stage 6). It is what makes them want to carry on.
 2. Protect the function (stage 4). It is the hardest idea and the most reusable.
 3. Cut the NumPy rewrite (stage 5) to a two-minute "here is what this becomes,
-   the homework will walk you through it." It reads well cold.
+   the drills will walk you through it." It reads well cold.
 4. Never cut stage 3. The verbose loop is the load-bearing wall.
 
 **Type stage 3 slowly and out loud.** Nested loops are where people fall off.
