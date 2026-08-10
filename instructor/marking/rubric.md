@@ -4,7 +4,7 @@
 |---|---|---|
 | Week 1 setup checkpoint | pass/fail gate | `check_setup.py` output submitted |
 | Week 2 drill set | 10% | `week2_programming/drills/` |
-| Week 3 AI tool + verification | 20% | `week3_ai/homework.md` |
+| Week 3 AI tool + verification | 20% | `week3_ai/task.md` |
 | Project — code & reproducibility | 30% | group repo |
 | Project — brief & presentation | 25% | group |
 | Individual reflection | 15% | individual |
@@ -30,7 +30,7 @@ of the week from the date, which is the point of the exercise.
 
 ---
 
-## Week 3 homework — 20%
+## Week 3 task — 20%
 
 **The weighting inside this component is 60/20/20 on evidence / prompts / tool.**
 Apply it strictly on the first submission or the message does not land.

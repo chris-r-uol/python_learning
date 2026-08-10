@@ -79,7 +79,7 @@ ask for the next one.
 
 ## What you submit
 
-For the week 3 homework, and again for the project, you submit:
+For the week 3 task, and again for the project, you submit:
 
 1. The code.
 2. The prompts you used.

@@ -193,7 +193,7 @@ print("  loop result and NumPy result agree:",
 print("  peak hour:", int(numpy_average.argmax()))
 # The standard deviation at the peak is surprisingly large. That is not a
 # mistake - it is telling you that the days in this file are not all alike.
-# The homework will find out why.
+# Task 2 will find out why.
 print("  std dev at peak: {0:.0f} veh/h".format(
     counts_array[mask & (hours_array == numpy_average.argmax())].std()))
 print()

@@ -1,5 +1,5 @@
 """
-Produces the homework target figure that students must reproduce.
+Produces the week 2 task 2 target figure that students must reproduce.
 
     python instructor/solutions/week2/make_target_figure.py
 
