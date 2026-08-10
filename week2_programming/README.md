@@ -4,10 +4,10 @@
 with a conditional inside it, package repeated work into a function, do
 arithmetic on a NumPy array, and produce a labelled figure.
 
-The session has three parts. First the ideas — there are six, and they are
-the whole vocabulary of basic programming. Then we build a real analysis
-together, live, using each idea at the moment it becomes necessary. Then you
-do the tasks, in class, with the instructor and the TA circulating.
+The session has three parts. First the ideas — there are six, and together
+they are the working vocabulary of basic programming. Then we build a real
+analysis together, live, using each idea at the moment it becomes necessary.
+Then you do the tasks, in class, with the instructor and the TA circulating.
 
 Everything this week serves one question: *what does an average day look like
 at this traffic count site, and when is the peak?* That is not a toy
@@ -20,48 +20,130 @@ records, keep the ones that matter, summarise them, and show the result.
 
 ### 1. Store — variables and types
 
-A variable is a name with a value attached. `count = 1703` stores the number
-1703 under the name `count`; from then on, writing `count` means that value.
-
-Every value has a **type**, and the two you meet constantly are text (called
-a *string*) and numbers. This distinction matters more than it first appears,
-because data files arrive as text. When you read `"1703"` from a CSV file,
-you have four characters, not a number — and text behaves like text:
+A variable is a name with a value attached. The line
 
 ```python
-"9" > "1000"      # True  - text compares alphabetically, character by character
-9 > 1000          # False - numbers compare as numbers
+count = 1703
 ```
 
-The function `int()` converts text to a whole number: `int("1703")` is
-`1703`. Forgetting this conversion is one of the most common mistakes in data
-work, and Python will not always warn you — sometimes it just sorts your
-data alphabetically and lets you draw the wrong conclusion.
+is an instruction with a definite order of events: first the right-hand side
+is worked out, then the result is stored under the name on the left. From
+that moment, writing `count` anywhere below means *the value currently
+stored under that name*.
+
+Be careful with the `=` sign, because it does not mean what it means in
+mathematics. In mathematics, `x = x + 1` is a contradiction. In Python,
+
+```python
+count = count + 1
+```
+
+is routine, and reads as an instruction, right side first: *take the value
+currently stored under `count`, add one, and store the result back under
+`count`.* The `=` is an action — "make this name refer to this value" — not
+a statement of fact. If you hold on to that one reframing, a surprising
+amount of code that looks strange becomes readable.
+
+You choose the names. Python's rules are loose — letters, digits, and
+underscores, not starting with a digit — but the real constraint is the
+human reader. `northbound_total` costs a few more keystrokes than `nt` and
+repays them every time anyone, including you in three weeks, has to work
+out what the code does.
+
+Every value also has a **type**, and the two you will handle constantly are
+numbers and text (text values are called *strings*). The same-looking value
+behaves completely differently depending on its type:
+
+```python
+1703 + 1        # 1704        - numbers add
+"1703" + "1"    # "17031"     - strings join end to end
+9 > 1000        # False       - numbers compare by size
+"9" > "1000"    # True        - strings compare alphabetically, character by character
+```
+
+That last line deserves a second look. Text is ordered like words in a
+dictionary: `"9"` comes after `"1000"` because the character `9` comes after
+the character `1`, and nothing further is checked. Data that is secretly
+text therefore *sorts* wrongly and *compares* wrongly — while looking
+perfectly normal when printed.
+
+This matters because **files hand you text**. A CSV file is a plain text
+file — open one in a text editor once and see — so every value you read from
+it, however numeric it looks, arrives as a string. Converting is your job,
+and it is deliberate: `int("1703")` gives the whole number 1703;
+`float("3.1")` gives the decimal 3.1.
+
+If you are used to Excel, you have been protected from this — and
+occasionally betrayed by the protection. Excel guesses types silently, and
+its guesses are famous enough that geneticists renamed human genes because
+Excel kept reading them as dates. Python makes the opposite bargain: it
+never guesses, and if you compare text with a number it stops with a
+`TypeError`. Loud and immediate beats silent and wrong, every time you are
+the one signing the analysis.
 
 ### 2. Decide — `if`
 
-Programs make decisions with `if`: a condition, and an indented block that
-runs only when the condition is true.
+Programs make decisions with `if`. The anatomy has three parts: the keyword
+and a condition, a colon, and an indented block:
 
 ```python
 if count > 900:
     print("busy hour")
+    busy_hours = busy_hours + 1
 ```
 
-Conditions use comparisons — `>`, `<`, `>=`, `<=`, `==` (equal), `!=` (not
-equal). Two things deserve care. First, `==` compares, while `=` assigns;
-confusing them is a classic error. Second, boundaries: `count > 900` and
-`count >= 900` differ only for the value 900 exactly, and deciding which you
-mean is part of specifying an analysis, not a detail. One of today's drills
-is built entirely on this point.
+The indentation is not decoration. It is how Python knows which lines belong
+to the decision: every indented line is inside it, and the first line that
+returns to the left margin is outside it, running whether the condition was
+true or not. This is why week 1's `IndentationError` exists — the layout
+*is* the structure.
+
+The condition is an expression that works out to one of exactly two values,
+`True` or `False`. You build conditions with the comparison operators: `>`,
+`<`, `>=`, `<=`, `==` (equal to), and `!=` (not equal to). Note the doubled
+`==`: as we saw above, a single `=` stores a value, so Python uses `==` to
+ask whether two things are equal. Writing one where you meant the other is
+a rite of passage; you will do it once and then rarely again.
+
+An `if` can be given a partner, `else`, whose block runs when the condition
+is false — and a chain of further conditions with `elif` ("else if"), which
+you will use in the drills:
+
+```python
+if ratio < 0.7:
+    band = "free flow"
+elif ratio < 0.9:
+    band = "busy"
+else:
+    band = "at capacity or worse"
+```
+
+One habit to build from the first day: treat **boundaries** as decisions
+you make, not accidents that happen. Is a volume-to-capacity ratio of
+exactly 0.9 "busy" or "at capacity"? The code will happily implement either;
+`ratio < 0.9` puts 0.9 in the upper band, `ratio <= 0.9` puts it in the
+lower. Which is *correct* is not a programming question at all — it is a
+specification question, the kind you already answer in engineering
+standards — and the analyst's job is to choose deliberately and be able to
+say which they chose. One of today's drills is built entirely on this
+point.
 
 ### 3. Repeat — lists and loops
 
-A list holds many values in order: `counts = [52, 22, 24, 29]`. Positions
-are numbered **starting from zero**, so `counts[0]` is 52 and `counts[3]` is
-29. Asking for `counts[4]` raises the `IndexError` you met last week.
+A list holds many values in order:
 
-A `for` loop does something once for each item:
+```python
+counts = [52, 22, 24, 29]
+```
+
+Positions are numbered **starting from zero**: `counts[0]` is 52,
+`counts[1]` is 22, and `counts[3]` is 29 — the last item, at position
+*length minus one*. Asking for `counts[4]` raises the `IndexError` you met
+last week. Zero-based counting feels wrong for about a week; the way to hold
+it is that the index measures *how far from the start* an item is, and the
+first item is zero steps away. `len(counts)` gives the length, 4.
+
+A `for` loop runs a block once for each item:
 
 ```python
 total = 0
@@ -69,21 +151,49 @@ for count in counts:
     total = total + count
 ```
 
-The pattern in those three lines is called an **accumulator**: start with an
-empty total, add each item as it passes. It looks humble. It is the single
-most useful pattern in data processing — counting, summing, collecting
-matches into a new list — and most of what libraries like NumPy do for you
-is this pattern, performed at speed.
+Read the middle line as: *for each value in `counts`, one at a time, store
+it under the name `count` and run the indented block.* The name `count` is
+yours to choose; it is created by the loop and refilled on every pass.
+
+Do not skim those three lines, because they contain the most important
+pattern in data processing: the **accumulator**. Start with an empty total;
+fold each item in as it passes. Watch it run, pass by pass:
+
+| pass | `count` | `total` after the line runs |
+|---|---|---|
+| 1 | 52 | 52 |
+| 2 | 22 | 74 |
+| 3 | 24 | 98 |
+| 4 | 29 | 127 |
+
+Tracing a loop by hand like this — a column for each variable, a row for
+each pass — is not a beginner's crutch. It is a professional debugging
+technique, and when a loop misbehaves, three hand-traced passes will find
+the problem faster than an hour of staring.
+
+The same shape, with an `if` inside, produces the second great pattern:
+**build a new list of the items that qualify**. Start with an empty list,
+append each item that passes the test. Counting matches, summing matches,
+collecting matches — all of them are this one pattern wearing different
+clothes, and you will write all three in the drills.
+
+For the spreadsheet-minded: a list is a column, and a loop is what "fill
+this formula down the column" has been doing for you all along. Python makes
+the repetition visible and puts it under your control — which is exactly
+what you need the week the operation becomes too awkward to express in a
+cell formula.
 
 ### 4. Package — functions
 
-When the same block of code appears twice, the temptation is to copy it and
-edit one word. This is how many real bugs are born: the copies drift apart,
-someone fixes one and not the other, and the analysis quietly disagrees with
-itself.
+Here is how real analyses go wrong. You write ten good lines that compute an
+hourly average for the northbound direction. You need the same for
+southbound — so you copy the block and edit one word. The file now contains
+two near-identical copies. Weeks later you find a subtle bug and fix it — in
+one copy. From that day the two directions are computed by *different
+rules*, the file looks perfectly healthy, and nothing will ever warn you.
 
-A **function** removes the temptation. You name the block, state what inputs
-it needs, and state what it hands back:
+A **function** is the cure: give the block a name, state what varies, and
+keep exactly one copy.
 
 ```python
 def hourly_average(direction):
@@ -91,47 +201,112 @@ def hourly_average(direction):
     return result
 ```
 
-`def` names the function and its inputs; `return` is what comes back.
-Afterwards, `hourly_average("northbound")` and `hourly_average("southbound")`
-run the same tested code on different inputs. One block, one place to fix,
-no drift.
+The anatomy: `def` introduces the function; `hourly_average` is its name;
+`direction` is a **parameter** — a placeholder name for the value that will
+vary; the indented body is the work; and `return` says what the function
+hands back. Defining a function runs nothing. It is *called* later, by
+name, with an actual value for each parameter:
+
+```python
+northbound = hourly_average("northbound")
+southbound = hourly_average("southbound")
+```
+
+Follow the flow in the first call: the value `"northbound"` flows in and
+becomes `direction` for this one run; the body computes; `return result`
+sends the answer back; and the call itself — the whole expression
+`hourly_average("northbound")` — *becomes* that returned value, which is
+then stored under `northbound`. Same tested code, both directions, one place
+to fix anything.
+
+Two clarifications that save beginners real confusion. First, `return` is
+not `print`. A printed value appears on the screen and is gone — you cannot
+add it, compare it, or plot it. A returned value comes back into the program
+where it can be stored and used. Print is for humans; return is for the rest
+of the code. Second, names created inside a function — the parameters and
+anything defined in the body — exist only while that call runs, and vanish
+afterwards. Functions are sealed rooms: values pass in through the
+parameters and out through `return`, and this is precisely what makes one
+function testable on its own, without worrying about the rest of the file.
 
 ### 5. NumPy — arithmetic on many values at once
 
-NumPy is a library for numerical work. Its central object, the **array**, is
-a sequence like a list, with one large difference: arithmetic applies to the
-whole array at once.
+NumPy is a **library**: code written by others, installed into your
+environment during setup, and brought into a script with
+
+```python
+import numpy as np
+```
+
+— which loads it and gives it the short nickname `np`, the universal
+convention.
+
+Its central object is the **array**. An array is like a list with one
+restriction and one superpower. The restriction: every element has the same
+type. The superpower: arithmetic applies to *the whole array at once*:
 
 ```python
 counts = np.array([900, 1800, 2700])
 counts / 1800          # array([0.5, 1.0, 1.5])
 ```
 
-A comparison applies to the whole array too, producing an array of `True`
-and `False` called a **mask** — which can then select rows:
+One line, no loop — you say *what* should happen to every element, and NumPy
+handles the *each*. Comparisons work the same way, and produce an array of
+`True`/`False` values called a **mask**:
 
 ```python
-mask = directions == "northbound"
-counts[mask]           # only the northbound counts
+directions == "northbound"   # array([True, False, True, ...])
 ```
 
-Nothing new is happening here. The loop you wrote in idea 3 is still
-running — inside the library, in a faster language. That is why we write the
-loop by hand first: so that NumPy is a convenience you understand, not a
-mystery you depend on.
+A mask can then be used to select: `counts[mask]` keeps exactly the elements
+in the `True` positions. Filtering a dataset — the `if` inside the loop you
+wrote in idea 3 — becomes two short lines: build the mask, apply it. Masks
+can be combined with `&` (and) and `|` (or), with parentheses around each
+comparison; you will see that in the demonstration.
+
+Understand what has *not* happened here: nothing new. When you write
+`counts.mean()`, an accumulator loop runs — the same start-at-zero,
+fold-each-item-in loop you wrote by hand — inside the library, in a faster
+language. NumPy is a convenience and an accelerant, not a different kind of
+thing. We make you write the loop first precisely so that the one-line
+version is something you can *explain*, and being able to explain your tools
+is about to become the theme of this course.
 
 ### 6. The figure
 
-The output of an analysis is usually a figure, and matplotlib is the
-standard tool. The mechanics are a handful of calls — plot the values, label
-the axes, set a title, save the file — and you will see all of them in the
-demonstration.
+The usual output of an analysis is a figure, and the standard tool is
+matplotlib. Its mental model has two objects: the **figure** (the page) and
+the **axes** (the plotting area on that page — an awkward name, but
+universal). You get both from one call, then each further call adds or sets
+one element, and nothing appears anywhere until you save:
 
-The standard is the part that matters, and it starts now: **a figure with an
-unlabelled axis is not finished.** Every figure you produce from today needs
-axis labels with units, and a title that a reader could understand without
-you in the room. A figure is not decoration for an argument. On most days,
-the figure *is* the argument.
+```python
+figure, axes = plt.subplots()
+axes.plot(hours, flows)            # the data, as a line
+axes.set_xlabel("Hour of day")
+axes.set_ylabel("Average flow (vehicles per hour)")
+axes.set_title("Average hourly flow, site A34/012, 2-15 March 2026")
+figure.savefig("profile.png")
+```
+
+Six calls, one finished figure, written to a file you can put in a report.
+Everything else matplotlib offers — colours, legends, annotations, grids —
+is more calls of the same shape, added one at a time.
+
+What makes a figure *finished* is a checklist, and it is short: both axes
+labelled, **with units**; a title that states the finding, or at least the
+full context — site, place, period; a legend whenever more than one series
+is plotted; and the file saved at a size where the text is readable.
+
+The reason for the rule is worth spelling out, because the rule is the one
+thing from this week that applies to every figure you will ever make. A
+figure does not stay in your notebook. It gets pasted into a slide deck,
+cropped into a report, forwarded in an email — and it arrives without you,
+without your caption, and without the surrounding text. A reader one year
+from now will decide something based on what the figure alone says. An
+unlabelled axis makes that figure unusable at best; at worst, it makes it
+confidently misread. On most days, the figure *is* the analysis, and it
+travels alone. Label it accordingly.
 
 ---
 
