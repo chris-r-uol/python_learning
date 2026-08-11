@@ -1,9 +1,15 @@
 # Your Patch — build a transport atlas
 
-**Weeks 4 and 5. This is your own project — no groups, and nothing here is
-graded.** This module is for learning; the skills are assessed elsewhere.
+**Weeks 4 and 5. This is your own project, and it is yours alone.** There
+are no groups. Nothing here is graded, collected, submitted, presented, or
+reviewed by anybody — not by the instructor, not by the TA, not by other
+students. This module exists so that you learn to do this; the assessment
+of these skills happens elsewhere in your programme, not here.
+
 What you take away is the thing you build, and the experience of building
-something far larger than you could have written alone.
+something far larger than you could have written alone. Ask for help as
+often as you like — that is what the studio sessions are for — but nobody
+is going to look over your shoulder unless you invite them.
 
 ---
 
@@ -105,37 +111,37 @@ changing it is one line — nothing else in the atlas needs to know.
 
 ## The finish line
 
-There are no marks. The finish line is a fact, not a judgement:
+The finish line is a fact you can check for yourself, not a judgement
+anybody makes about you:
 
 **`python atlas.py` builds your whole atlas from scratch — every fetch, every
-figure, the report — on a machine that is not yours.**
+figure, the report — in a folder where nothing has been set up by hand.**
 
 That single sentence contains most of what this course has taught: paths that
 are not hardcoded, dependencies written down, sources recorded, steps that
-run in order without you nursing them. Test it the way week 5 tests it: fresh
-folder, clean copy, one command.
+run in order without you nursing them. Test it: copy your project to a fresh
+folder, delete anything the script should be creating, and run the one
+command. Either it rebuilds or it does not, and you will know which.
 
-## The gallery
+## The two numbers worth knowing
 
-Week 5 ends with thirty seconds per person: one page of your atlas on the
-screen. No presentation, no questions, no judging. Say three things:
+Keep a running count of two things, for yourself:
 
-1. **What the place is.**
-2. **What surprised you.**
-3. **Your two check numbers** — how many hand-checks you have, and how many
-   of those you verified against something *outside* the data. For example:
-   *"Eighteen hand-checks, four of them anchored outside the data."*
+1. **How many hand-checks you have.**
+2. **How many of those you verified against something outside the data** — a
+   map, a published statistic, somewhere you have actually stood.
 
-That third one takes five seconds and is the most honest thing said all
-term. An assistant will happily generate twenty checks that all pass and
-prove nothing, because it wrote both the question and the answer; the only
-ones worth counting are the ones you confirmed against a map, a published
-figure, or somewhere you have actually stood. See
-[`agent_guide.md`](agent_guide.md) for what separates the two.
+The second number is the one that means anything, and it is easy to fool
+yourself about. An assistant will cheerfully produce twenty checks that all
+pass and prove nothing, because it wrote both the question and the answer.
+Only the externally anchored ones tell you your atlas is true rather than
+merely self-consistent. [`agent_guide.md`](agent_guide.md) explains the
+difference and how to get more of them.
 
-Nothing is graded. But the second number does socially what a mark would
-do — it makes the invisible discipline visible, and it is the number that
-catches self-deception, including your own.
+Nobody is going to ask you for these numbers. That is exactly why they are
+worth keeping honestly — the habit of knowing how much of your own work you
+have actually confirmed is the thing you are here to build, and it only ever
+gets used when nobody is checking.
 
 ## Working honestly with real places
 

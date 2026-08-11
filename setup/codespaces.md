@@ -43,7 +43,7 @@ Now run the setup check:
 python check_setup.py
 ```
 
-Copy everything it prints and submit it, exactly as students on laptops do.
+Copy everything it prints and send it to us, exactly as students on laptops do.
 It should report `Running on: GitHub Codespaces` and `ALL CHECKS PASSED`.
 
 **If it says "no virtual environment is active":** the check itself will

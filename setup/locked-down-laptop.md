@@ -62,7 +62,7 @@ and use the **WinPython Command Prompt** inside the folder as your terminal.
 It includes the scientific libraries the course needs.
 
 This works, but it is the fiddliest option, and version mismatches are more
-likely. If you use it, say so when you submit your setup check.
+likely. If you use it, say so when you send us your setup check.
 
 ## Option 4 — GitHub Codespaces
 

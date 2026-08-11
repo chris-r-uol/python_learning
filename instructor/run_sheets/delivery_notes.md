@@ -254,13 +254,20 @@ Three things to get across, in this order:
    count before and after every filter and every join". Have them add it to
    a request in the room and watch the output change.
 3. **A check you wrote both sides of proves nothing.** The number that
-   matters is how many checks are anchored outside the data, and they will
-   say that number out loud in the gallery.
+   matters is how many checks are anchored outside the data, and each
+   student keeps that number for themselves.
 
 Circulate on layer 3, not layer 2. The row counts look after themselves
 once asked for; what needs you is students inventing checks that cannot
-fail. When you see "20 of 20 pass", ask which one they confirmed against a
-map.
+fail. When you see "20 of 20 pass" on a screen as you pass, ask — as a
+question, not an inspection — which one they confirmed against a map.
+
+**Nothing in weeks 4–5 is collected, shown, or presented**, and students
+should never be given the impression otherwise. There is no closing round
+and no gallery; week 5 simply ends. Watch your own language while
+circulating: "show me what you have" and "what will you have finished by
+five" both land as assessment however you mean them. "How is it going, what
+are you stuck on" does not.
 
 **Form the groups yourself.** Do not let them self-select — you will get one
 group of four strong students and one group of four who are all hoping someone

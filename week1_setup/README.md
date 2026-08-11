@@ -11,8 +11,8 @@ document covers all three parts in full, so you can also use it to review, or
 to catch up if you missed the session.
 
 **Before the session:** complete the setup guide for your machine (see
-`setup/`), run `check_setup.py` from the top of this repository, and submit
-what it prints. If it fails, submit the error text instead — that is just as
+`setup/`), run `check_setup.py` from the top of this repository, and send us
+what it prints. If it fails, send the error text instead — that is just as
 useful to us.
 
 ---

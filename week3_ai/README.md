@@ -437,10 +437,11 @@ data that has real problems in it. You do it in class, with the instructor
 and the TA circulating; it is the first time this course asks you to use an
 assistant, a specification, and the checklist together.
 
-You produce three things: the code, the prompts you used, and **evidence that
-the code is correct**. Nothing is graded — the evidence matters because it is
-the part the assistant cannot do for you, and because the project weeks ask
-you to repeat exactly this pattern, at volume, on your own project.
+You end up with three things: the code, the prompts you used, and **evidence
+that the code is correct**. None of it is collected or graded — you keep it.
+The evidence matters because it is the part the assistant cannot do for you,
+and because the project weeks ask you to repeat exactly this pattern, at
+volume, on your own work.
 
 ## What you are allowed to use
 
