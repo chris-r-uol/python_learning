@@ -4,30 +4,23 @@
 AI assistant produces correct code, check that code against a case you can
 work out by hand, and build things in small steps that you verify as you go.
 
-The session has three parts. First a demonstration — deliberately before any
-teaching, for reasons that will be obvious once you have seen it. Then the
-ideas. Then one substantial task, done in class under supervision, which uses
+The session has three parts. First the ideas — what your job becomes when an
+assistant writes the code, how to ask for what you want, and how to check
+what comes back. Then a worked demonstration of the whole problem in one
+page. Then a substantial task, done in class under supervision, which uses
 everything from the first three weeks at once.
+
+> **In the session, the demonstration comes first, and cold.** That is
+> deliberate: it is far more convincing to be caught out by it than to be
+> warned about it. If you are reading this before the session, you are
+> welcome to do the same — jump to Part 2, work through it, and come back
+> here afterwards. If you would rather have the ideas first, read straight
+> through; Part 2 still asks you to judge the answer for yourself before it
+> tells you anything.
 
 ---
 
-## Part 1 — Demonstration: the failure
-
-We begin in `failure_demo/`: a reasonable-sounding request typed into an AI
-assistant, a professional-looking answer, and an error of about 21% that
-nothing on the screen would warn you about.
-
-```
-cd week3_ai/failure_demo
-python lazy_analysis.py
-python correct_analysis.py
-```
-
-If you missed the session, `failure_demo/README.md` records what happened and
-why it matters. If you have not seen the session yet, know that the
-demonstration lands harder live — the folder will still be there afterwards.
-
-## Part 2 — The ideas
+## Part 1 — The ideas
 
 ### 1. You have been promoted
 
@@ -63,8 +56,8 @@ memory. That is what the assistant is for.
 
 #### Dictionaries — a list you index by label
 
-The demonstration you just watched turned on three lines you may not have
-been able to read:
+The demonstration in Part 2 turns on three lines that would be hard to read
+without this section:
 
 ```python
 speeds_by_link = defaultdict(list)
@@ -110,9 +103,9 @@ Now the two unfamiliar names from the demonstration:
 
 So the third line reads, in plain words: *take the speed from this row,
 convert it from text to a decimal number, and add it to the list of speeds
-belonging to this row's link.* That is the whole of the lazy analysis — and
-now you can see that it never checks what those speed values are, which is
-precisely how the `-1` got averaged in.
+belonging to this row's link.* Hold on to that sentence: in Part 2 it is the
+whole of the analysis that goes wrong, and being able to read it is what
+lets you see why.
 
 #### DataFrames — a table you can question
 
@@ -164,9 +157,10 @@ The row count is how you hear them.
 
 ### 3. Specifying
 
-The demonstration fails because the request leaves everything important
-unsaid. Look at the difference concretely, using the week 2 data you already
-know. Here is the request most people type:
+Most requests fail for one reason: they leave everything important unsaid.
+The demonstration in Part 2 is exactly this failure, and you will recognise
+it when you get there. Look at the difference concretely first, using the
+week 2 data you already know. Here is the request most people type:
 
 > Analyse traffic_counts.csv and tell me the daily pattern.
 
@@ -192,8 +186,8 @@ answer could walk. That is the entire craft, and it has four parts:
   says there are two rows per hour. You know it; the assistant cannot. Every
   dataset has knowledge like this — a code for missing data, a unit, a
   renamed site — and it exists only in heads and documentation, never in the
-  file itself. The demonstration you just watched turned entirely on one
-  such convention.
+  file itself. The demonstration in Part 2 turns entirely on one such
+  convention.
 - **The output you expect** — shape, units, and *rough size*. Saying "peaks
   near 2,000–3,000" costs one clause and buys you both a sanity check and a
   shared definition of nonsense.
@@ -282,10 +276,159 @@ Honest limits, each with the form it actually takes:
   site — and either crashes, or worse, does not.
 
 Every one of these is caught by the four checks. None of them is caught by
-reading the output and finding it believable — believable output is exactly
-what the demonstration produced while being 21% wrong.
+reading the output and finding it believable — and believable output is
+exactly what you are about to be shown, while it is 21% wrong.
 
 ---
+
+## Part 2 — Demonstration: the failure
+
+Everything above, happening at once, on half a page of real data. This is
+the demonstration the session opens with, written out in full so you can
+work through it alone.
+
+Take it slowly, and stop where the text tells you to stop. There is a point
+in the middle where you are asked to judge an answer for yourself, and the
+whole demonstration depends on your doing that honestly before reading on —
+including, and especially, if you already suspect where it is going.
+
+### The data
+
+A traffic authority has average speeds for four road links, measured at two
+times of day over ten days — eighty rows in
+`failure_demo/data/link_speeds.csv`:
+
+```
+date,link_id,hour,speed_kph
+2026-04-01,A101,8,12.8
+2026-04-02,A101,8,12.0
+2026-04-03,A101,8,15.0
+```
+
+Four columns: the date, which link, the hour of day, and the speed in
+kilometres per hour. Nothing complicated.
+
+### The request
+
+This exact sentence was typed into an AI assistant, with the file attached:
+
+> *analyse this traffic data and tell me the average speed on each link*
+
+It is the sort of request anybody would type. It is polite, it is clear
+enough in English, and it names the file, the subject and the calculation.
+
+### What came back
+
+The assistant returned the program saved as `failure_demo/lazy_analysis.py`.
+Its working part is four lines: read the file, collect every speed under its
+link, then print the average of each.
+
+```python
+for row in reader:
+    speeds_by_link[row["link_id"]].append(float(row["speed_kph"]))
+
+for link in sorted(speeds_by_link):
+    values = speeds_by_link[link]
+    print(f"{link:<10} {sum(values) / len(values):>10.1f} {len(values):>10}")
+```
+
+Run it yourself:
+
+```
+cd week3_ai/failure_demo
+python lazy_analysis.py
+```
+
+```
+Average speed by link
+----------------------------------
+Link         Mean kph      N obs
+A101             12.6         20
+A102             16.6         20
+A103              6.5         20
+B201             23.8         20
+```
+
+### Stop here
+
+Before reading on, decide for yourself: **is this right?**
+
+Look at the table properly. It is neatly formatted. It carries units. The
+values are the right sort of size for congested urban roads. The ranking is
+believable — A103 is the slowest, B201 the fastest. Twenty observations per
+link, and four links times twenty is the eighty rows we started with, so
+nothing appears to be missing.
+
+Most people conclude it is fine. It is not.
+
+### What was wrong
+
+Open the CSV and look down the `speed_kph` column. Thirteen of the eighty
+values are `-1.0`:
+
+```
+2026-04-04,A101,17,-1.0
+```
+
+`-1` is the sensor's code for *no observation was made* — a fault, a gap, a
+vehicle count too low to be meaningful. It is not a speed. No car travelled
+at minus one kilometre per hour.
+
+Nothing in the file says this. There is no note, no separate column, no
+legend. You would have to already know, or ask, or read a data dictionary
+that nobody sent you. The assistant could not have known — and, importantly,
+it did not say that it was guessing.
+
+So it averaged those thirteen `-1` values in as though they were measured
+speeds, and every average came out too low.
+
+The corrected version excludes them and reports what it excluded:
+
+```
+python correct_analysis.py
+```
+
+```
+Link         Mean kph   N used  N missing    % missing
+A101             13.3       19          1           5%
+A102             21.0       16          4          20%
+A103              8.4       16          4          20%
+B201             30.0       16          4          20%
+```
+
+### The three things to take from this
+
+**1. The ranking did not change.** A103 is still slowest, B201 still
+fastest. Every quick sanity check a busy person applies — does the order
+make sense, are the magnitudes plausible — still passes. That is exactly why
+this kind of error survives review and reaches a decision.
+
+**2. The magnitudes are badly wrong.** B201's real average is 30.0 kph, not
+23.8 — an error of about 21%. If the next step is a journey time
+calculation, a speed limit compliance assessment or a business case, that
+error flows straight into a number somebody signs their name to.
+
+**3. The warning was on the screen the whole time.** Look again at the lazy
+table: `N obs` reads exactly 20 for every link. Real sensor data is never
+that tidy. The clue was printed, in a column nobody read.
+
+### The point
+
+The assistant did not malfunction. It did exactly what it was asked to do,
+correctly, given what it could see. It had no way of knowing what `-1`
+meant, and it did not tell you it was assuming.
+
+**Noticing that is your job now.** This will keep happening, with every tool
+and every dataset, because every dataset carries a convention that lives in
+somebody's head rather than in the file: a code for missing data, a unit, a
+time zone, a site that was renamed halfway through. The assistant cannot see
+those. You can — but only if you look.
+
+You will meet exactly this class of problem in this week's task, and again
+in the project.
+
+> `failure_demo/README.md` holds the same demonstration in the folder
+> itself, for when you are working there.
 
 ## Part 3 — The task
 

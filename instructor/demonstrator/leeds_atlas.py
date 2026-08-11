@@ -101,7 +101,7 @@ def chapter_2_safety():
     axes.set_ylabel("Casualties (people, 2022-23)")
     total = len(casualties)
     fatal = int((casualties["severity"] == "fatal").sum())
-    axes.set_title("{0} people walking or cycling were hurt in two years\n"
+    axes.set_title(f"{total} people walking or cycling were hurt in two years\n"
                    f"{PLACE_NAME}, STATS19 2022-23")
     axes.legend(frameon=False)
     name = save(figure, "chapter2_safety.png")
@@ -132,7 +132,7 @@ def chapter_3_deprivation():
     axes.set_ylabel("Neighbourhoods (LSOAs)")
     most = int(deciles.loc[1])
     share = 100.0 * most / len(imd)
-    axes.set_title("{0:.0f}% of Leeds neighbourhoods are in England's most "
+    axes.set_title(f"{share:.0f}% of Leeds neighbourhoods are in England's most "
                    f"deprived decile\nLeeds district, IMD 2019")
     name = save(figure, "chapter3_deprivation.png")
 
@@ -167,7 +167,7 @@ def chapter_4_car_free():
                       ha="center", va="bottom", fontsize=10)
     axes.set_xlabel("Cars or vans available to the household")
     axes.set_ylabel("Share of households (%)")
-    axes.set_title("{0:.0f}% of Leeds households have no car\n"
+    axes.set_title(f"{shares.iloc[0]:.0f}% of Leeds households have no car\n"
                    f"Leeds district, Census 2021 (TS045)")
     name = save(figure, "chapter4_car_free.png")
 

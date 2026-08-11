@@ -143,9 +143,27 @@ chapters.
 ## Week 3
 
 **Do the failure demo cold, before any framing.** If you explain what is about
-to happen first, it does not land. The choreography (the student-facing
-`week3_ai/failure_demo/README.md` is now a post-session recap and no longer
-contains it):
+to happen first, it does not land.
+
+Note two changes to the student week 3 README, neither of which changes what
+you do in the room.
+
+**The whole demonstration is now written out** — request, data, both
+outputs, and the reveal — because students working through it alone could
+not follow a page that only said "go and run these two files". It has a
+"Stop here — is this right?" break before the reveal, so a reader still gets
+the moment. Do not read it aloud, and do not put it on screen before the
+reveal.
+
+**In the written document the ideas now come first, and the demonstration
+second.** That is the right order for somebody reading alone, who needs to
+know what the week is about before being shown a puzzle. It is the wrong
+order for the room, so the README says so at the top and invites readers to
+jump to Part 2 first if they want the cold version. **You still open the
+session with the demonstration, cold, before any framing.** The written
+order and the delivered order differ on purpose.
+
+The choreography:
 
 1. Say the task out loud, then type the lazy prompt in front of them exactly
    as written: *"analyse this traffic data and tell me the average speed on
