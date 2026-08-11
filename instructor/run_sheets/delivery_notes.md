@@ -238,6 +238,30 @@ project data. Not a finished tool.
 > Weeks 4–5 are now the individual transport atlas — structure and studio
 > flow in `docs/ATLAS_PROJECT_DESIGN.md`.
 
+**Teach `project/agent_guide.md` in the week 4 opening teach, not as
+reading.** It is the response to a trial build in which a very capable
+assistant produced twenty hand-checks, displayed "20 of 20 pass", and had
+written both the expectations and the answers — two were tautologies, and
+about four of the twenty were anchored outside the data. That story is the
+teach: it lands far better than "the AI might hallucinate", because it is
+what happens when a *competent* operator delegates without a contract.
+
+Three things to get across, in this order:
+
+1. **The catalogue is a list of what your assistant will invent.** In real
+   work you write that list yourself, before you start.
+2. **One clause is worth more than any amount of care:** "printing the row
+   count before and after every filter and every join". Have them add it to
+   a request in the room and watch the output change.
+3. **A check you wrote both sides of proves nothing.** The number that
+   matters is how many checks are anchored outside the data, and they will
+   say that number out loud in the gallery.
+
+Circulate on layer 3, not layer 2. The row counts look after themselves
+once asked for; what needs you is students inventing checks that cannot
+fail. When you see "20 of 20 pass", ask which one they confirmed against a
+map.
+
 **Form the groups yourself.** Do not let them self-select — you will get one
 group of four strong students and one group of four who are all hoping someone
 else does it. Use the week 2 drill scores: one 12/12, one who got 9, two in

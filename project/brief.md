@@ -59,8 +59,18 @@ Every chapter has the same shape, and the shape is the method:
 
 > **Fetch** (record the source and the date) → **cut to your patch** (count
 > what you cut) → **clean** (count again) → **figure** (labelled axes, units,
-> a title with the place name in it) → **three sentences** in your own words
-> about what it shows → **one hand-check** against the raw data.
+> a title with the place name in it) → **look at the figure** → **three
+> sentences** in your own words about what it shows → **one hand-check
+> anchored outside the data**.
+
+Two of those steps are easy to skip and are the ones that catch real
+errors. **Look at the figure** means open the image, not check that the
+script finished — data errors fail loudly, but presentation errors fail
+silently and look confident. And a hand-check **anchored outside the data**
+means checked against a map, a published statistic, or somewhere you have
+stood — not against a number your own code produced.
+[`agent_guide.md`](agent_guide.md) explains why that distinction is the
+whole of quality control here.
 
 The seven core chapters, with sources — all details, working addresses, and
 known traps are in [`data_sources.md`](data_sources.md):
@@ -108,9 +118,24 @@ folder, clean copy, one command.
 ## The gallery
 
 Week 5 ends with thirty seconds per person: one page of your atlas on the
-screen. Say what the place is and what surprised you. That is all — no
-presentation, no questions, no judging. The point is a room full of real
-places, analysed by people who could not program five weeks ago.
+screen. No presentation, no questions, no judging. Say three things:
+
+1. **What the place is.**
+2. **What surprised you.**
+3. **Your two check numbers** — how many hand-checks you have, and how many
+   of those you verified against something *outside* the data. For example:
+   *"Eighteen hand-checks, four of them anchored outside the data."*
+
+That third one takes five seconds and is the most honest thing said all
+term. An assistant will happily generate twenty checks that all pass and
+prove nothing, because it wrote both the question and the answer; the only
+ones worth counting are the ones you confirmed against a map, a published
+figure, or somewhere you have actually stood. See
+[`agent_guide.md`](agent_guide.md) for what separates the two.
+
+Nothing is graded. But the second number does socially what a mark would
+do — it makes the invisible discipline visible, and it is the number that
+catches self-deception, including your own.
 
 ## Working honestly with real places
 
