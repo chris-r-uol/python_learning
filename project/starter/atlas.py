@@ -47,6 +47,12 @@ def chapter_1_stops():
 
     Fetch the stops for your ATCO area, cut to BBOX, drop stops marked
     inactive, figure: where the stops are, sized or coloured by type.
+
+    Look your ATCO area code up in data/external/atco_area_codes.csv - do
+    not guess it and do not ask the assistant, because the codes look
+    guessable and are not. If your bounding-box filter leaves you with zero
+    stops, suspect the area code before anything else.
+
     Hand-check: pick one stop you know personally and confirm its
     coordinates put it where it really is.
     """
@@ -96,6 +102,18 @@ def chapter_7_weather():
 # figure and your three sentences. Ask the assistant for a small function
 # that writes this from a list of (title, figure_path, text) entries -
 # and read what it gives you before you run it.
+#
+# Writing a file is the one thing here you have not done before. Reading
+# used open(path) - writing is the same call with "w" added, and it
+# REPLACES whatever was there:
+#
+#     with open("atlas_output/index.html", "w") as handle:
+#         handle.write("<h1>My patch</h1>")
+#
+# Two things to know. The folder must already exist, which is what the
+# os.makedirs call in main() below is for. And a script that writes a file
+# succeeds silently - there is no output to tell you it worked, so check
+# the file afterwards rather than assuming.
 # ---------------------------------------------------------------------------
 
 def build_report(chapters):

@@ -47,6 +47,41 @@ def in_bbox(lon, lat):
 
 # ---------------------------------------------------------------------------
 
+def fetch_atco_codes():
+    """The ATCO area code lookup students need for chapter 1.
+
+    The only official source is the NPTG gazetteer, which is XML - well
+    beyond what the course teaches - so we flatten it to a two-column CSV
+    once, here, and ship that. Without it a student whose patch is not
+    Leeds cannot start chapter 1, which is week 4's whole finish line.
+    """
+    import xml.etree.ElementTree as ET
+
+    print("NPTG gazetteer (ATCO area codes)")
+    response = requests.get("https://naptan.api.dft.gov.uk/v1/nptg",
+                            headers=HEADERS, timeout=180)
+    response.raise_for_status()
+    root = ET.fromstring(response.content)
+    ns = {"n": "http://www.naptan.org.uk/"}
+
+    areas = []
+    for area in root.iter("{http://www.naptan.org.uk/}AdministrativeArea"):
+        code = area.find("n:AtcoAreaCode", ns)
+        name = area.find("n:Name", ns)
+        if code is not None and name is not None and code.text and name.text:
+            areas.append((code.text.strip().zfill(3), name.text.strip()))
+    areas = sorted(set(areas), key=lambda row: row[1].lower())
+    print(f"  administrative areas found         {len(areas):>7}")
+
+    out = os.path.join(EXTERNAL, "atco_area_codes.csv")
+    pd.DataFrame(areas, columns=["atco_area_code", "area_name"]).to_csv(
+        out, index=False)
+    record("atco_area_codes.csv",
+           "NPTG gazetteer via the NaPTAN API (flattened from XML)",
+           "OGL v3",
+           f"{len(areas)} areas, code against name - chapter 1 lookup")
+
+
 def fetch_naptan():
     """Chapter 1: bus stops. NaPTAN, ATCO area 450 (West Yorkshire)."""
     print("NaPTAN (area 450)")
@@ -257,6 +292,7 @@ def write_manifest():
 
 def main():
     os.makedirs(EXTERNAL, exist_ok=True)
+    fetch_atco_codes()
     fetch_naptan()
     fetch_imd()
     fetch_census()

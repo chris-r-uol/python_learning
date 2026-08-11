@@ -14,6 +14,7 @@ example, `project/starter/fetch_external.py`, run on the same patch.
 | File | Source | Licence | Contents |
 |---|---|---|---|
 | casualties.geojson | DfT STATS19 collision + casualty files, 2022-23 | OGL v3 | active-mode casualties in the patch |
+| atco_area_codes.csv | NPTG gazetteer via the NaPTAN API (flattened from XML) | OGL v3 | 150 areas, code against name — the chapter 1 lookup, and **not** patch-specific: it covers all of Great Britain |
 | naptan_stops.csv | NaPTAN API, atcoAreaCodes=450 (West Yorkshire) | OGL v3, (c) Crown copyright | 1324 active stops in the patch |
 | imd2019_leeds.csv | MHCLG, English Indices of Deprivation 2019, File 7 | OGL v3 | 482 LSOAs (Leeds district; 2011 LSOA codes) |
 | census_car_availability.csv | ONS Census 2021 table TS045 via the Nomis API (dataset NM_2063_1) | OGL v3 | 2440 rows; 2021 LSOA codes; households by cars available |

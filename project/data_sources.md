@@ -11,6 +11,27 @@ Read it before you build any of the others. The pattern never changes.
 
 ---
 
+## First, the thing that wastes the most time
+
+Three of the seven chapters need an **area identifier** before they will
+give you anything: NaPTAN wants an ATCO area code, the PCT wants a region
+folder name, and the Census wants a local-authority code. None of these is
+guessable, all of them look guessable, and asking an assistant produces
+confident wrong answers — this is exactly the week 3 lesson wearing a
+different hat.
+
+So do not guess, and do not ask. Each one has a known route:
+
+| You need | Where it comes from |
+|---|---|
+| ATCO area code (chapter 1) | `data/external/atco_area_codes.csv` in this repository — all 150, by name |
+| PCT region name (chapter 5) | the list in the PCT entry below — they are historic counties, so Bristol is `avon` |
+| Local-authority code (chapter 4) | the deprivation file itself, which carries district names beside their codes |
+
+The four chapters not in that table — safety, amenities, weather, and the
+deprivation file itself — need only your bounding box, so once chapter 1
+has defined your patch they will work straight away.
+
 ## The scope rule
 
 You have three weeks of Python. Real geospatial analysis is a term's work on
@@ -62,6 +83,12 @@ The standard English measure of relative deprivation, by small area (LSOA).
   after. This is the whole course in one join.
 - **Second trap:** decile **1 is the most deprived**, not the least. Published
   charts regularly get this backwards; check yours twice.
+- **A useful side effect.** Every row carries both the *name* and the
+  *code* of its local authority district. So you can cut this file down by
+  name — `"Leeds"`, `"York"` — without needing to know any code, and the
+  code you get back in the same rows (`E08000035` for Leeds) is exactly the
+  one the Census chapter needs. Two chapters, one lookup, and the lookup is
+  a word you already know.
 - **Licence:** OGL v3.
 
 ### DfT road traffic counts (AADF)
@@ -81,8 +108,13 @@ Households, car availability, method of travel to work, by small area.
   for whom walking, cycling, and the bus are the whole transport system.
 - **How:** the Nomis API returns CSV directly, e.g.
   `https://www.nomisweb.co.uk/api/v01/dataset/NM_2062_1.data.csv?geography=...&measures=20100`
-- **The trap:** finding the right dataset id and geography code is most of the
-  work. Ask the assistant, then check the row count and one value against the
+- **The trap:** finding the right dataset id and geography code is most of
+  the work. The car-availability table (TS045) is dataset `NM_2063_1`, and
+  a district's small areas are requested as
+  `geography=<district code>TYPE151` — for example
+  `E08000035TYPE151` for every LSOA in Leeds. **You do not need to hunt for
+  that district code:** it comes free with the deprivation file above.
+- **Verify it:** check the row count and one value against the
   [Nomis web interface](https://www.nomisweb.co.uk/) by hand.
 - **Licence:** OGL v3.
 
@@ -123,13 +155,22 @@ Every public transport access point in Great Britain. Chapter 1's source.
 
 - **Gives you:** real stop names, locations and codes for your patch.
 - **How:** `https://naptan.api.dft.gov.uk/v1/access-nodes?dataFormat=csv&atcoAreaCodes=450`
-  (450 is West Yorkshire — the Leeds demonstrator's area; find your patch's
-  code in the NPTG gazetteer, or ask the assistant and then verify one stop).
-- **The trap:** the area code must be **three digits** — West Yorkshire is
-  **450**, not `045`, and assistants reliably suggest the two-digit form
-  padded the wrong way. The API's error message tells you the format is
-  wrong, but not which code you wanted. Tens of thousands of stops come back
-  per area — filter them to your bounding box, and drop inactive stops.
+  — where `450` is the ATCO area code for the region your patch sits in
+  (450 is West Yorkshire, the Leeds demonstrator's area).
+- **Finding your area code:** `data/external/atco_area_codes.csv` in this
+  repository lists all 150 of them, area name against code. Look yours up
+  there. Do **not** ask the assistant for it and do not guess: the codes
+  look guessable and are not (West Yorkshire is `450`, but York is `329`
+  and Bristol is `010`), and the only official source is an XML file that
+  is more trouble than it is worth for one number.
+- **The trap:** the code must be **three digits**, so keep the leading zero
+  on codes such as `010`. The API's error message tells you the format is
+  wrong but not which code you wanted, so a mistake here looks like a
+  format problem when it is really a lookup problem.
+- **Verify it worked:** tens of thousands of stops come back per area.
+  Filter to your bounding box and count. If you get **zero**, you almost
+  certainly have the wrong area — check the lookup table again before
+  changing anything else. Also drop the stops marked inactive.
 - **Licence:** OGL v3.
 
 ### Propensity to Cycle Tool — cycling potential
@@ -138,8 +179,26 @@ DfT-funded model of how much cycling each road segment could carry.
 - **Gives you:** where cycling *would* happen under a given scenario,
   against what happens now.
 - **How:** `https://media.githubusercontent.com/media/npct/pct-outputs-regional-notR/master/commute/lsoa/west-yorkshire/rnet_full.geojson`
-  — swap `west-yorkshire` for your patch's region; the folder names follow
-  the PCT website's region list.
+  — swap `west-yorkshire` for the region containing your patch.
+- **The trap, and it will catch you:** the regions are **historic counties,
+  not cities**, so the name you want is often not the name you expect.
+  Bristol is under `avon`. Manchester is `greater-manchester`. Newcastle is
+  `north-east`. Hull is `humberside`. There are forty-five in all:
+
+  ```
+  avon, bedfordshire, berkshire, buckinghamshire, cambridgeshire, cheshire,
+  cornwall-and-isles-of-scilly, cumbria, derbyshire, devon, dorset,
+  east-sussex, essex, gloucestershire, greater-manchester, hampshire,
+  hereford-and-worcester, hertfordshire, humberside, isle-of-wight, kent,
+  lancashire, leicestershire, lincolnshire, liverpool-city-region, london,
+  norfolk, north-east, north-yorkshire, northamptonshire, northumberland,
+  nottinghamshire, oxfordshire, shropshire, somerset, south-yorkshire,
+  staffordshire, suffolk, surrey, wales, warwickshire, west-midlands,
+  west-sussex, west-yorkshire, wiltshire
+  ```
+
+  A wrong name gives you a 404 rather than a wrong answer, which is the
+  kindest way for this to fail.
 - **The trap:** it models **2011 Census commuting only**. No shopping, no
   school, no leisure, and the baseline is fifteen years old. It is a scenario
   model, not an observation, and every sentence you write about it needs to say
