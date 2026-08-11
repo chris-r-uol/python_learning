@@ -73,16 +73,61 @@ def check_windows_store_python():
     return []
 
 
+def running_on_colab():
+    try:
+        import google.colab                      # noqa: F401
+        return True
+    except ImportError:
+        return False
+
+
+def running_on_codespaces():
+    return os.environ.get("CODESPACES", "").lower() == "true"
+
+
+def describe_environment():
+    """Say where this is running. Useful to us when you submit the output."""
+    if running_on_colab():
+        where = "Google Colab"
+    elif running_on_codespaces():
+        where = "GitHub Codespaces"
+    else:
+        where = "your own machine"
+    say("Running on", where)
+    return where
+
+
 def check_virtual_environment():
+    """Advisory, not blocking. Returns a list of notes."""
     in_venv = sys.prefix != getattr(sys, "base_prefix", sys.prefix)
     say("Virtual environment", "active" if in_venv else "NOT active")
-    if not in_venv:
+
+    if in_venv:
+        return []
+
+    if running_on_colab():
         return [
-            "No virtual environment is active. If you are on Google Colab this",
-            "is expected and you can ignore it. Otherwise, see the activation",
-            "step in your setup guide - you will need it from week 2.",
+            "No virtual environment is active. On Colab that is normal -",
+            "Colab manages the environment for you. Nothing to fix.",
         ]
-    return []
+
+    if running_on_codespaces():
+        return [
+            "No virtual environment is active, and on Codespaces there should",
+            "be one. Two likely reasons:",
+            "  - the setup step was still running when this terminal opened.",
+            "    Close the terminal, open a new one, and run this again.",
+            "  - your Codespace was created before the course configuration",
+            "    was added. Rebuild it: press F1, then choose",
+            "    'Codespaces: Rebuild Container'.",
+        ]
+
+    return [
+        "No virtual environment is active. Python still works, so you can",
+        "carry on today, but you will need one from week 2 onwards. The",
+        "activation command is in your setup guide - it is the step people",
+        "most often forget, and it applies per terminal window.",
+    ]
 
 
 def check_packages():
@@ -101,13 +146,15 @@ def check_packages():
 
 
 def check_working_directory():
+    """Advisory, not blocking. Returns a list of notes."""
     cwd = os.getcwd()
     say("Working directory", cwd)
     here = os.path.dirname(os.path.abspath(__file__))
     if os.path.abspath(cwd) != here:
         return [
-            "You are running this from a different folder to the one it lives in.",
-            "That is the most common cause of 'file not found' errors.",
+            "You are running this from a different folder to the one it lives",
+            "in. Nothing is broken, but this is the most common cause of",
+            "'file not found' errors later.",
             "Try: cd {0}".format(here),
         ]
     return []
@@ -119,27 +166,52 @@ def main():
     print(LINE)
 
     say("Operating system", "{0} {1}".format(platform.system(), platform.release()))
+    describe_environment()
 
-    problems = []
-    problems += check_python_version()
-    problems += check_macos_system_python()
-    problems += check_windows_store_python()
-    problems += check_virtual_environment()
-    problems += check_packages()
-    problems += check_working_directory()
+    # Blockers stop you working. Notes do not - they are things to be aware
+    # of, and some of them are entirely normal depending on where you run.
+    blockers = []
+    blockers += check_python_version()
+    blockers += check_macos_system_python()
+    blockers += check_windows_store_python()
+    blockers += check_packages()
+
+    notes = []
+    notes += check_virtual_environment()
+    notes += check_working_directory()
 
     print(LINE)
-    if not problems:
-        print("ALL CHECKS PASSED.")
-        print("Copy everything above and submit it. You are ready for week 1.")
+
+    if blockers:
+        print("NOT READY YET.")
+        print("")
+        print("These need fixing before week 1:")
+        print("")
+        for blocker in blockers:
+            print("  " + blocker)
+    elif notes:
+        print("READY, WITH NOTES.")
+        print("")
+        print("Everything the course needs is installed and working. This")
+        print("counts as a pass. Read the notes below - some are normal for")
+        print("where you are running, and some are worth acting on.")
     else:
-        print("SOME CHECKS DID NOT PASS.")
+        print("ALL CHECKS PASSED.")
         print("")
-        for problem in problems:
-            print("  " + problem)
+        print("Everything the course needs is installed and working.")
+
+    if notes:
         print("")
-        print("Copy everything above and submit it. Do not try to fix this alone -")
-        print("we will sort it out before the session.")
+        print("Notes:")
+        print("")
+        for note in notes:
+            print("  " + note)
+
+    print("")
+    print("Copy everything above and submit it, whichever result you got.")
+    if blockers:
+        print("Do not try to fix it alone - we will sort it out with you")
+        print("before the session.")
     print(LINE)
 
 

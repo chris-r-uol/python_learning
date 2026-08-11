@@ -44,11 +44,24 @@ python check_setup.py
 ```
 
 Copy everything it prints and submit it, exactly as students on laptops do.
-It should report that all checks passed.
+It should report `Running on: GitHub Codespaces` and `ALL CHECKS PASSED`.
 
-**If the prompt does not show `(.venv)`,** the setup step may still have
-been running when your terminal opened. Close the terminal, open a new one,
-and look again.
+**If it says "no virtual environment is active":** the check itself will
+tell you which of the two causes applies, but in short —
+
+1. The setup step was still finishing when your terminal opened. Close the
+   terminal, open a new one, and run the check again. This is the usual
+   explanation and it costs you ten seconds.
+2. Your Codespace was created before the course configuration existed in
+   the repository. Existing Codespaces do not pick up a new configuration
+   on their own. Press **F1**, type `Rebuild Container`, and choose
+   **Codespaces: Rebuild Container**. Your files are kept. Alternatively,
+   delete the Codespace at github.com/codespaces and create a fresh one.
+
+Note that "READY, WITH NOTES" is a pass — see the verdict table in the main
+README. On Codespaces, though, you should be able to reach a clean
+`ALL CHECKS PASSED`, so it is worth resolving the note rather than
+ignoring it.
 
 ## 3. Working in your Codespace
 
