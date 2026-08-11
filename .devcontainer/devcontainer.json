@@ -1,0 +1,40 @@
+{
+  "name": "Python for Transport & Civil Engineering",
+
+  // Python 3.12 on Debian. Matches the course requirement of 3.11 or newer.
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python",
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+
+  // Build the same virtual environment the setup guides describe, and
+  // activate it automatically in every terminal. Students on Codespaces
+  // therefore see exactly what students on laptops see - including the
+  // (.venv) prompt marker the course keeps telling them to look for.
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+
+  // 8501 is Streamlit, for the optional atlas web app in week 5.
+  "forwardPorts": [8501],
+  "portsAttributes": {
+    "8501": {
+      "label": "Streamlit (week 5 stretch)",
+      "onAutoForward": "notify"
+    }
+  },
+
+  // 2 cores is plenty for this course and uses the free monthly quota
+  // most slowly.
+  "hostRequirements": {
+    "cpus": 2
+  }
+}
