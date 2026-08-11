@@ -51,7 +51,118 @@ two skills this week teaches — specifying and verifying — are the two halves
 of being the signature rather than the drafter. Both depend on your being
 able to read code, which is what the last two weeks bought you.
 
-### 2. Specifying
+### 2. Reading code you did not write
+
+You cannot sign off what you cannot read, and from this week onwards the code
+in front of you will contain things the course never taught. That is the
+intended condition, not a failure of preparation — but it does mean you need
+a reading-level grasp of the two constructions you are about to meet
+constantly. Reading level means: you can look at a line and say what it does
+and what it produces. You are not expected to write either of these from
+memory. That is what the assistant is for.
+
+#### Dictionaries — a list you index by label
+
+The demonstration you just watched turned on three lines you may not have
+been able to read:
+
+```python
+speeds_by_link = defaultdict(list)
+reader = csv.DictReader(handle)
+speeds_by_link[row["link_id"]].append(float(row["speed_kph"]))
+```
+
+A **dictionary** is like a list, with one difference: instead of reaching
+items by their position, you reach them by a **label** of your choosing.
+Compare the two directly:
+
+```python
+counts = [52, 22, 24]          # a list  - counts[0] is 52
+speeds = {"A101": 12.6,        # a dictionary - speeds["A101"] is 12.6
+          "A102": 16.6}
+```
+
+The label is called the **key** (here, `"A101"`), and what it points at is
+the **value**. Curly brackets `{}` build a dictionary; square brackets still
+do the looking-up. You add or overwrite an entry by assigning to a key:
+
+```python
+speeds["B201"] = 23.8
+```
+
+This is the natural tool for **grouping**, which is why it appears the
+moment real data does. "All the speeds recorded on link A101" is a value you
+want to reach by the label `A101`, not by remembering that A101 happened to
+be the fourth link in the file.
+
+Now the two unfamiliar names from the demonstration:
+
+- `defaultdict(list)` is an ordinary dictionary with one convenience: if you
+  reach for a key that does not exist yet, it quietly creates it with an
+  empty list rather than raising an error. It exists so that the code can
+  say "append this speed to link A101's list" without first checking
+  whether A101 has been seen before.
+- `csv.DictReader` reads the file so that each row is a dictionary keyed by
+  the column names from the header. It is why the code says
+  `row["speed_kph"]` instead of `parts[3]` — the same value, reached by
+  column name rather than by counting positions. It is more readable, and it
+  does not break when somebody inserts a column.
+
+So the third line reads, in plain words: *take the speed from this row,
+convert it from text to a decimal number, and add it to the list of speeds
+belonging to this row's link.* That is the whole of the lazy analysis — and
+now you can see that it never checks what those speed values are, which is
+precisely how the `-1` got averaged in.
+
+#### DataFrames — a table you can question
+
+The task uses `pandas`, and pandas hands you a **DataFrame**: a table with
+named columns and numbered rows, much like one sheet of a spreadsheet. If
+you can read a spreadsheet, you already have the mental model; what follows
+is only the notation.
+
+```python
+import pandas as pd
+arrivals = pd.read_csv("arrivals.csv")   # the whole file, as a table
+```
+
+Six things account for most of the pandas you will be handed:
+
+| You see | Read it as |
+|---|---|
+| `len(arrivals)` | how many rows the table has |
+| `arrivals["dwell_s"]` | one named column |
+| `arrivals[arrivals["stop_id"] == "S001"]` | keep only the rows where this is true |
+| `arrivals["dwell_s"].mean()` | one number, summarising that column |
+| `arrivals.groupby("stop_id")["dwell_s"].mean()` | split into groups by stop, one mean per group |
+| `left.merge(right, on="trip_id")` | join two tables wherever they share a trip id |
+
+The filter line is worth reading twice, because it looks stranger than it
+is. The inner part, `arrivals["stop_id"] == "S001"`, asks the question of
+every row at once and produces a column of true and false answers. The outer
+square brackets then keep the rows that answered true. It is the `if` inside
+a loop from week 2, written in one line and applied to the whole table —
+exactly the relationship NumPy masks had to loops.
+
+#### The one habit that makes this safe
+
+Whenever a line transforms a table, ask the same question immediately:
+**how many rows do I have now, and is that the number I expected?**
+
+```python
+print(len(arrivals))          # before
+arrivals = arrivals.drop_duplicates()
+print(len(arrivals))          # after - what did that remove?
+```
+
+This is check 3 of the verification checklist, applied line by line. It is
+the difference between using pandas and being used by it: a filter that
+matches nothing gives you an empty table, and a merge on a key that repeats
+silently *multiplies* your rows — and both of those produce a tidy,
+professional, entirely wrong answer downstream. Neither announces itself.
+The row count is how you hear them.
+
+### 3. Specifying
 
 The demonstration fails because the request leaves everything important
 unsaid. Look at the difference concretely, using the week 2 data you already
@@ -97,7 +208,7 @@ than the specification would have. You have written specifications before —
 a design brief, a lab protocol, a survey instruction sheet. This is that
 skill, pointed at code.
 
-### 3. Verifying
+### 4. Verifying
 
 The full method is [`verification_checklist.md`](verification_checklist.md) —
 print it and keep it beside you; it is written to remain useful long after
@@ -127,7 +238,7 @@ yourself.
    a line does is always allowed, and asking until you actually understand
    is the skill. Skipping the line is the only wrong move.
 
-### 4. Working in the loop
+### 5. Working in the loop
 
 The failure pattern has a shape: ask for everything at once, receive two
 hundred lines, discover the output is wrong, and have no idea which of the
@@ -150,7 +261,7 @@ Measure to the point where the answer is *verified*, rather than merely
 generated, and they are much faster — this is the same edit → run → look
 loop from week 1, with generation added.
 
-### 5. Where this breaks
+### 6. Where this breaks
 
 Honest limits, each with the form it actually takes:
 

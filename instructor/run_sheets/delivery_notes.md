@@ -107,6 +107,20 @@ Priority order if you lose time:
    the drills will walk you through it." It reads well cold.
 4. Never cut stage 3. The verbose loop is the load-bearing wall.
 
+**`range` is now taught in the README, and it needed to be.** The README's
+loop section previously taught only `for count in counts` — looping over
+items — while the worked example uses `range` ten times, always in the
+harder position-based form. Students met `for index in range(len(counts))`
+in the live demonstration having never seen `range` at all. The new
+subsection, "The second way to write a loop: over positions", shows both
+forms side by side doing the same job and gives the three reasons the
+position form exists. Teach it before stage 3, or stage 3 lands on nothing.
+
+Slicing, `[0] * 24`, tuple unpacking and `None` are also new to the README,
+each for the same reason: a drill required it and nothing taught it. Without
+`[0] * 24`, a student following the material faithfully had to type
+twenty-four zeros by hand for drill 9 — and would know it was absurd.
+
 **Type stage 3 slowly and out loud.** Nested loops are where people fall off.
 Narrate the indices: *"we are now on hour eight; we are about to look at every
 row in the file and ask whether it is hour eight."*
@@ -164,8 +178,27 @@ experience. Students prompting in Chinese is fine and explicitly allowed;
 what you circulate to check is the same as for everyone — the row counts and
 the hand-worked case, not the language of the prompt.
 
-**Say the grading rule out loud, twice.** "The evidence is what is marked." Some
-of them will not believe you until they see the first mark come back.
+**Section 2 of the week 3 README ("Reading code you did not write") is new
+and exists because of a real gap.** Dictionaries are never taught anywhere
+in weeks 1–2, yet `lazy_analysis.py` — the very first code of the week —
+is built on `defaultdict` and `csv.DictReader`. Students could watch the
+demo but not read the line that causes the error. The section covers
+dictionaries and a reading-level model of DataFrames, using the demo's own
+three lines as the worked example, so run the demo cold first and then
+teach the section against it. Say plainly that it is reading level: they
+are not expected to write pandas from memory, only to hold the assistant to
+account.
+
+The habit to hammer in that section is the row count after every
+transformation. It is check 3 made concrete, and it is the single thing
+that catches both of the silent pandas failures — an empty filter and a
+merge on duplicated keys that multiplies rows.
+
+**Two things the task now defines that it previously did not:** median and
+the 90th percentile, including the instruction to state which percentile
+method they used. Students were being asked for numbers nobody had defined.
+The task also warns, without giving the answer, that de-duplication needs a
+tool they have not been taught and that they should ask for it by name.
 
 **Expect pushback**, usually one of:
 
