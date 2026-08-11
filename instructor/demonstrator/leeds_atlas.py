@@ -102,7 +102,7 @@ def chapter_2_safety():
     total = len(casualties)
     fatal = int((casualties["severity"] == "fatal").sum())
     axes.set_title("{0} people walking or cycling were hurt in two years\n"
-                   "{1}, STATS19 2022-23".format(total, PLACE_NAME))
+                   f"{PLACE_NAME}, STATS19 2022-23")
     axes.legend(frameon=False)
     name = save(figure, "chapter2_safety.png")
 
@@ -133,7 +133,7 @@ def chapter_3_deprivation():
     most = int(deciles.loc[1])
     share = 100.0 * most / len(imd)
     axes.set_title("{0:.0f}% of Leeds neighbourhoods are in England's most "
-                   "deprived decile\nLeeds district, IMD 2019".format(share))
+                   f"deprived decile\nLeeds district, IMD 2019")
     name = save(figure, "chapter3_deprivation.png")
 
     least = int(deciles.loc[10])
@@ -163,12 +163,12 @@ def chapter_4_car_free():
     colors = [ORANGE, BLUE, BLUE, BLUE]
     axes.bar(labels, shares.values, color=colors)
     for i, value in enumerate(shares.values):
-        axes.annotate("{0:.0f}%".format(value), (i, value),
+        axes.annotate(f"{value:.0f}%", (i, value),
                       ha="center", va="bottom", fontsize=10)
     axes.set_xlabel("Cars or vans available to the household")
     axes.set_ylabel("Share of households (%)")
     axes.set_title("{0:.0f}% of Leeds households have no car\n"
-                   "Leeds district, Census 2021 (TS045)".format(shares.iloc[0]))
+                   f"Leeds district, Census 2021 (TS045)")
     name = save(figure, "chapter4_car_free.png")
 
     no_car = int(by_category.iloc[0])
@@ -207,7 +207,7 @@ def chapter_5_cycling_potential():
     axes.set_ylabel("Modelled commuter cyclists (segment-sum, indicative)")
     multiple = sums[2] / sums[0]
     axes.set_title("The Go Dutch scenario is {0:.1f}x the observed baseline\n"
-                   "{1}, PCT commute model".format(multiple, PLACE_NAME))
+                   f"{PLACE_NAME}, PCT commute model")
     name = save(figure, "chapter5_cycling.png")
 
     text = (
@@ -235,7 +235,7 @@ def chapter_6_what_is_there():
     axes.grid(axis="y", alpha=0)
     axes.set_xlabel("Mapped locations in the patch")
     axes.set_title("What the stops serve: {0} everyday destinations\n"
-                   "{1}, OpenStreetMap".format(len(amenities), PLACE_NAME))
+                   f"{PLACE_NAME}, OpenStreetMap")
     name = save(figure, "chapter6_amenities.png")
 
     schools = int(counts.get("school", 0))
@@ -301,12 +301,12 @@ def chapter_7_weather():
 def build_report(chapters):
     parts = [
         "<!DOCTYPE html><html><head><meta charset='utf-8'>",
-        "<title>The {0} transport atlas</title>".format(PLACE_NAME),
+        f"<title>The {PLACE_NAME} transport atlas</title>",
         "<style>body{font-family:Georgia,serif;max-width:860px;margin:2em auto;"
         "padding:0 1em;color:#222;line-height:1.55}img{max-width:100%;border:1px "
         "solid #ddd}h1{font-size:1.7em}h2{margin-top:2.2em}p.meta{color:#666;"
         "font-size:0.9em}</style></head><body>",
-        "<h1>The {0} transport atlas</h1>".format(PLACE_NAME),
+        f"<h1>The {PLACE_NAME} transport atlas</h1>",
         "<p class='meta'>The instructor's demonstrator for the Your Patch "
         "project. Built entirely from the cached open-data fallbacks in "
         "<code>project/data/external/</code> &mdash; sources, dates, and "
@@ -315,9 +315,9 @@ def build_report(chapters):
         "(ODbL, &copy; OpenStreetMap contributors).</p>",
     ]
     for number, (title, figure_name, text) in enumerate(chapters, start=1):
-        parts.append("<h2>Chapter {0} &mdash; {1}</h2>".format(number, title))
-        parts.append("<img src='{0}' alt='{1}'>".format(figure_name, title))
-        parts.append("<p>{0}</p>".format(text))
+        parts.append(f"<h2>Chapter {number} &mdash; {title}</h2>")
+        parts.append(f"<img src='{figure_name}' alt='{title}'>")
+        parts.append(f"<p>{text}</p>")
     parts.append("</body></html>")
 
     path = os.path.join(OUTPUT, "index.html")
@@ -338,9 +338,9 @@ def main():
         chapter_7_weather(),
     ]
     report = build_report(chapters)
-    print("Atlas of {0}: {1} chapters".format(PLACE_NAME, len(chapters)))
+    print(f"Atlas of {PLACE_NAME}: {len(chapters)} chapters")
     for number, (title, figure_name, _) in enumerate(chapters, start=1):
-        print("  {0}. {1:<24} {2}".format(number, title, figure_name))
+        print(f"  {number}. {title:<24} {figure_name}")
     print("Report:", os.path.relpath(report, HERE))
 
 

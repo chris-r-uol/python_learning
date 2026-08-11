@@ -73,7 +73,7 @@ def load_and_clean(verbose=True):
         print("CLEANING REPORT")
         print("-" * 60)
         for key, value in report.items():
-            print("  {0:<28} {1}".format(key, value))
+            print(f"  {key:<28} {value}")
         print("  {0:<28} {1}".format("rows_out", len(arrivals)))
         print()
 
@@ -176,8 +176,8 @@ def core_analysis():
     print()
 
     top = worst.index[0]
-    print("  Ground truth: {0}".format(BOTTLENECK_TRUTH))
-    print("  Found:        {0}".format(top))
+    print(f"  Ground truth: {BOTTLENECK_TRUTH}")
+    print(f"  Found:        {top}")
     print("  MATCH" if top[0] == BOTTLENECK_TRUTH[0] else "  MISMATCH - investigate")
     print()
 

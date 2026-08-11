@@ -10,6 +10,13 @@ Either outcome is useful - you are not expected to fix it yourself.
 
 Written to be parseable by Python 2 as well as Python 3, so that students who
 run it with an old interpreter get a clear message instead of a SyntaxError.
+
+DO NOT convert this file to f-strings. The rest of the course uses them, and
+they are the better choice everywhere else - but the `f"..."` prefix did not
+exist before Python 3.6, so on any older interpreter this file would fail to
+parse and the student would see a SyntaxError instead of the message telling
+them their Python is too old. That message is the entire point of the file.
+Keep .format() here.
 """
 
 import os

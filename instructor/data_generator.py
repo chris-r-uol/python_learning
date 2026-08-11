@@ -39,7 +39,7 @@ def write_csv(path, header, rows):
         writer = csv.writer(handle)
         writer.writerow(header)
         writer.writerows(rows)
-    print("  {0:<48} {1:>8} rows".format(os.path.relpath(path, HERE), len(rows)))
+    print(f"  {os.path.relpath(path, HERE):<48} {len(rows):>8} rows")
 
 
 # ---------------------------------------------------------------------------
@@ -116,7 +116,7 @@ def make_link_speeds():
             if rng.random() < 0.15:
                 observed = -1.0
             rows.append([
-                "2026-04-{0:02d}".format(day),
+                f"2026-04-{day:02d}",
                 link,
                 hour,
                 round(float(observed), 1),
@@ -156,7 +156,7 @@ def make_corridor(n_days=28, start=datetime(2026, 4, 1)):
     lat, lon = 52.4820, -1.8990
     for index, name in enumerate(STOP_NAMES):
         stop_rows.append([
-            "S{0:03d}".format(index + 1),
+            f"S{index + 1:03d}",
             name,
             round(lat + index * 0.0061 + float(rng.normal(0, 0.0004)), 6),
             round(lon + index * 0.0028 + float(rng.normal(0, 0.0004)), 6),
@@ -168,9 +168,9 @@ def make_corridor(n_days=28, start=datetime(2026, 4, 1)):
     lengths = rng.uniform(380, 940, n_stops - 1)
     for index in range(n_stops - 1):
         segment_rows.append([
-            "SEG{0:02d}".format(index + 1),
-            "S{0:03d}".format(index + 1),
-            "S{0:03d}".format(index + 2),
+            f"SEG{index + 1:02d}",
+            f"S{index + 1:03d}",
+            f"S{index + 2:03d}",
             int(round(lengths[index])),
         ])
 
@@ -179,7 +179,7 @@ def make_corridor(n_days=28, start=datetime(2026, 4, 1)):
 
     # --- arrivals ------------------------------------------------------
     arrival_rows = []
-    vehicles = ["BUS_{0:04d}".format(number) for number in range(2830, 2854)]
+    vehicles = [f"BUS_{number:04d}" for number in range(2830, 2854)]
     trip_counter = 0
 
     for offset in range(n_days):
@@ -201,7 +201,7 @@ def make_corridor(n_days=28, start=datetime(2026, 4, 1)):
         for direction in ("outbound", "inbound"):
             for departure in departures:
                 trip_counter += 1
-                trip_id = "T{0:06d}".format(trip_counter)
+                trip_id = f"T{trip_counter:06d}"
                 vehicle = vehicles[trip_counter % len(vehicles)]
 
                 scheduled = float(departure) * 60.0     # seconds past midnight
@@ -231,7 +231,7 @@ def make_corridor(n_days=28, start=datetime(2026, 4, 1)):
                         scheduled += base_run * (1.0 + 0.22 * profile[hour])
                         actual += run
 
-                    stop_id = "S{0:03d}".format(stop_index + 1)
+                    stop_id = f"S{stop_index + 1:03d}"
                     name = STOP_NAMES[stop_index]
 
                     # DEFECT: stop renamed part-way through the period.
@@ -282,7 +282,7 @@ def make_corridor(n_days=28, start=datetime(2026, 4, 1)):
                 expected = profile[hour] * weights[stop_index] * 26
                 boarding_rows.append([
                     day.strftime("%Y-%m-%d"),
-                    "S{0:03d}".format(stop_index + 1),
+                    f"S{stop_index + 1:03d}",
                     hour,
                     int(rng.poisson(max(expected, 0.2))),
                 ])
@@ -301,7 +301,7 @@ def seconds_to_clock(seconds):
 
 
 def main():
-    print("Generating course datasets (seed {0})".format(SEED))
+    print(f"Generating course datasets (seed {SEED})")
     print("-" * 62)
 
     write_csv(

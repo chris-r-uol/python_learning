@@ -46,22 +46,23 @@ def main():
         code, stdout, stderr = run(filename)
 
         if code == 0 and stdout == expected_output:
-            print("  PASS   {0:<16} {1}".format(filename, stdout))
+            print(f"  PASS   {filename:<16} {stdout}")
             passed += 1
         elif code == 0:
-            print("  WRONG  {0:<16} it runs, but the answer is not right".format(filename))
-            print("         got:      {0}".format(stdout or "(nothing printed)"))
-            print("         expected: {0}".format(expected_output))
+            print(f"  WRONG  {filename:<16} it runs, but the answer is not right")
+            shown = stdout or "(nothing printed)"
+            print(f"         got:      {shown}")
+            print(f"         expected: {expected_output}")
         else:
             last_line = stderr.splitlines()[-1] if stderr else "(no error text)"
             still_original = expected_error in stderr
             label = "STILL BROKEN" if still_original else "NEW ERROR"
-            print("  FAIL   {0:<16} {1}".format(filename, label))
-            print("         {0}".format(last_line))
+            print(f"  FAIL   {filename:<16} {label}")
+            print(f"         {last_line}")
         print()
 
     print("=" * 64)
-    print("{0} of {1} fixed.".format(passed, len(EXPECTED)))
+    print(f"{passed} of {len(EXPECTED)} fixed.")
     if passed == len(EXPECTED):
         print("All six fixed. You can now read a traceback, and that is most")
         print("of debugging.")

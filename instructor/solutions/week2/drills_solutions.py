@@ -286,13 +286,13 @@ def main():
                 name, type(error).__name__, error))
             continue
         if result:
-            print("  PASS   {0}".format(name))
+            print(f"  PASS   {name}")
             passed += 1
         else:
-            print("  FAIL   {0:<22} runs, but gives the wrong answer".format(name))
+            print(f"  FAIL   {name:<22} runs, but gives the wrong answer")
 
     print("-" * 60)
-    print("{0} of {1} passed.".format(passed, total))
+    print(f"{passed} of {total} passed.")
     if passed == total:
         print("All twelve. You have the four moves: store, decide, repeat, package.")
     elif passed >= 9:
