@@ -24,16 +24,16 @@ with open("data/link_speeds.csv") as handle:
 
 print("Average speed by link (missing observations excluded)")
 print("-" * 58)
-print("{:<10} {:>10} {:>8} {:>10} {:>12}".format(
-    "Link", "Mean kph", "N used", "N missing", "% missing"))
+print(f"{'Link':<10} {'Mean kph':>10} {'N used':>8} "
+      f"{'N missing':>10} {'% missing':>12}")
 
 for link in sorted(speeds_by_link):
     values = speeds_by_link[link]
     missing = missing_by_link[link]
     total = len(values) + missing
-    print("{:<10} {:>10.1f} {:>8} {:>10} {:>11.0f}%".format(
-        link, sum(values) / len(values), len(values), missing,
-        100 * missing / total))
+    mean_speed = sum(values) / len(values)
+    print(f"{link:<10} {mean_speed:>10.1f} {len(values):>8} "
+          f"{missing:>10} {100 * missing / total:>11.0f}%")
 
 print()
 print("Note: speed_kph = -1 is the sensor's code for 'no observation'.")

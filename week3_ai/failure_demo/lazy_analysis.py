@@ -26,7 +26,7 @@ with open("data/link_speeds.csv") as handle:
 
 print("Average speed by link")
 print("-" * 34)
-print("{:<10} {:>10} {:>10}".format("Link", "Mean kph", "N obs"))
+print(f"{'Link':<10} {'Mean kph':>10} {'N obs':>10}")
 for link in sorted(speeds_by_link):
     values = speeds_by_link[link]
-    print("{:<10} {:>10.1f} {:>10}".format(link, sum(values) / len(values), len(values)))
+    print(f"{link:<10} {sum(values) / len(values):>10.1f} {len(values):>10}")

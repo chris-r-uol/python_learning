@@ -37,7 +37,7 @@ manifest = []
 
 def record(filename, source, licence, note):
     manifest.append((filename, source, licence, note))
-    print("  -> {0}   {1}".format(filename, note))
+    print(f"  -> {filename}   {note}")
     print()
 
 
@@ -52,13 +52,13 @@ def fetch_naptan():
     print("NaPTAN (area 450)")
     url = "https://naptan.api.dft.gov.uk/v1/access-nodes?dataFormat=csv&atcoAreaCodes=450"
     stops = pd.read_csv(url, low_memory=False)
-    print("  West Yorkshire stops downloaded  {0:>7}".format(len(stops)))
+    print(f"  West Yorkshire stops downloaded  {len(stops):>7}")
 
     stops = stops[stops["Status"] == "active"]
-    print("  active                           {0:>7}".format(len(stops)))
+    print(f"  active                           {len(stops):>7}")
 
     stops = stops[stops["Latitude"].between(S, N) & stops["Longitude"].between(W, E)]
-    print("  inside the patch                 {0:>7}".format(len(stops)))
+    print(f"  inside the patch                 {len(stops):>7}")
 
     keep = ["ATCOCode", "CommonName", "LocalityName", "StopType",
             "Longitude", "Latitude"]
@@ -67,7 +67,7 @@ def fetch_naptan():
     record("naptan_stops.csv",
            "NaPTAN API, atcoAreaCodes=450 (West Yorkshire)",
            "OGL v3, (c) Crown copyright",
-           "{0} active stops in the patch".format(len(stops)))
+           f"{len(stops)} active stops in the patch")
 
 
 def fetch_imd():
@@ -76,11 +76,11 @@ def fetch_imd():
     url = ("https://assets.publishing.service.gov.uk/media/5dc407b440f0b6379a7acc8d/"
            "File_7_-_All_IoD2019_Scores__Ranks__Deciles_and_Population_Denominators_3.csv")
     imd = pd.read_csv(url)
-    print("  England LSOAs downloaded         {0:>7}".format(len(imd)))
+    print(f"  England LSOAs downloaded         {len(imd):>7}")
 
     lad_col = "Local Authority District code (2019)"
     leeds = imd[imd[lad_col] == "E08000035"]
-    print("  Leeds district LSOAs             {0:>7}".format(len(leeds)))
+    print(f"  Leeds district LSOAs             {len(leeds):>7}")
 
     keep = [c for c in imd.columns if c.startswith(("LSOA", "Local Authority"))
             or "Index of Multiple Deprivation" in c]
@@ -89,7 +89,7 @@ def fetch_imd():
     record("imd2019_leeds.csv",
            "MHCLG, English Indices of Deprivation 2019, File 7",
            "OGL v3",
-           "{0} LSOAs (Leeds district; 2011 LSOA codes)".format(len(leeds)))
+           f"{len(leeds)} LSOAs (Leeds district; 2011 LSOA codes)")
 
 
 def fetch_census():
@@ -98,7 +98,7 @@ def fetch_census():
     url = ("https://www.nomisweb.co.uk/api/v01/dataset/NM_2063_1.data.csv"
            "?date=latest&geography=E08000035TYPE151&measures=20100")
     census = pd.read_csv(url)
-    print("  rows downloaded (Leeds LSOAs)    {0:>7}".format(len(census)))
+    print(f"  rows downloaded (Leeds LSOAs)    {len(census):>7}")
 
     keep = ["GEOGRAPHY_CODE", "GEOGRAPHY_NAME", "C2021_CARS_5_NAME", "OBS_VALUE"]
     out = os.path.join(EXTERNAL, "census_car_availability.csv")
@@ -106,7 +106,7 @@ def fetch_census():
     record("census_car_availability.csv",
            "ONS Census 2021 table TS045 via the Nomis API (dataset NM_2063_1)",
            "OGL v3",
-           "{0} rows; 2021 LSOA codes; households by cars available".format(len(census)))
+           f"{len(census)} rows; 2021 LSOA codes; households by cars available")
 
 
 def fetch_pct():
@@ -117,7 +117,7 @@ def fetch_pct():
     response = requests.get(url, headers=HEADERS, timeout=300)
     response.raise_for_status()
     network = response.json()
-    print("  West Yorkshire segments          {0:>7}".format(len(network["features"])))
+    print(f"  West Yorkshire segments          {len(network['features']):>7}")
 
     fields = ["bicycle", "govtarget_slc", "dutch_slc"]
     kept = []
@@ -139,7 +139,7 @@ def fetch_pct():
                 },
                 "properties": {f: feature["properties"].get(f) for f in fields},
             })
-    print("  segments touching the patch      {0:>7}".format(len(kept)))
+    print(f"  segments touching the patch      {len(kept):>7}")
 
     out = os.path.join(EXTERNAL, "pct_rnet.geojson")
     with open(out, "w") as handle:
@@ -150,7 +150,7 @@ def fetch_pct():
     record("pct_rnet.geojson",
            "Propensity to Cycle Tool, commute route network, west-yorkshire",
            "OGL / CC-BY (see pct.bike)",
-           "{0} segments touching the patch".format(len(kept)))
+           f"{len(kept)} segments touching the patch")
 
 
 def fetch_osm():
@@ -172,7 +172,7 @@ out center tags;
                              data={"data": query}, headers=HEADERS, timeout=180)
     response.raise_for_status()
     elements = response.json()["elements"]
-    print("  elements returned                {0:>7}".format(len(elements)))
+    print(f"  elements returned                {len(elements):>7}")
 
     features = []
     for element in elements:
@@ -192,7 +192,7 @@ out center tags;
                          "coordinates": [round(lon, 6), round(lat, 6)]},
             "properties": {"category": category, "name": tags.get("name", "")},
         })
-    print("  usable point features            {0:>7}".format(len(features)))
+    print(f"  usable point features            {len(features):>7}")
 
     out = os.path.join(EXTERNAL, "osm_amenities.geojson")
     with open(out, "w") as handle:
@@ -203,7 +203,7 @@ out center tags;
     record("osm_amenities.geojson",
            "OpenStreetMap contributors, via the Overpass API",
            "ODbL - attribution required",
-           "{0} amenities in six categories".format(len(features)))
+           f"{len(features)} amenities in six categories")
 
 
 def fetch_weather():
@@ -220,11 +220,11 @@ def fetch_weather():
     with open(out, "w") as handle:
         handle.write(response.text)
     rows = response.text.count("\n")
-    print("  lines written                    {0:>7}".format(rows))
+    print(f"  lines written                    {rows:>7}")
     record("weather_2025.csv",
            "open-meteo.com historical archive, hourly, centre of the patch",
            "CC-BY 4.0 - attribution required",
-           "hourly precipitation and temperature for 2025 (~{0} lines)".format(rows))
+           f"hourly precipitation and temperature for 2025 (~{rows} lines)")
 
 
 def write_manifest():
@@ -265,7 +265,7 @@ def main():
     fetch_weather()
     write_manifest()
     print()
-    print("All fallbacks written to {0}".format(os.path.relpath(EXTERNAL, HERE)))
+    print(f"All fallbacks written to {os.path.relpath(EXTERNAL, HERE)}")
 
 
 if __name__ == "__main__":

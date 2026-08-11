@@ -43,8 +43,11 @@ header = lines[0]
 # header. That is the actual data.
 data_lines = lines[1:]
 
-print("Read {} rows from {}".format(len(data_lines), DATA_FILE))
-print("Columns are: {}".format(header.strip()))
+# An f-string: put `f` before the quotes, and anything inside {curly braces}
+# is worked out and dropped into the text. It saves building sentences with +
+# and converting numbers to text by hand.
+print(f"Read {len(data_lines)} rows from {DATA_FILE}")
+print(f"Columns are: {header.strip()}")
 print()
 
 
@@ -91,18 +94,21 @@ for line in data_lines:
 # 4. Report what we found.
 # ---------------------------------------------------------------------------
 
-print("Direction:        {}".format(DIRECTION))
-print("Busy threshold:   {} vehicles/hour".format(BUSY_THRESHOLD))
-print("Total vehicles:   {}".format(total_vehicles))
-print("Busy hours found: {}".format(len(busy_hours)))
+print(f"Direction:        {DIRECTION}")
+print(f"Busy threshold:   {BUSY_THRESHOLD} vehicles/hour")
+print(f"Total vehicles:   {total_vehicles}")
+print(f"Busy hours found: {len(busy_hours)}")
 print()
 
 if len(busy_hours) == 0:
     print("No hours were above the threshold. Try lowering BUSY_THRESHOLD.")
 else:
-    print("{:<12} {:>5} {:>8}".format("Date", "Hour", "Count"))
+    # The part after the colon controls the layout: <12 means "pad to 12
+    # characters, left-aligned", >5 means "pad to 5, right-aligned". That is
+    # what lines the columns up underneath each other.
+    print(f"{'Date':<12} {'Hour':>5} {'Count':>8}")
     for date, hour, count in busy_hours:
-        print("{:<12} {:>5} {:>8}".format(date, hour, count))
+        print(f"{date:<12} {hour:>5} {count:>8}")
 
 
 # ---------------------------------------------------------------------------

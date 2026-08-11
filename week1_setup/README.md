@@ -290,6 +290,47 @@ how many repetitions you need. Its one hazard is worth knowing: if the
 condition never becomes false, the program runs forever, and you stop it
 with **Ctrl-C**.
 
+#### Printing values inside a sentence
+
+Programs constantly need to report a number inside a line of text. Joining
+the pieces by hand is awkward, because text and numbers cannot simply be
+added together:
+
+```python
+print("Total: " + total)      # TypeError - you cannot add a number to text
+```
+
+Python's answer is the **f-string**. Put the letter `f` immediately before
+the opening quotation mark, and anything you write inside `{curly braces}`
+is worked out and dropped into the text:
+
+```python
+total = 32083
+print(f"Total: {total}")              # Total: 32083
+print(f"Half of it is {total / 2}")   # Half of it is 16041.5
+```
+
+The `f` stands for *formatted*. Anything can go inside the braces — a name,
+a calculation, a function call — and the result is converted to text for
+you. You will see this in every script in this course.
+
+There is a second part you will meet in the scripts, after a colon, which
+controls the layout rather than the value:
+
+```python
+print(f"{count:>8}")      # pad to 8 characters, right-aligned
+print(f"{speed:.1f}")     # show 1 decimal place
+print(f"{hour:02d}")      # pad a whole number to 2 digits, so 8 becomes 08
+```
+
+Those are worth recognising rather than memorising: they are how a script
+lines its output up into readable columns. Look them up when you need one.
+
+> You may also see `"Total: {}".format(total)` in older code, which does the
+> same job in an older style. One file in this course still uses it —
+> `check_setup.py`, deliberately, because f-strings do not work on very old
+> versions of Python and that file has to run on them to tell you so.
+
 #### Putting it together
 
 Those four ideas are almost the whole of the script you are about to read: a

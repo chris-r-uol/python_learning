@@ -53,14 +53,14 @@ CASUALTY_TYPE = {0: "pedestrian", 1: "cyclist"}
 def fetch_year(year):
     """Download one year of collisions and casualties. Returns two frames."""
     collisions = pd.read_csv(
-        "{0}/dft-road-casualty-statistics-collision-{1}.csv".format(BASE, year),
+        f"{BASE}/dft-road-casualty-statistics-collision-{year}.csv",
         usecols=["collision_index", "longitude", "latitude",
                  "collision_severity", "speed_limit", "date"],
         dtype={"collision_index": str},
         low_memory=False,
     )
     casualties = pd.read_csv(
-        "{0}/dft-road-casualty-statistics-casualty-{1}.csv".format(BASE, year),
+        f"{BASE}/dft-road-casualty-statistics-casualty-{year}.csv",
         usecols=["collision_index", "casualty_severity", "casualty_type"],
         dtype={"collision_index": str},
         low_memory=False,
@@ -70,18 +70,18 @@ def fetch_year(year):
 
 def main():
     south, west, north, east = BBOX
-    print("Patch: {0}".format(PLACE_NAME))
-    print("  south {0:.4f}  north {1:.4f}".format(south, north))
-    print("  west  {0:.4f}  east  {1:.4f}".format(west, east))
+    print(f"Patch: {PLACE_NAME}")
+    print(f"  south {south:.4f}  north {north:.4f}")
+    print(f"  west  {west:.4f}  east  {east:.4f}")
     print()
 
     features = []
 
     for year in YEARS:
-        print("STATS19 {0}".format(year))
+        print(f"STATS19 {year}")
         collisions, casualties = fetch_year(year)
-        print("  collisions downloaded (GB)      {0:>8}".format(len(collisions)))
-        print("  casualties downloaded (GB)      {0:>8}".format(len(casualties)))
+        print(f"  collisions downloaded (GB)      {len(collisions):>8}")
+        print(f"  casualties downloaded (GB)      {len(casualties):>8}")
 
         # Coordinates arrive as text and a few rows have none. Coercing to a
         # number turns those into NaN rather than crashing - which means they
@@ -90,13 +90,13 @@ def main():
         collisions["longitude"] = pd.to_numeric(collisions["longitude"], errors="coerce")
         collisions["latitude"] = pd.to_numeric(collisions["latitude"], errors="coerce")
         no_coords = int(collisions["longitude"].isna().sum())
-        print("  collisions with no coordinates  {0:>8}".format(no_coords))
+        print(f"  collisions with no coordinates  {no_coords:>8}")
 
         in_box = collisions[
             collisions["latitude"].between(south, north)
             & collisions["longitude"].between(west, east)
         ]
-        print("  collisions inside the patch     {0:>8}".format(len(in_box)))
+        print(f"  collisions inside the patch     {len(in_box):>8}")
 
         # Only pedestrians and cyclists - the people street design affects
         # most, and the atlas's safety chapter is about them.
@@ -106,7 +106,7 @@ def main():
         # expect, the join key is wrong, and a wrong join key is the single
         # most common way to get a confident wrong answer out of pandas.
         joined = in_box.merge(active, on="collision_index", how="inner")
-        print("  active-mode casualties in patch {0:>8}".format(len(joined)))
+        print(f"  active-mode casualties in patch {len(joined):>8}")
         print()
 
         for _, row in joined.iterrows():
@@ -136,8 +136,8 @@ def main():
             "features": features,
         }, handle, indent=1)
 
-    print("TOTAL active-mode casualties kept: {0}".format(len(features)))
-    print("Written to {0}".format(os.path.relpath(OUT, HERE)))
+    print(f"TOTAL active-mode casualties kept: {len(features)}")
+    print(f"Written to {os.path.relpath(OUT, HERE)}")
     print()
     print("Before you use this: sanity-check the total against the size of")
     print("your patch. A town-sized box with two casualties in two years, or")

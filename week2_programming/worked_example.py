@@ -115,8 +115,10 @@ for hour_of_day in range(24):
 print("STAGE 3")
 for hour_of_day in range(24):
     bar = "#" * int(average_by_hour[hour_of_day] / 40)
-    print("  {0:02d}:00  {1:7.1f}  {2}".format(
-        hour_of_day, average_by_hour[hour_of_day], bar))
+    # :02d pads the hour to two digits (so 8 prints as 08), and :7.1f gives
+    # a number 7 characters wide with 1 decimal place, which lines the
+    # column up.
+    print(f"  {hour_of_day:02d}:00  {average_by_hour[hour_of_day]:7.1f}  {bar}")
 print()
 
 
@@ -153,10 +155,10 @@ northbound = hourly_average("northbound")
 southbound = hourly_average("southbound")
 
 print("STAGE 4")
-print("  northbound peak hour: {0:02d}:00  ({1:.0f} veh/h)".format(
-    peak_hour(northbound), max(northbound)))
-print("  southbound peak hour: {0:02d}:00  ({1:.0f} veh/h)".format(
-    peak_hour(southbound), max(southbound)))
+print(f"  northbound peak hour: {peak_hour(northbound):02d}:00  "
+      f"({max(northbound):.0f} veh/h)")
+print(f"  southbound peak hour: {peak_hour(southbound):02d}:00  "
+      f"({max(southbound):.0f} veh/h)")
 print()
 
 # Check that stage 4 agrees with stage 3. If they disagree, one of them is
@@ -194,8 +196,8 @@ print("  peak hour:", int(numpy_average.argmax()))
 # The standard deviation at the peak is surprisingly large. That is not a
 # mistake - it is telling you that the days in this file are not all alike.
 # Task 2 will find out why.
-print("  std dev at peak: {0:.0f} veh/h".format(
-    counts_array[mask & (hours_array == numpy_average.argmax())].std()))
+peak_counts = counts_array[mask & (hours_array == numpy_average.argmax())]
+print(f"  std dev at peak: {peak_counts.std():.0f} veh/h")
 print()
 
 
@@ -217,7 +219,7 @@ axes.plot(range(24), southbound, color=ORANGE, linewidth=2, label="Southbound")
 peak = peak_hour(northbound)
 axes.plot(peak, northbound[peak], "o", color=BLUE, markersize=9)
 axes.annotate(
-    "AM peak {0:02d}:00\n{1:.0f} veh/h".format(peak, northbound[peak]),
+    f"AM peak {peak:02d}:00\n{northbound[peak]:.0f} veh/h",
     xy=(peak, northbound[peak]),
     xytext=(peak + 1.4, northbound[peak] - 210),
     fontsize=9,

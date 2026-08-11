@@ -88,8 +88,8 @@ def main():
         weekday.index(max(weekday)), max(weekday)))
     print("  weekend peak hour:  {0:02d}:00 at {1:.0f} veh/h".format(
         weekend.index(max(weekend)), max(weekend)))
-    print("  weekday 08:00:      {0:.0f} veh/h".format(weekday[8]))
-    print("  weekend 08:00:      {0:.0f} veh/h".format(weekend[8]))
+    print(f"  weekday 08:00:      {weekday[8]:.0f} veh/h")
+    print(f"  weekend 08:00:      {weekend[8]:.0f} veh/h")
 
 
 if __name__ == "__main__":

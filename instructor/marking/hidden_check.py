@@ -50,14 +50,14 @@ def check_cleaned(path):
     # 1. Duplicates removed - the single most common miss.
     no_dupes = not frame.duplicated().any()
     score += check("no exact duplicate rows remain", no_dupes,
-                   "" if no_dupes else "{0} left".format(int(frame.duplicated().sum())))
+                   "" if no_dupes else f"{int(frame.duplicated().sum())} left")
 
     # 2. Row count in the right region. Allow latitude: groups may legitimately
     #    also drop the ghost-vehicle rows or the negative-dwell rows.
     rows = len(frame)
     plausible = 90000 <= rows <= 95000
     score += check("row count in plausible cleaned range", plausible,
-                   "{0} rows (expected 90k-95k)".format(rows))
+                   f"{rows} rows (expected 90k-95k)")
 
     # 3. The renamed stop was reconciled, not left split.
     if "stop_id" in frame.columns and "stop_name" in frame.columns:
@@ -72,7 +72,7 @@ def check_cleaned(path):
     if "dwell_s" in frame.columns:
         remaining = int((pd.to_numeric(frame["dwell_s"], errors="coerce") < 0).sum())
         score += check("negative dwell times handled", remaining == 0,
-                       "" if remaining == 0 else "{0} remain".format(remaining))
+                       "" if remaining == 0 else f"{remaining} remain")
     else:
         score += check("negative dwell times handled", True, "column dropped - acceptable")
 
@@ -90,7 +90,7 @@ def check_finding(segment, hour, direction):
     score += check("worst period", int(hour) in TRUTH["worst_hours"],
                    "said {0}, truth {1}".format(hour, sorted(TRUTH["worst_hours"])))
     score += check("direction", direction == TRUTH["worst_direction"],
-                   "said {0}".format(direction))
+                   f"said {direction}")
     print()
     return score
 
@@ -100,7 +100,7 @@ def main():
         print(__doc__)
         print("Ground truth:")
         for key, value in TRUTH.items():
-            print("  {0:<30} {1}".format(key, value))
+            print(f"  {key:<30} {value}")
         return
 
     path = sys.argv[1]
@@ -112,7 +112,7 @@ def main():
     print("HIDDEN CHECK:", os.path.basename(path))
     print("=" * 70)
     score = check_cleaned(path)
-    print("Cleaning score: {0}/4".format(score))
+    print(f"Cleaning score: {score}/4")
     print()
     print("Run check_finding(segment, hour, direction) against their stated answer.")
 
