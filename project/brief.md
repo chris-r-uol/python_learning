@@ -125,6 +125,8 @@ Conclusions about the people who live there are not yours to draw.
 
 The studio sessions exist for exactly this work — the instructor and the TA
 are there to unblock you, and the ten-minute rule from week 1 still applies.
-The assistant is your production tool; `data_sources.md` lists every trap we
-already know about; and if an API is down, the repository carries cached
-fallback copies of every source — use them and note the date.
+The assistant is your production tool — any capable one, in any language you
+prefer (see [`setup/chinese-services.md`](../setup/chinese-services.md));
+`data_sources.md` lists every trap we already know about; and if an API is
+down, the repository carries cached fallback copies of every source — use
+them and note the date.

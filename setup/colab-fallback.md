@@ -13,7 +13,10 @@ Two things to say clearly at the start:
   Read them once so they do not surprise you.
 
 You need a Google account. If you do not have one or cannot use one, tell us
-and we will sort something out.
+and we will sort something out — and note that Colab does not work from
+mainland China, so if you expect to spend part of the course there, the
+local setup is the resilient choice (see
+[`chinese-services.md`](chinese-services.md)).
 
 ## 1. Open Colab
 

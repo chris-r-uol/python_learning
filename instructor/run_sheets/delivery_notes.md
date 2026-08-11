@@ -110,6 +110,14 @@ correctly, you need a harder example — the pattern to reach for is a conventio
 that lives outside the file. The renamed stop in the project data works, or feed
 it distances in metres and ask for a speed in kph.
 
+**Expect a substantial part of the cohort on Chinese assistants** — DeepSeek
+and Kimi above all (see `setup/chinese-services.md`, which sanctions them).
+The failure demo reproduces on them just as reliably, and it is worth
+re-running it on DeepSeek too before the session so you can say so from
+experience. Students prompting in Chinese is fine and explicitly allowed;
+what you circulate to check is the same as for everyone — the row counts and
+the hand-worked case, not the language of the prompt.
+
 **Say the grading rule out loud, twice.** "The evidence is what is marked." Some
 of them will not believe you until they see the first mark come back.
 

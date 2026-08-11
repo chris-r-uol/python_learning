@@ -16,6 +16,10 @@ optional: the first session builds on it.
    - Work laptop with no admin rights → [`setup/locked-down-laptop.md`](setup/locked-down-laptop.md)
    - Nothing working → [`setup/colab-fallback.md`](setup/colab-fallback.md)
 
+   If you prefer Chinese services — Baidu, DeepSeek, WeChat sign-in, Chinese
+   documentation — read [`setup/chinese-services.md`](setup/chinese-services.md)
+   as well. Everything in this course works with them.
+
 2. At the end of the guide you will run the setup check. From this folder, with
    your virtual environment active:
 

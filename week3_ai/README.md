@@ -193,3 +193,10 @@ you to repeat exactly this pattern, at volume, on your own project.
 Anything — including pandas, a library you have not been taught. Working out
 how to use an unfamiliar library safely, with the assistant's help and your
 own checks, is precisely this week's skill.
+
+"Anything" includes your choice of assistant. The demonstrations use the
+university's licensed one, but the method is identical with any capable
+service — including Chinese assistants such as DeepSeek or Kimi, and
+prompting in Chinese. See
+[`setup/chinese-services.md`](../setup/chinese-services.md). The one thing
+that never changes, whichever you use, is the checklist.
