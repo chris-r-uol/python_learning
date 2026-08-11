@@ -143,6 +143,28 @@ last week. Zero-based counting feels wrong for about a week; the way to hold
 it is that the index measures *how far from the start* an item is, and the
 first item is zero steps away. `len(counts)` gives the length, 4.
 
+**Taking a run of items — slicing.** Square brackets with a colon inside
+give you a section of a list rather than one item:
+
+```python
+counts[1:3]     # [22, 24]  - from position 1, up to but NOT including 3
+counts[1:]      # [22, 24, 29]  - from position 1 to the end
+counts[:2]      # [52, 22]  - from the start up to position 2
+```
+
+The rule that catches everybody once: the first number is included and the
+second is not. So `counts[1:3]` gives you two items, not three, and if you
+want positions 7 to 9 *inclusive* you must write `counts[7:10]`. This is the
+notation behind `lines[1:]` in last week's script — "everything except the
+header row" — and one of today's drills is built on it.
+
+**Making a list of repeated values.** Multiplying a list repeats it, which
+is the usual way to start a set of counters at zero:
+
+```python
+[0] * 24        # a list of twenty-four zeros
+```
+
 A `for` loop runs a block once for each item:
 
 ```python
@@ -176,6 +198,98 @@ The same shape, with an `if` inside, produces the second great pattern:
 append each item that passes the test. Counting matches, summing matches,
 collecting matches — all of them are this one pattern wearing different
 clothes, and you will write all three in the drills.
+
+#### The second way to write a loop: over positions
+
+Everything above loops over *items*. There is a second form, which loops
+over *positions*, and you need it because the worked example uses it
+throughout — and because some jobs are impossible without it.
+
+`range` produces a run of whole numbers:
+
+```python
+range(24)          # 0, 1, 2, ... 23   - twenty-four numbers, starting at 0
+range(7, 10)       # 7, 8, 9           - starts at 7, stops before 10
+range(0, 24, 2)    # 0, 2, 4, ... 22   - every second number
+```
+
+Note that `range(24)` stops *before* 24, exactly as slicing does. That is
+not a coincidence: Python is consistent about "up to, but not including",
+and once you expect it everywhere it stops surprising you.
+
+Put a `range` in a `for` loop and the loop variable holds a position rather
+than a value:
+
+```python
+for hour_of_day in range(24):        # hour_of_day is 0, then 1, then 2 ...
+    print(hour_of_day)
+```
+
+These two loops do exactly the same thing:
+
+```python
+for count in counts:                 # over items
+    total = total + count
+
+for index in range(len(counts)):     # over positions
+    total = total + counts[index]
+```
+
+The second is longer, so why would anyone write it? Because the position is
+sometimes the thing you actually need:
+
+- **When the position is the answer.** "Which hour was busiest?" is asking
+  for a position, not a value.
+- **When you must walk two lists together.** If `hours[i]` and `counts[i]`
+  describe the same row of the file, then one index reaches into both. The
+  worked example does this constantly, because it reads the CSV into four
+  parallel lists.
+- **When you are not walking a list at all.** `for hour_of_day in range(24)`
+  loops over the twenty-four hours of a day, whether or not any list of that
+  length exists.
+
+`range(len(counts))` reads awkwardly at first. Take it in two steps:
+`len(counts)` is 4, so `range(len(counts))` is `range(4)`, which is 0, 1, 2,
+3 — every valid position in the list, and never one past the end. Written
+that way it stays correct even when the list changes length, which is why it
+is preferred over typing the number.
+
+**Use the item form when you can and the position form when you must.** If
+you only need each value, `for count in counts` is clearer and harder to get
+wrong.
+
+#### Rows that hold several values at once
+
+Data often arrives as pairs or rows rather than single numbers — a list
+where every item is itself a small group of values:
+
+```python
+rows = [(8, 100), (8, 50), (17, 90)]     # (hour, count) pairs
+```
+
+Those round brackets make a **tuple**, which for our purposes behaves like a
+list you do not intend to change: `rows[0]` is the pair `(8, 100)`, and
+`rows[0][0]` is `8`. You can therefore reach the parts by position, exactly
+as with a list:
+
+```python
+for row in rows:
+    hour = row[0]
+    count = row[1]
+```
+
+Python also lets you name the parts in the `for` line itself, which does the
+same thing more readably:
+
+```python
+for hour, count in rows:
+    ...
+```
+
+This is called **unpacking**, and you have already seen it: last week's
+`first_script.py` ends with `for date, hour, count in busy_hours:`, taking
+apart three-value rows in exactly this way. Either form is fine; use
+whichever you find clearer.
 
 For the spreadsheet-minded: a list is a column, and a loop is what "fill
 this formula down the column" has been doing for you all along. Python makes
@@ -218,6 +332,34 @@ sends the answer back; and the call itself — the whole expression
 `hourly_average("northbound")` — *becomes* that returned value, which is
 then stored under `northbound`. Same tested code, both directions, one place
 to fix anything.
+
+**When there is no answer: `None`.** Sometimes a function is asked for
+something that does not exist — the average of an empty list, the busiest
+hour of a file with no rows. Returning `0` would be a lie, because zero is a
+real average and "there was nothing to average" is not the same statement.
+Python has a value for exactly this: `None`, meaning *no value at all*.
+
+```python
+def average(values):
+    if len(values) == 0:
+        return None
+    ...
+```
+
+`None` is a value like any other, so it can be returned and stored — but it
+is not zero and not empty text, and arithmetic on it fails immediately with
+a `TypeError`. That is a feature: it stops a missing answer from quietly
+being treated as a real one, which is the exact failure you will watch
+happen in week 3. You test for it with `is None`:
+
+```python
+if average(counts) is None:
+    print("no data")
+```
+
+Deciding what your function does when there is nothing to work on is part of
+writing it, not an afterthought — and one of today's drills is built on
+precisely that decision.
 
 Two clarifications that save beginners real confusion. First, `return` is
 not `print`. A printed value appears on the screen and is gone — you cannot

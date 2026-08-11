@@ -107,6 +107,20 @@ Priority order if you lose time:
    the drills will walk you through it." It reads well cold.
 4. Never cut stage 3. The verbose loop is the load-bearing wall.
 
+**`range` is now taught in the README, and it needed to be.** The README's
+loop section previously taught only `for count in counts` — looping over
+items — while the worked example uses `range` ten times, always in the
+harder position-based form. Students met `for index in range(len(counts))`
+in the live demonstration having never seen `range` at all. The new
+subsection, "The second way to write a loop: over positions", shows both
+forms side by side doing the same job and gives the three reasons the
+position form exists. Teach it before stage 3, or stage 3 lands on nothing.
+
+Slicing, `[0] * 24`, tuple unpacking and `None` are also new to the README,
+each for the same reason: a drill required it and nothing taught it. Without
+`[0] * 24`, a student following the material faithfully had to type
+twenty-four zeros by hand for drill 9 — and would know it was absurd.
+
 **Type stage 3 slowly and out loud.** Nested loops are where people fall off.
 Narrate the indices: *"we are now on hour eight; we are about to look at every
 row in the file and ask whether it is hour eight."*
