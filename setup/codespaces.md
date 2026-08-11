@@ -103,10 +103,18 @@ Two habits keep you well inside it:
 
 ## 5. Getting your work out
 
-Your project lives in Git, so committing and pushing from the Codespace
-terminal works exactly as described in the project brief. If you would
-rather keep a copy on your own machine, right-click any file or folder in
-the sidebar and choose **Download**.
+A Codespace is already a Git repository, so the snapshot habit from the
+project brief — `git status`, `git add .`, `git commit` — works in its
+terminal with no setup at all, and it is worth using from week 4 onwards.
+
+One thing to know about `git push`: your Codespace was launched from the
+*course* repository, which is not yours to push to. The first time you
+push, GitHub notices this and offers to create a **fork** — a copy of the
+repository under your own account. Accept, and from then on your snapshots
+go to your own copy.
+
+If you would rather keep a copy on your own machine instead, right-click
+any file or folder in the sidebar and choose **Download**.
 
 ---
 

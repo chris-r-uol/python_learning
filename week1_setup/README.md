@@ -470,6 +470,13 @@ are: the error table above, which names the idea behind each error; section
 4, which explains those ideas; and `first_script.py`, which is a working
 example of every one of them. Then the ten-minute rule — try, then ask.
 
+Fixed versions of all six exist in `instructor/solutions/week1/`, and that
+is not an accident — nothing in this course is graded, so the only person
+you can cheat is yourself. Use them the way you would use the answers in
+the back of a textbook: after a real attempt, to check yourself, or to get
+unstuck when you have genuinely run out of ideas. Reading them first costs
+you the practice, which is the only thing the task exists to give you.
+
 When all six pass, you have met, in miniature, most of the errors you will
 see for the rest of the course.
 

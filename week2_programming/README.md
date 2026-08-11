@@ -504,6 +504,12 @@ person next to you, ask the TA. The one approach that teaches you nothing is
 copying a finished answer — the struggle in the middle is what the practice
 is for.
 
+Complete solutions exist in `instructor/solutions/week2/`, openly and on
+purpose: nothing is graded, so they can only help you or cheat you, and
+which one is your choice. The good use is checking your working version
+against another way of doing it, or getting unstuck after a genuine attempt.
+The self-defeating use is reading one before you have tried.
+
 ### Task 2 — Reproduce the figure
 
 The file `drills/target_figure.png` shows weekday and weekend demand

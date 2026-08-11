@@ -160,8 +160,9 @@ git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 ```
 
-The handful of commands you will actually use — `clone`, `status`, `add`,
-`commit`, `push`, `pull` — are covered in the project brief when you need them.
+The handful of commands you will actually use — `status`, `add`, `commit`,
+`log`, `restore`, and `push` — are taught in the project brief, in the
+section "Saving your progress with Git", at the point you need them.
 
 ---
 

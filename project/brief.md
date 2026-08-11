@@ -109,6 +109,81 @@ Somewhere with at least a few thousand people in it; an isolated hamlet will
 make the chapters feel empty. If your first box turns out dull or unwieldy,
 changing it is one line — nothing else in the atlas needs to know.
 
+## Saving your progress with Git
+
+You are about to produce several hundred lines of code at speed, and some of
+your experiments will not work. The professional answer to that is **Git**:
+a tool that keeps named snapshots of your work, so that any version that
+ever worked is a version you can get back. You installed it in setup week;
+this is the moment it starts earning its place. The whole working method is
+one habit and four commands.
+
+**The habit:** every time a chapter runs and its checks pass, take a
+snapshot. A known-good version you can return to turns every failed
+experiment from a crisis into a shrug.
+
+**One-time start.** In a terminal, standing in your course folder:
+
+```
+git init
+```
+
+That turns the folder into a *repository* — a folder whose history is
+recorded. (If you work in a Codespace, skip this: it is already one.)
+
+**The snapshot loop** — after each chapter starts working:
+
+```
+git status
+```
+
+shows what has changed since your last snapshot. Then:
+
+```
+git add .
+```
+
+stages everything, and:
+
+```
+git commit -m "chapter 2 fetches and passes its row counts"
+```
+
+records the snapshot, with a message in your own words saying what state
+this is. Write messages your future self can read — "fixed stuff" helps
+nobody, including you.
+
+**Looking back, and getting things back.**
+
+```
+git log --oneline
+```
+
+lists every snapshot you have taken. And if an experiment has made a mess of
+one file, this restores it to how it was at your last commit:
+
+```
+git restore atlas.py
+```
+
+That command is the whole reason the habit pays: it means you can let the
+assistant try something ambitious, knowing the way back costs one line.
+
+**An off-machine copy (optional but sensible).** If you would like your
+atlas backed up to your own GitHub account, the easiest route is VS Code's
+Source Control panel — the **Publish to GitHub** button creates a private
+repository under your account and pushes to it in one step. After that,
+`git push` sends each new snapshot up. In a Codespace there is one wrinkle:
+you launched it from the course repository, which is not yours to push to —
+the first time you push, GitHub will offer to create a **fork** under your
+own account. Accept, and everything works from then on.
+
+That is the entire toolkit: `init` once, then `status`, `add`, `commit` as
+a rhythm, `log` and `restore` when you need history, `push` if you want a
+copy in the cloud. Ask the assistant about anything beyond this — branches,
+undoing commits — if and when you ever need it, which in this project you
+probably will not.
+
 ## The finish line
 
 The finish line is a fact you can check for yourself, not a judgement

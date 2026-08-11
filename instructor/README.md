@@ -1,12 +1,16 @@
 # Instructor materials
 
-Not for students. Do not commit this folder to a repo they can read.
-
-> **Status (10 August 2026):** the course is now an ungraded learning module,
+> **Status (11 August 2026):** the course is an ungraded learning module,
 > and weeks 4–5 are the individual transport atlas
 > (`docs/ATLAS_PROJECT_DESIGN.md`). The corridor dataset and its solutions
 > below now support the **week 3 task only**; the marking rubric is retired;
 > `hidden_check.py` survives as an optional self-check on the week 3 data.
+>
+> **This folder ships in the student repository, deliberately.** Nothing is
+> graded, so open solutions cost nothing and give students a way to check
+> themselves — the week 1 and week 2 task notes point at them explicitly,
+> framed as the answers in the back of the textbook. Do not treat anything
+> in here as secret, and do not add anything that would need to be.
 
 | Path | What it is |
 |---|---|
