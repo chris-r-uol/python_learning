@@ -35,6 +35,47 @@ Requirement 3 is not decoration. It is the requirement.
 
 You may use pandas. You have not been taught pandas; that is deliberate. Ask
 the assistant for help, and apply the checklist to everything it gives you.
+Section 2 of this week's README gives you enough of a reading-level grasp of
+dictionaries and DataFrames to judge what comes back.
+
+### The three numbers, defined
+
+You cannot verify a number whose definition you never fixed, so fix them
+before you ask for code:
+
+- **Mean** — add the journey times up, divide by how many there are. You
+  wrote this in week 2.
+- **Median** — sort the journey times and take the middle one. With an even
+  count, take the average of the two middle values. The median is worth
+  having next to the mean because a handful of very slow trips drag a mean
+  upwards while barely moving a median; if your two numbers differ
+  noticeably, that difference is itself a finding.
+- **90th percentile** — the value below which 90% of the journeys fall. In
+  other words, the slow-but-not-freak trip: nine journeys in ten were at
+  least this quick.
+
+A warning about that last one. There is more than one accepted way to
+compute a percentile, and they disagree slightly — mostly in how they
+interpolate between two neighbouring values. `numpy.percentile(values, 90)`
+and pandas' `.quantile(0.9)` use the same default, and either is fine here.
+**Say in your verification which one you used.** "The 90th percentile is
+56.5 minutes, using `numpy.percentile`'s default method" is a defensible
+sentence; "the 90th percentile is 56.5 minutes" is one you cannot fully
+defend, because the reader does not know what you computed.
+
+### One thing you will need and have not been taught
+
+The data contains rows that appear more than once. Removing them is
+straightforward with the right tool and effectively impossible with only
+what weeks 1 and 2 gave you, so this is not a trick — it is your first real
+instance of needing to ask for a capability by name. Ask the assistant how
+to remove exact duplicate rows, then do what you always do: count the rows
+before and after, and check that the number removed is a number you can
+explain.
+
+It matters more than it sounds. On this data, leaving the duplicates in
+inflates the number of trips counted in a morning-peak band by more than a
+tenth — and every figure that follows still looks entirely reasonable.
 
 ---
 

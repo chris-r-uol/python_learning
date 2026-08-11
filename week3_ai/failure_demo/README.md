@@ -31,6 +31,13 @@ This output looks right. It is formatted, it has units, the values are the
 right general size for urban roads, and the ranking is believable — A103
 slowest, B201 fastest. Nothing on the screen suggests a problem.
 
+> **If the code itself is unreadable to you**, that is expected at this
+> point — it uses dictionaries, which the course has not taught. Section 2
+> of [the week 3 README](../README.md) explains what
+> `defaultdict`, `csv.DictReader` and `speeds_by_link[...]` are doing, using
+> these exact three lines as its example. Read it and then come back; the
+> error below is much sharper when you can see the line that causes it.
+
 ## What was wrong
 
 Open the CSV and look at the `speed_kph` column. Some of the values are `-1`.
