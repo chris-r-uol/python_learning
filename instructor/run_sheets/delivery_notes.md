@@ -8,6 +8,19 @@ running late.
 
 ## Before week 1
 
+**Codespaces is now the primary rescue route** (`setup/codespaces.md`,
+configured by `.devcontainer/`). Anyone whose setup check fails, or who
+arrives with nothing working, can be in a fully working environment inside
+five minutes with only a browser and a free GitHub account — and unlike
+Colab it keeps the terminal, files, and virtual environment, so the week 1
+material is not lost and no separate catch-up is needed.
+
+Two things to do yourself before term: launch one Codespace from the repo so
+you have seen the flow, and check the free-allowance figures quoted in the
+guide are still current (GitHub changes them). Mention the route in the
+pre-work email — some students will prefer it to installing, and that is a
+perfectly good choice, not a concession.
+
 **Send the pre-work 10 days out, not 3.** You need time to triage.
 
 **Triage the `check_setup.py` submissions the day before.** Sort them into:

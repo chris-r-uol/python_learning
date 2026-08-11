@@ -4,14 +4,20 @@ This guide is for managed or corporate machines: laptops where installers ask
 for an administrator password you do not have, where the app store is
 controlled by your IT department, or where the network blocks some downloads.
 
-One rule before you start: **give this thirty minutes, then stop.** If none of
-the options below works within half an hour, switch to
-[`colab-fallback.md`](colab-fallback.md) and tell us which step failed. Colab
-is a full, supported way to take this course — it is not a lesser option, and
-nobody will treat it as one. What we do not want is you losing an evening to a
-fight with your IT department that we could have had for you.
+One rule before you start: **give this thirty minutes, then stop.** If none
+of the local options works within half an hour, switch to
+[`codespaces.md`](codespaces.md) and tell us which step failed. A Codespace
+needs nothing but a browser and a free GitHub account, so a locked-down
+laptop cannot block it — and it gives you a real terminal and a real virtual
+environment, so no part of the course is lost. It is a full, supported way
+to take this course, not a lesser one.
 
-Try the options in this order.
+In fact, if your machine is heavily restricted, you may prefer to go
+straight to Codespaces and skip the rest of this page. What we do not want
+is you losing an evening to a fight with your IT department that we could
+have had for you.
+
+If you would still rather install locally, try the options in this order.
 
 ## Option 1 — your organisation's software centre
 
@@ -58,10 +64,18 @@ It includes the scientific libraries the course needs.
 This works, but it is the fiddliest option, and version mismatches are more
 likely. If you use it, say so when you submit your setup check.
 
-## Option 4 — Colab
+## Option 4 — GitHub Codespaces
 
-[`colab-fallback.md`](colab-fallback.md). Everything in the course can be done
-there, and the guide covers the small differences.
+[`codespaces.md`](codespaces.md). Nothing to install; a browser and a free
+GitHub account are the whole requirement. This is the best of the
+no-installation routes, because you still get a terminal, files, and a
+virtual environment, so every command in the course works as written.
+
+## Option 5 — Colab
+
+[`colab-fallback.md`](colab-fallback.md). Use this if a GitHub account is not
+possible for you. Everything in the course can be done there, and the guide
+covers the differences.
 
 ---
 

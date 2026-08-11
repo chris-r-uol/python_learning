@@ -14,7 +14,11 @@ optional: the first session builds on it.
    - Windows → [`setup/windows.md`](setup/windows.md)
    - macOS → [`setup/macos.md`](setup/macos.md)
    - Work laptop with no admin rights → [`setup/locked-down-laptop.md`](setup/locked-down-laptop.md)
-   - Nothing working → [`setup/colab-fallback.md`](setup/colab-fallback.md)
+   - **Installation not working, or you would rather skip it entirely** →
+     [`setup/codespaces.md`](setup/codespaces.md). GitHub runs a machine for
+     you with everything already installed; you need only a browser and a
+     free GitHub account.
+   - No GitHub account possible → [`setup/colab-fallback.md`](setup/colab-fallback.md)
 
    If you prefer Chinese services — Baidu, DeepSeek, WeChat sign-in, Chinese
    documentation — read [`setup/chinese-services.md`](setup/chinese-services.md)

@@ -1,5 +1,12 @@
 # Fallback — Google Colab
 
+> **Consider Codespaces first.** [`codespaces.md`](codespaces.md) also
+> requires no installation, and it keeps the terminal, the files, and the
+> virtual environment — so nothing from week 1 is lost and every command in
+> the course works exactly as written. Use this Colab guide if a GitHub
+> account is not possible for you, or if you already know Colab and prefer
+> it.
+
 If a local setup did not work out, you will use Google Colab: a free service
 that runs Python in your web browser, on Google's computers. Nothing needs to
 be installed on your machine.

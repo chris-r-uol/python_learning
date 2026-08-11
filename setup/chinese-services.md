@@ -78,6 +78,10 @@ Term breaks happen. If you take the project home, three things change:
 - **Google Colab does not work in China.** If you are on the Colab fallback,
   plan around this — or better, get the local setup working before you
   travel; it needs no Google services at all.
+- **GitHub Codespaces depends on GitHub**, which is usually reachable from
+  China but can be slow or intermittent. It is an excellent option while you
+  are in the UK; it is not the one to depend on for a working trip home. A
+  local installation is.
 - **PyPI and GitHub can be slow or unreliable.** For package installs, the
   Tsinghua mirror is the standard fix:
 
