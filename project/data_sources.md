@@ -27,10 +27,22 @@ So do not guess, and do not ask. Each one has a known route:
 | ATCO area code (chapter 1) | `data/external/atco_area_codes.csv` in this repository — all 150, by name |
 | PCT region name (chapter 5) | the list in the PCT entry below — they are historic counties, so Bristol is `avon` |
 | Local-authority code (chapter 4) | the deprivation file itself, which carries district names beside their codes |
+| The ONS boundary service address (chapter 3) | copy it from the ONS entry below — do not let an assistant reconstruct it from memory |
 
-The four chapters not in that table — safety, amenities, weather, and the
-deprivation file itself — need only your bounding box, so once chapter 1
-has defined your patch they will work straight away.
+That last row deserves its own warning, because it is the one place in the
+catalogue where an assistant will fill a gap with something that looks
+right. The address is long, it contains a service identifier nobody could
+derive, and a wrong one returns an error rather than a wrong answer *only
+if you are lucky*. Copy it. Do not retype it, and do not ask for it.
+
+The three chapters not in that table — safety, amenities and weather — need
+only your bounding box, so once chapter 1 has defined your patch they will
+work straight away.
+
+**One more thing about this page, and it is the point of it.** What you are
+looking at is a list of the things an assistant will confidently invent.
+Nobody will hand you one of these in real work; you write it yourself,
+before you start. See [`agent_guide.md`](agent_guide.md).
 
 ## The scope rule
 
@@ -144,8 +156,33 @@ Point-in-polygon, done on their server, so you never touch a polygon.
 
 - **Gives you:** the LSOA code for any point in your patch, which unlocks
   IMD and Census.
-- **How:** a GET to the LSOA boundary FeatureServer with
-  `geometry=<lon>,<lat>&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=LSOA21CD,LSOA21NM&returnGeometry=false&f=json`
+- **The address — copy this, do not retype it and do not ask for it:**
+
+  ```
+  https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Lower_layer_Super_Output_Areas_December_2021_Boundaries_EW_BSC_V4/FeatureServer/0/query
+  ```
+
+  with these parameters:
+
+  ```
+  geometry=<lon>,<lat>
+  geometryType=esriGeometryPoint
+  inSR=4326
+  spatialRel=esriSpatialRelIntersects
+  outFields=LSOA21CD,LSOA21NM
+  returnGeometry=false
+  f=json
+  ```
+
+  Verified working: the point `-1.5491, 53.7965` returns `E01033016`
+  (Leeds 111E). Use that as your first test — if you get that answer back,
+  your request is correctly formed and you can move on to your own points.
+- **Why the emphasis on copying.** That address contains a service
+  identifier (`ESMARspQHYMw9BZ9`) that nobody could derive and no assistant
+  can remember. Asked for it, an assistant will produce something with the
+  right shape and the wrong identifier, delivered with complete confidence.
+  This is the single most likely place in the whole atlas to lose an hour,
+  and it is in the chapter about not letting that happen.
 - **The trap:** longitude comes **first**. Swap them and you get a silent
   `NO MATCH` for every point, or worse, a match somewhere in the North Sea.
 - **Licence:** OGL v3, © Crown copyright and database right.

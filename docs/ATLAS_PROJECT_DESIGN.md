@@ -148,6 +148,45 @@ notice; the delivery notes and design docs get aligned.
   project" (reference solution, hidden check, delivery notes weeks 4–5) are
   annotated as week 3 support material but could be tidied further.
 
+## What a trial build taught us (August 2026)
+
+The project was run end to end by a very capable AI assistant. Four findings
+changed the material, and they are worth keeping in mind when teaching it.
+
+**The catalogue is load-bearing, not convenience.** What made delegation
+safe was `data_sources.md` — functionally a pre-loaded list of what an
+assistant will confidently invent. Removed, the same process yields seven
+plausible, wrong atlases that all run. This is now named explicitly to
+students as the transferable move: *before you delegate volume, write down
+what your assistant is likely to invent*, because in real work nobody hands
+you that document.
+
+**Quality control splits into three layers**, and only the third is the
+student's. Layer 1, tracebacks, is free. Layer 2 — row counts, tests, clean
+rebuilds — is fully delegable but invisible unless requested; the gap
+between "build chapter 3" and "build chapter 3, printing row counts before
+and after every filter and join" is one clause and is the highest-value
+thing to drill. Layer 3, checking the answer against the world, cannot be
+delegated at all.
+
+**QC theatre is the real failure mode**, and it is a much more useful
+warning than "the AI might hallucinate". The trial produced twenty
+hand-checks displaying "20 of 20 pass". The assistant had written both the
+expectation and the answer; two were literal tautologies, discovered only
+when an unrelated bug made them fail. About **four** were worth anything,
+and all four were anchored outside the dataset — a bus station's street, a
+Met Office rainfall normal, the two universities that must appear. Hence
+the new `agent_guide.md`, the "do not invent a hand-check" contract clause,
+and the two numbers said aloud in the gallery.
+
+**The web app trades one objective against the other.** Every data bug in
+the trial failed loudly; every presentation bug failed silently and looked
+confident — a map two zoom levels out, a colour scale collapsed to one
+tone. No row count catches those; only looking at the output does. A front
+end therefore strengthens "too big to hand-write" and weakens "QC
+manageable", so it stays a **stretch goal**, and "look at the figure" is now
+a step in the chapter shape rather than advice.
+
 ## Risks
 
 | Risk | Mitigation |

@@ -9,6 +9,7 @@ then production time, with the instructor and the TA circulating.
 | | |
 |---|---|
 | `brief.md` | The project: seven chapters, one patch, one command |
+| `agent_guide.md` | **Read this before you start building.** How to direct an agent at this much work without losing control of whether it is right |
 | `data_sources.md` | The source catalogue — addresses, licences, and known traps |
 | `starter/atlas.py` | The atlas skeleton: chapter stubs and the report builder's shape |
 | `starter/fetch_external.py` | A complete, worked chapter fetcher (STATS19), the pattern for all of them |
