@@ -52,11 +52,17 @@ code in Chinese* is also a legitimate and excellent use of it: "逐行解释这�
 代码" ("explain this code line by line") is exactly check 4 of the
 verification checklist, in the language you think fastest in.
 
-Two things should stay in English: the **names in your code** (variables,
-functions, comments), because your work will be read in the gallery and
-shared with people who read English; and the **three sentences per chapter**
-in your atlas, for the same reason. Your `prompts.md` record may be in
-Chinese — it is a record of what you actually did.
+One practical recommendation: keep the **names in your code** — variables,
+functions — in English. Not because anyone will inspect your work, but
+because Python's own keywords, every library you call, and every error
+message you will ever read are in English, and mixing the two makes a line
+harder to read at a glance. It also makes it easier for the TA to help you
+quickly when you ask.
+
+Everything else is yours. Comments, your `prompts.md` record, the sentences
+you write about each chapter of your atlas — write them in whichever
+language you think in. The atlas is yours to keep and nobody else's to
+read.
 
 ## Search and learning resources
 

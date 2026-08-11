@@ -5,8 +5,8 @@ takes most people 30 to 45 minutes. Follow the steps in order, and do not skip
 the checks — each one confirms that the step before it worked.
 
 If a step fails, do not spend your evening fighting it. Copy the error message,
-note which step you were on, and submit that instead of the check output. We
-will fix it with you before the first session.
+note which step you were on, and send us that instead of the check output.
+We will fix it with you before the first session.
 
 > Screenshots for each step are marked **[screenshot]**. If your screen does not
 > match the description, stop and ask rather than guessing.
@@ -137,14 +137,15 @@ Still in the course folder, with the environment active:
 python check_setup.py
 ```
 
-Copy everything it prints and submit it. If it reports problems, submit that
-output — it is designed to tell us exactly what to fix, and that is just as
+Copy everything it prints and send it to us. If it reports problems, send
+that output — it is designed to tell us exactly what to fix, and that is just as
 useful as a pass.
 
 ## 9. Install Git (needed from week 4)
 
-Git is the tool the project weeks use to share code within your group. You do
-not need it in weeks 1 to 3, but installing it now saves time later.
+Git keeps a history of your own work and lets you get back to any version
+that worked. You do not need it in weeks 1 to 3, but installing it now saves
+time later.
 
 1. Download Git from [git-scm.com](https://git-scm.com/download/win) and run
    the installer. The default options are fine.

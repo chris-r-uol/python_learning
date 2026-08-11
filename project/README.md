@@ -1,8 +1,9 @@
 # Project — Your Patch: a transport atlas
 
-Weeks 4 and 5. **An individual project: your own place, your own atlas, and
-nothing graded.** The sessions are studios — short teaching at the start,
-then production time, with the instructor and the TA circulating.
+Weeks 4 and 5. **An individual project: your own place, your own atlas.**
+Nothing here is graded, collected, or shown to anybody. The sessions are
+studios — short teaching at the start, then working time, with the
+instructor and the TA there for whenever you want them.
 
 **Read [`brief.md`](brief.md) first.**
 

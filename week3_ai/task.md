@@ -1,14 +1,14 @@
 # Week 3 task — build something, then prove it works
 
-**Done in class, under supervision. About 2 hours of work. Anything
-unfinished at the end of the session, finish before week 4 — the project
-weeks assume this way of working.**
+**Done in class, with the instructor and TA around. About 2 hours of work.
+Anything unfinished at the end of the session is worth finishing before
+week 4 — the project weeks build directly on this way of working.**
 
 You are going to build a small tool with AI assistance. Building the tool is
-the easy part. The real exercise is showing that it is correct — nothing here
-is graded, and that is precisely why the proof matters: the only reason to
-verify is the only reason that will exist after this course, which is that
-nobody else is going to.
+the easy part. The real exercise is proving to *yourself* that it is
+correct — nothing here is collected or graded, and that is precisely why the
+proof matters: the only reason to verify is the only reason that will exist
+after this course, which is that nobody else is going to.
 
 The instructor and the TA are circulating, and this task is designed to make
 you need them at least once. Try for ten minutes, then ask — and note that
@@ -79,10 +79,11 @@ tenth — and every figure that follows still looks entirely reasonable.
 
 ---
 
-## What you produce
+## What you end up with
 
-Three files. Keep all three — together they are the template for every piece
-of AI-assisted work you do in the project weeks, and afterwards.
+Three files, which you keep. Nobody collects them. Together they are the
+template for every piece of AI-assisted work you do in the project weeks,
+and afterwards.
 
 ### 1. `journey_time.py`
 
@@ -152,9 +153,10 @@ wrong number and a decision made on it is whether you looked.
 
 ## Two habits to avoid from the start
 
-**Keeping code you cannot explain.** In week 4 the instructor will ask you,
-conversationally and in person, what your code does — not to test you, but
-because saying it out loud is how you find out whether you own it.
+**Keeping code you cannot explain.** Try saying what each function does out
+loud, to yourself, before you move on. It takes a minute, nobody is
+listening, and it is the fastest way to find the lines you have accepted
+without understanding.
 
 **Writing "I tested it and it worked."** That is not evidence. Evidence
 contains numbers.

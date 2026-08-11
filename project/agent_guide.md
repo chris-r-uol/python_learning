@@ -162,18 +162,22 @@ you read your row counts.
 
 ---
 
-## 6. What to say in the gallery
+## 6. Keep your own score
 
-When you show a page in week 5, say two numbers:
+At the end of each chapter, write two numbers at the top of it:
 
-> *"Eighteen hand-checks. Four of them verified against something outside
-> the data — the bus station address, the rainfall average, the two
-> universities, and the casualty total against the published Leeds figure."*
+> *Eighteen hand-checks. Four verified against something outside the data —
+> the bus station address, the rainfall average, the two universities, and
+> the casualty total against the published figure.*
 
-Nothing here is graded, and that is not going to change. But saying that
-second number out loud does the job grading would otherwise do: it makes
-the invisible discipline into the visible artefact, and it is the number
-that exposes theatre — including your own. The assistant that produced
-twenty checks would have had to stand up and say *four*.
+Nobody will ask you for those numbers. There is no submission, no
+presentation, and nobody reviewing your atlas. That is precisely what makes
+them worth keeping accurately.
 
-Be the person who can say the second number, and can name them.
+The assistant in our trial would have had to write *four*, next to a display
+saying *20 of 20 pass*. Writing the honest second number is what stops you
+believing your own interface — and it is a habit you will need most in the
+situations this course cannot simulate, where the work matters, the deadline
+is real, and nobody is looking over your shoulder.
+
+Be the person who knows which four they are.

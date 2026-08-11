@@ -29,7 +29,7 @@ city they have heard of, a club they follow, somewhere they mean to visit.
 London is excluded: it is the reflex choice, the file sizes are hostile, and
 "which London?" burns studio time. Duplicate patches are acceptable —
 thirty Leeds atlases would still differ in box, figures, and findings —
-though the brief nudges toward variety because the gallery is better for it.
+and no comparison between students ever takes place.
 
 They then build **a transport atlas of their patch**: a pipeline that fetches
 seven national open datasets, cleans each one, draws its figures, and
@@ -61,12 +61,22 @@ sessions plus the week between. That gap *is* the lesson. Nobody experiences
 what AI acceleration means from a 40-line exercise; they experience it by
 shipping something they know they could not have typed.
 
-**Ungraded without going soft.** The motivation structure replaces marks with
-three things: ownership (it is their town), a visible finish line (the atlas
-builds from scratch with one command), and an audience (the week 5 gallery,
-where everyone shows one page). The verification habits from week 3 continue
-as *practice* — each chapter includes one hand-check against the raw data —
-because the habit is the point, not evidence for a marker.
+**Ungraded without going soft, and unobserved as well.** There is no
+submission, no presentation, no gallery, and no structured moment where a
+student shows the work to anybody. Motivation rests on two things only:
+ownership (they chose the place) and a finish line they can check
+themselves (the atlas rebuilds from nothing with one command). The
+verification habits from week 3 continue as *practice* — each chapter
+carries a hand-check anchored outside the data — because the habit is the
+point, and because the situation this rehearses is precisely the one where
+nobody is looking.
+
+This is deliberate and should not be quietly re-introduced. An audience is
+an effective motivator, which is exactly why it distorts: students optimise
+for the moment of display. Removing it means the only reason to keep the
+check numbers honest is that they are true, which is the disposition the
+module exists to build. Students can and should ask questions freely; what
+they never do is account for their work.
 
 **Nothing like a corridor commission.** No AVL, no reliability metrics, no
 worst segment, no intervention argument, no stakeholder brief. The synthetic
@@ -114,12 +124,13 @@ week's finish line; it proves their loop runs end to end.
 **Between weeks.** Chapters at their own pace. The cache-first fallback data
 committed in the repo means nobody is blocked by an API outage.
 
-**Week 5 — volume (studio).** The whole session is production. The TA and
-instructor circulate on unblocking, not checking. Last twenty minutes: the
-gallery — every student puts one page of their atlas on the screen for thirty
-seconds. No presentations, no questions required, no judgement; the point is
-thirty-one different places, all real, all built by people who could not
-program five weeks ago.
+**Week 5 — volume (studio).** The whole session is production, start to
+finish. The TA and instructor circulate on unblocking, not checking. There
+is no closing round, no showing of work, and no point at which a student
+presents anything — the session simply ends, with everyone further along
+than they started and their atlas theirs to keep. Close with the practical
+things only: how to keep the project running after the module, and where to
+go next.
 
 ## What must change elsewhere (course-wide de-grading)
 
@@ -177,7 +188,7 @@ when an unrelated bug made them fail. About **four** were worth anything,
 and all four were anchored outside the dataset — a bus station's street, a
 Met Office rainfall normal, the two universities that must appear. Hence
 the new `agent_guide.md`, the "do not invent a hand-check" contract clause,
-and the two numbers said aloud in the gallery.
+and the two numbers each student keeps for themselves.
 
 **The web app trades one objective against the other.** Every data bug in
 the trial failed loudly; every presentation bug failed silently and looked

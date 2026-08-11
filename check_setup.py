@@ -93,7 +93,7 @@ def running_on_codespaces():
 
 
 def describe_environment():
-    """Say where this is running. Useful to us when you submit the output."""
+    """Say where this is running. Useful to us when you send the output."""
     if running_on_colab():
         where = "Google Colab"
     elif running_on_codespaces():
@@ -215,7 +215,9 @@ def main():
             print("  " + note)
 
     print("")
-    print("Copy everything above and submit it, whichever result you got.")
+    print("Copy everything above and send it to us, whichever result you got.")
+    print("This is a report on your machine, not on you - it is how we fix")
+    print("setup problems before the session rather than during it.")
     if blockers:
         print("Do not try to fix it alone - we will sort it out with you")
         print("before the session.")

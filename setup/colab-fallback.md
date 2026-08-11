@@ -64,7 +64,7 @@ live in your Google Drive, which persists.
 !python check_setup.py
 ```
 
-Copy everything it prints and submit it, exactly as local students do.
+Copy everything it prints and send it to us, exactly as local students do.
 
 One expected difference: the check will report that no virtual environment is
 active. On Colab that is normal — Colab manages the environment for you — and
@@ -104,9 +104,8 @@ offer it.
 
 ## Getting your project out at the end
 
-Your project group will keep its work in a shared repository from week 4. From
-Colab, the simple route is: download your files (right-click a file in the
-file browser → Download), and add them to the group repository from any
-machine with Git — or use Colab's built-in **File → Save a copy in GitHub**
-for notebooks. We will help with this in the project weeks; nothing about it
+Your atlas is yours to keep, so it is worth getting a copy off Colab at the
+end. Right-click any file or folder in the file browser and choose
+**Download**; for notebooks there is also **File → Save a copy in GitHub**.
+Ask us in the project weeks if you want a hand with it — nothing about this
 needs solving now.
