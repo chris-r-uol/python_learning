@@ -33,7 +33,17 @@ optional: the first session builds on it.
 
 3. Copy everything it prints and submit it.
 
-**If the check fails, submit the error text instead.** A failure report is
+### What counts as a pass
+
+The check ends with one of three verdicts:
+
+| Verdict | Meaning |
+|---|---|
+| **ALL CHECKS PASSED** | Everything is installed and configured. Nothing to do. |
+| **READY, WITH NOTES** | **This is also a pass.** Everything the course needs works. The notes are things to be aware of — and some of them, such as "no virtual environment" on Colab or a missing one on the day you install, are entirely normal. Read them, then carry on. |
+| **NOT READY YET** | Something genuinely blocks you: Python is too old, the wrong Python is being used, or the packages are not installed. Submit the output and we will fix it with you. |
+
+**Submit the output whichever verdict you get.** A "not ready" report is
 just as useful to us as a pass — it tells us what to fix before the session,
 so that nobody spends class time watching an installer.
 

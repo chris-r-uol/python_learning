@@ -15,6 +15,21 @@ five minutes with only a browser and a free GitHub account — and unlike
 Colab it keeps the terminal, files, and virtual environment, so the week 1
 material is not lost and no separate catch-up is needed.
 
+**Triaging the submitted checks.** The script reports one of three
+verdicts, and only the third needs you:
+
+- `ALL CHECKS PASSED` — nothing to do.
+- `READY, WITH NOTES` — **also a pass.** Everything works; the notes are
+  advisory. "No virtual environment" is expected on Colab, and common on a
+  laptop the day someone installs. Do not triage these as failures; the
+  script previously reported them as failures and it caused exactly that
+  confusion.
+- `NOT READY YET` — a real blocker: Python too old, system/Store Python, or
+  packages missing. These are your triage list.
+
+The output also reports `Running on:` (own machine / Codespaces / Colab),
+which tells you at a glance how much of the cohort is on each route.
+
 Two things to do yourself before term: launch one Codespace from the repo so
 you have seen the flow, and check the free-allowance figures quoted in the
 guide are still current (GitHub changes them). Mention the route in the
