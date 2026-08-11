@@ -143,9 +143,18 @@ chapters.
 ## Week 3
 
 **Do the failure demo cold, before any framing.** If you explain what is about
-to happen first, it does not land. The choreography (the student-facing
-`week3_ai/failure_demo/README.md` is now a post-session recap and no longer
-contains it):
+to happen first, it does not land.
+
+Note that **Part 1 of the student week 3 README now contains the whole
+demonstration in writing** — request, data, both outputs, and the reveal —
+because students working through it alone could not follow a page that only
+said "go and run these two files". It is written with a "Stop here — is this
+right?" break before the reveal, so a student reading ahead still gets the
+moment. In the room you still run it live and cold; the written version is
+for the ones who miss the session or come back to it later. Do not read it
+aloud, and do not put it on screen before the reveal.
+
+The choreography:
 
 1. Say the task out loud, then type the lazy prompt in front of them exactly
    as written: *"analyse this traffic data and tell me the average speed on
