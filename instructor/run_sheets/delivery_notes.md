@@ -145,14 +145,23 @@ chapters.
 **Do the failure demo cold, before any framing.** If you explain what is about
 to happen first, it does not land.
 
-Note that **Part 1 of the student week 3 README now contains the whole
-demonstration in writing** — request, data, both outputs, and the reveal —
-because students working through it alone could not follow a page that only
-said "go and run these two files". It is written with a "Stop here — is this
-right?" break before the reveal, so a student reading ahead still gets the
-moment. In the room you still run it live and cold; the written version is
-for the ones who miss the session or come back to it later. Do not read it
-aloud, and do not put it on screen before the reveal.
+Note two changes to the student week 3 README, neither of which changes what
+you do in the room.
+
+**The whole demonstration is now written out** — request, data, both
+outputs, and the reveal — because students working through it alone could
+not follow a page that only said "go and run these two files". It has a
+"Stop here — is this right?" break before the reveal, so a reader still gets
+the moment. Do not read it aloud, and do not put it on screen before the
+reveal.
+
+**In the written document the ideas now come first, and the demonstration
+second.** That is the right order for somebody reading alone, who needs to
+know what the week is about before being shown a puzzle. It is the wrong
+order for the room, so the README says so at the top and invites readers to
+jump to Part 2 first if they want the cold version. **You still open the
+session with the demonstration, cold, before any framing.** The written
+order and the delivered order differ on purpose.
 
 The choreography:
 
