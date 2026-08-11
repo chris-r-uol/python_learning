@@ -179,18 +179,24 @@ what the demonstration produced while being 21% wrong.
 ## Part 3 — The task
 
 [`task.md`](task.md) — build a journey time tool, with AI assistance, against
-the project's real data. You do it in class, with the instructor and the TA
-circulating; it is the first time this course asks you to use an assistant,
-a specification, and the checklist together on data that has real problems
-in it.
+data that has real problems in it. You do it in class, with the instructor
+and the TA circulating; it is the first time this course asks you to use an
+assistant, a specification, and the checklist together.
 
-You submit three things: the code, the prompts you used, and **evidence that
-the code is correct**. The evidence carries 60% of the mark. A partial tool
-with thorough verification scores higher than a complete tool with none —
-that weighting is deliberate, and it is how the project weeks are marked too.
+You produce three things: the code, the prompts you used, and **evidence that
+the code is correct**. Nothing is graded — the evidence matters because it is
+the part the assistant cannot do for you, and because the project weeks ask
+you to repeat exactly this pattern, at volume, on your own project.
 
 ## What you are allowed to use
 
 Anything — including pandas, a library you have not been taught. Working out
 how to use an unfamiliar library safely, with the assistant's help and your
 own checks, is precisely this week's skill.
+
+"Anything" includes your choice of assistant. The demonstrations use the
+university's licensed one, but the method is identical with any capable
+service — including Chinese assistants such as DeepSeek or Kimi, and
+prompting in Chinese. See
+[`setup/chinese-services.md`](../setup/chinese-services.md). The one thing
+that never changes, whichever you use, is the checklist.

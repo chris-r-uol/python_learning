@@ -16,6 +16,10 @@ optional: the first session builds on it.
    - Work laptop with no admin rights → [`setup/locked-down-laptop.md`](setup/locked-down-laptop.md)
    - Nothing working → [`setup/colab-fallback.md`](setup/colab-fallback.md)
 
+   If you prefer Chinese services — Baidu, DeepSeek, WeChat sign-in, Chinese
+   documentation — read [`setup/chinese-services.md`](setup/chinese-services.md)
+   as well. Everything in this course works with them.
+
 2. At the end of the guide you will run the setup check. From this folder, with
    your virtual environment active:
 
@@ -37,7 +41,7 @@ so that nobody spends class time watching an installer.
 | `week1_setup/` | Your first scripts, and the traceback exercises |
 | `week2_programming/` | The worked example and the practice drills |
 | `week3_ai/` | The verification checklist and the AI-assisted task |
-| `project/` | The corridor reliability brief, the data, and the data source catalogue |
+| `project/` | Your Patch — the individual transport atlas, and the data source catalogue |
 
 ## Three rules that apply all course
 

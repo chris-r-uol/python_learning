@@ -1,5 +1,10 @@
 # Weeks 4–5 — Project studio, redesigned
 
+> **SUPERSEDED (10 August 2026).** The group corridor studio described below
+> was replaced by the individual, ungraded transport atlas — see
+> [`ATLAS_PROJECT_DESIGN.md`](ATLAS_PROJECT_DESIGN.md). Kept for the record;
+> do not deliver from this document.
+
 Supersedes the weeks 4–5 section of [`COURSE_DESIGN.md`](COURSE_DESIGN.md). Two
 changes: the sessions grow from 105 minutes to **3 hours each**, and week 5
 becomes an exercise in **AI-accelerated access to real national datasets**.

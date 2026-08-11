@@ -1,5 +1,10 @@
 # Marking rubric
 
+> **RETIRED (10 August 2026).** The course is now an ungraded learning
+> module; skills are assessed elsewhere. This rubric is kept only as a
+> reference for what each activity was designed to exercise. Nothing in it
+> should be applied to students.
+
 | Component | Weight | Where |
 |---|---|---|
 | Week 1 setup checkpoint | pass/fail gate | `check_setup.py` output submitted |

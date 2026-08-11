@@ -1,19 +1,20 @@
 # UK open data — the catalogue
 
-For the week 5 extension. Every source here is free, needs no account, and was
-checked working on **10 August 2026**. If one is unavailable on the day, record
-that and use another. Public data services go down from time to time; working
-around it is part of the job, not a reason to stop.
+The sources behind the atlas chapters. Every source here is free, needs no
+account, and was checked working on **10 August 2026**. If one is unavailable
+on the day, use the cached fallback copy in `data/external/` and record the
+date. Public data services go down from time to time; working around it is
+part of the job, not a reason to stop.
 
-`starter/fetch_external.py` is a complete worked fetcher for the first one. Read
-it before you build any of the others. The pattern never changes.
+`starter/fetch_external.py` is a complete worked fetcher for the first one.
+Read it before you build any of the others. The pattern never changes.
 
 ---
 
 ## The scope rule
 
-You have three weeks of Python. Real geospatial analysis is a term's work on its
-own, so this project draws a hard line:
+You have three weeks of Python. Real geospatial analysis is a term's work on
+its own, so the atlas draws a hard line:
 
 **In scope** — three operations, and everything on this page is reachable with them:
 
@@ -40,7 +41,7 @@ what you cannot read, and a projection bug produces a map that looks fine.
 ### STATS19 — road casualties
 Every reported injury collision in Great Britain, with coordinates.
 
-- **Gives you:** where people walking and cycling get hurt near your corridor.
+- **Gives you:** where people walking and cycling get hurt in your patch.
 - **How:** `https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2023.csv` (and `-casualty-2023.csv`), joined on `collision_index`.
 - **Worked example:** `starter/fetch_external.py`.
 - **The trap:** `casualty_type` and `collision_severity` are integer codes whose
@@ -52,7 +53,7 @@ Every reported injury collision in Great Britain, with coordinates.
 ### Index of Multiple Deprivation 2019
 The standard English measure of relative deprivation, by small area (LSOA).
 
-- **Gives you:** the equity argument. Who is bearing the unreliability.
+- **Gives you:** how your patch sits in England's deprivation distribution.
 - **How:** [File 7 (all scores, ranks, deciles)](https://assets.publishing.service.gov.uk/media/5dc407b440f0b6379a7acc8d/File_7_-_All_IoD2019_Scores__Ranks__Deciles_and_Population_Denominators_3.csv) — 32,844 rows, one per LSOA.
 - **The trap, and it is the instructive one:** IMD 2019 uses **2011** LSOA
   codes. The boundary service in tier 2 returns **2021** codes. Most codes are
@@ -66,8 +67,8 @@ The standard English measure of relative deprivation, by small area (LSOA).
 ### DfT road traffic counts (AADF)
 Annual average daily flows on the road network, by local authority.
 
-- **Gives you:** what the traffic on the corridor's parallel road is doing, and
-  whether it is growing.
+- **Gives you:** what the traffic in your patch's local authority is doing,
+  and whether it is growing.
 - **How:** `https://storage.googleapis.com/dft-statistics/road-traffic/downloads/data-gov-uk/local_authority_traffic.csv`
 - **The trap:** it is *annual average daily* — you cannot get a peak hour out of
   it, and any argument you build about the peak from this number is invented.
@@ -76,8 +77,8 @@ Annual average daily flows on the road network, by local authority.
 ### Census 2021 via Nomis
 Households, car availability, method of travel to work, by small area.
 
-- **Gives you:** how many people near each stop have no car — i.e. who has no
-  alternative when the bus fails.
+- **Gives you:** how many households in your patch have no car — the people
+  for whom walking, cycling, and the bus are the whole transport system.
 - **How:** the Nomis API returns CSV directly, e.g.
   `https://www.nomisweb.co.uk/api/v01/dataset/NM_2062_1.data.csv?geography=...&measures=20100`
 - **The trap:** finding the right dataset id and geography code is most of the
@@ -109,38 +110,55 @@ Schools, shops, crossings, cycle lanes, anything mapped.
 ### ONS Open Geography — which LSOA is this point in?
 Point-in-polygon, done on their server, so you never touch a polygon.
 
-- **Gives you:** the LSOA code for each stop, which unlocks IMD and Census.
+- **Gives you:** the LSOA code for any point in your patch, which unlocks
+  IMD and Census.
 - **How:** a GET to the LSOA boundary FeatureServer with
   `geometry=<lon>,<lat>&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=LSOA21CD,LSOA21NM&returnGeometry=false&f=json`
-- **Verified:** stop S001 returns `E01033620` (Birmingham 138A).
 - **The trap:** longitude comes **first**. Swap them and you get a silent
-  `NO MATCH` for every stop, or worse, a match somewhere in the North Sea.
+  `NO MATCH` for every point, or worse, a match somewhere in the North Sea.
 - **Licence:** OGL v3, © Crown copyright and database right.
 
 ### NaPTAN — the real bus stop register
-Every public transport access point in Great Britain.
+Every public transport access point in Great Britain. Chapter 1's source.
 
-- **Gives you:** real stop names, locations and codes — useful if you want to
-  anchor the fictional corridor to real infrastructure.
-- **How:** `https://naptan.api.dft.gov.uk/v1/access-nodes?dataFormat=csv&atcoAreaCodes=430`
-- **The trap:** the area code must be **three digits**, and the West Midlands
-  is **430**, not `043`. Assistants reliably suggest `043`. The API's error
-  message tells you the format is wrong, but not which code you wanted. Around
-  15,500 stops come back for 430 — filter them to your bounding box.
+- **Gives you:** real stop names, locations and codes for your patch.
+- **How:** `https://naptan.api.dft.gov.uk/v1/access-nodes?dataFormat=csv&atcoAreaCodes=450`
+  (450 is West Yorkshire — the Leeds demonstrator's area; find your patch's
+  code in the NPTG gazetteer, or ask the assistant and then verify one stop).
+- **The trap:** the area code must be **three digits** — West Yorkshire is
+  **450**, not `045`, and assistants reliably suggest the two-digit form
+  padded the wrong way. The API's error message tells you the format is
+  wrong, but not which code you wanted. Tens of thousands of stops come back
+  per area — filter them to your bounding box, and drop inactive stops.
 - **Licence:** OGL v3.
 
 ### Propensity to Cycle Tool — cycling potential
 DfT-funded model of how much cycling each road segment could carry.
 
-- **Gives you:** the latent-demand argument — where cycling *would* happen under
-  a given scenario, against what happens now.
-- **How:** `https://media.githubusercontent.com/media/npct/pct-outputs-regional-notR/master/commute/lsoa/west-midlands/rnet_full.geojson`
+- **Gives you:** where cycling *would* happen under a given scenario,
+  against what happens now.
+- **How:** `https://media.githubusercontent.com/media/npct/pct-outputs-regional-notR/master/commute/lsoa/west-yorkshire/rnet_full.geojson`
+  — swap `west-yorkshire` for your patch's region; the folder names follow
+  the PCT website's region list.
 - **The trap:** it models **2011 Census commuting only**. No shopping, no
   school, no leisure, and the baseline is fifteen years old. It is a scenario
   model, not an observation, and every sentence you write about it needs to say
-  so. In Coventry its correlation with observed cycling is roughly *negative* —
-  a good model can still be the wrong model for your place.
+  so. In some cities its correlation with observed cycling is roughly
+  *negative* — a good model can still be the wrong model for your place.
 - **Licence:** OGL / CC-BY. See [pct.bike](https://www.pct.bike/).
+
+### open-meteo — historical weather
+Hourly weather for any coordinates, back decades. Chapter 7's source.
+
+- **Gives you:** a year of rain and temperature for your patch, as JSON.
+- **How:** `https://archive-api.open-meteo.com/v1/archive?latitude=53.80&longitude=-1.55&start_date=2025-01-01&end_date=2025-12-31&hourly=precipitation,temperature_2m`
+  — no key, no account. Point the coordinates at the centre of your patch.
+- **The trap:** the response is JSON with parallel lists — one list of
+  timestamps, one list per variable, matched by position. Turning that into
+  a table is a small, precise specification exercise: say the shape you
+  want, and check the first and last rows against the website's own charts.
+- **Licence:** CC-BY 4.0, attribution required. See
+  [open-meteo.com](https://open-meteo.com/).
 
 ---
 
@@ -158,28 +176,27 @@ Named so you know they exist and know why you are not using them this term.
 
 ---
 
-## What you must record for every source you use
+## What to record for every source you use
 
-Non-negotiable, and it is marked:
+This is the professional habit the atlas exists to build. Nobody is marking
+it — which is exactly why doing it anyway is the habit worth having:
 
 1. **Where it came from** — the URL, and the date you pulled it.
-2. **The licence line** — OGL v3 and ODbL both require attribution.
-3. **Row counts** — national, after your area filter, after every merge.
-4. **The approximation you made** — nearest-centroid instead of true
-   containment, bounding box instead of corridor, 2011 codes joined to 2021
-   codes. Every one of these is defensible. None of them is defensible silently.
+2. **The licence line** — OGL v3, ODbL, and CC-BY all require attribution.
+3. **Row counts** — national, after your patch filter, after every merge.
+4. **The approximation you accepted** — nearest-centroid instead of true
+   containment, a rectangle instead of a boundary, 2011 codes joined to 2021
+   codes. Every one of these is defensible. None of them is defensible
+   silently.
 
 ---
 
-## A word about the corridor
+## A word about real places
 
-The 47 and its eighteen stops are **synthetic**. The geography underneath them
-is **real** — the coordinates in `stops.csv` run north through Birmingham, so
-real casualties, real deprivation and real schools genuinely do fall along it.
-
-That is what makes the joins work, and it is also a trap. You are practising
-on a real place with an invented bus service. **Do not present your findings
-as conclusions about the real city's bus network** — not in your brief, not in
-your presentation, and not anywhere your work could be forwarded. State what
-the data is. That sentence costs you nothing, and it is the difference between
-an analyst and a liability.
+Everything in your atlas is real: real casualties, real deprivation, real
+streets where real people live — quite possibly including you. Two
+disciplines follow. State what each dataset is and when you fetched it, so a
+figure can never be mistaken for something it is not. And keep description
+separate from judgement: "this area is in England's most deprived decile" is
+data; conclusions about the people who live there are not yours to draw. Write
+about every patch with the respect you would want for your own street.

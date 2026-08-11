@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'>
+<title>The Leeds city centre transport atlas</title>
+<style>body{font-family:Georgia,serif;max-width:860px;margin:2em auto;padding:0 1em;color:#222;line-height:1.55}img{max-width:100%;border:1px solid #ddd}h1{font-size:1.7em}h2{margin-top:2.2em}p.meta{color:#666;font-size:0.9em}</style></head><body>
+<h1>The Leeds city centre transport atlas</h1>
+<p class='meta'>The instructor's demonstrator for the Your Patch project. Built entirely from the cached open-data fallbacks in <code>project/data/external/</code> &mdash; sources, dates, and licences in <code>SOURCES.md</code> there. Contains OS, DfT, ONS, MHCLG and open-meteo data (OGL v3 / CC-BY) and OpenStreetMap data (ODbL, &copy; OpenStreetMap contributors).</p>
+<h2>Chapter 1 &mdash; The patch and its stops</h2>
+<img src='chapter1_stops.png' alt='The patch and its stops'>
+<p>The patch contains 1324 active public transport stops. The densest locality is Leeds City Centre, with 149 stops - the city-centre interchange effect is visible before any service data is added. Stop positions alone already sketch the road network.</p>
+<h2>Chapter 2 &mdash; Road safety</h2>
+<img src='chapter2_safety.png' alt='Road safety'>
+<p>STATS19 records 729 pedestrian and cyclist casualties in the patch across 2022-23, of whom 244 were seriously hurt and 15 killed. Pedestrians account for 406 of the 729. Every one of these points has a location, so the natural next question - where, exactly - is answerable with the distance technique from the studio.</p>
+<h2>Chapter 3 &mdash; Deprivation</h2>
+<img src='chapter3_deprivation.png' alt='Deprivation'>
+<p>Across the Leeds district's 482 neighbourhoods, 114 (24%) fall in England's most deprived decile, against 33 in the least deprived - the city holds both extremes at once. This chapter is drawn at district level; cutting it to the patch needs the ONS point-in-LSOA lookup, which is a worthwhile refinement for a student atlas. Note the codes: IMD 2019 uses 2011 LSOA boundaries.</p>
+<h2>Chapter 4 &mdash; Who has no car</h2>
+<img src='chapter4_car_free.png' alt='Who has no car'>
+<p>Of the district's 341,490 households, 98,087 (29%) have no car or van - for them, walking, cycling, and public transport are the whole transport system. The neighbourhood where car-free households are most common is Leeds 111B, at 82%. Census codes here are 2021 LSOAs; joining them to the 2019 deprivation file is the vintage trap from the catalogue.</p>
+<h2>Chapter 5 &mdash; Cycling potential</h2>
+<img src='chapter5_cycling.png' alt='Cycling potential'>
+<p>Across the 3552 network segments touching the patch, the PCT's Go Dutch scenario models roughly 6.8 times the cycling of its 2011 observed baseline. Two honesty notes belong in any use of this chart: the sums count each cyclist on every segment they cross, so the scale is indicative rather than a count of people; and the model covers 2011 commuting only - no leisure, shopping, or study trips, and a baseline now well over a decade old.</p>
+<h2>Chapter 6 &mdash; What is there</h2>
+<img src='chapter6_amenities.png' alt='What is there'>
+<p>OpenStreetMap places 290 everyday destinations in the patch across six categories, including 108 schools, 63 pharmacies, and 68 supermarkets. These are the places transport exists to reach, which makes this layer the natural companion to chapter 1: a stop matters in proportion to what is near it. Coverage is community-mapped, so treat absence as unmapped, never as proven absent.</p>
+<h2>Chapter 7 &mdash; A year of weather</h2>
+<img src='chapter7_weather.png' alt='A year of weather'>
+<p>In 2025 the patch received 756 mm of rain, and rain heavier than drizzle fell in 665 hours - 8% of the year. Monthly mean temperatures ran from 2.6 to 17.5 deg C. For anyone walking, cycling, or waiting at one of chapter 1's stops, this is the operating environment; joining it to demand or reliability data is a natural stretch chapter.</p>
+</body></html>

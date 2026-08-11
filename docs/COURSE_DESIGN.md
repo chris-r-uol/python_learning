@@ -10,10 +10,15 @@
 > "homework" framing below is retired — what the run sheets call homework is
 > now in-session task time, and the student-facing week READMEs carry the
 > teaching content in written form (concepts first, then the demonstration,
-> then the tasks). Contact time grows accordingly; weeks 4–5 are 3h each
-> (see `WEEKS_4_5_DESIGN.md`). The task content, marking, and weights are
-> unchanged. The timed run sheets below predate this change and need
+> then the tasks). The timed run sheets below predate this change and need
 > rebalancing before delivery.
+>
+> **Assessment removed (August 2026).** This is now a pure learning module —
+> no grading anywhere; the skills are assessed elsewhere. Every marking
+> table, weight, and rubric below is historical. Weeks 4–5 were also
+> replaced: the group corridor project became an individual, ungraded
+> transport atlas built at volume with AI assistance — see
+> `ATLAS_PROJECT_DESIGN.md`.
 
 ---
 

@@ -2,11 +2,13 @@
 
 **Done in class, under supervision. About 2 hours of work. Anything
 unfinished at the end of the session, finish before week 4 — the project
-assumes it.**
+weeks assume this way of working.**
 
 You are going to build a small tool with AI assistance. Building the tool is
-the easy part. The submission is graded on whether you can show that it is
-correct.
+the easy part. The real exercise is showing that it is correct — nothing here
+is graded, and that is precisely why the proof matters: the only reason to
+verify is the only reason that will exist after this course, which is that
+nobody else is going to.
 
 The instructor and the TA are circulating, and this task is designed to make
 you need them at least once. Try for ten minutes, then ask — and note that
@@ -36,9 +38,10 @@ the assistant for help, and apply the checklist to everything it gives you.
 
 ---
 
-## What you submit
+## What you produce
 
-Three files.
+Three files. Keep all three — together they are the template for every piece
+of AI-assisted work you do in the project weeks, and afterwards.
 
 ### 1. `journey_time.py`
 
@@ -49,12 +52,13 @@ The tool.
 Every prompt you used, in order, including the ones that did not work. If you
 rewrote a prompt, include both versions and say what you changed and why.
 
-We are not checking whether your prompts were elegant. We are checking that
-you know which ones worked, and can say why.
+The point is not elegant prompts. The point is knowing, afterwards, which
+ones worked and being able to say why — that record is how the skill
+compounds instead of resetting every session.
 
 ### 3. `verification.md`
 
-**This is the part that is marked.** It must contain three sections.
+**This is the part that matters.** It has three sections.
 
 **a. A hand-worked case.**
 Choose one pair of stops and one specific trip. Work out the journey time
@@ -79,9 +83,10 @@ you construct yourself, so you still know how it would behave.
 - Rows that appear twice
 
 You will not have anticipated all of these. Finding out which ones your tool
-handles, and which ones break it, *is the exercise*. A tool that handles three
-of the five, with the other two documented honestly, scores better than one
-that claims to handle all five without evidence.
+handles, and which ones break it, *is the exercise*. A tool that handles
+three of the five, with the other two documented honestly, is worth more
+than one that claims to handle all five without evidence — here and
+everywhere after this course.
 
 **c. One sentence per function.**
 For every function in your file, write one sentence saying what it does. If
@@ -90,27 +95,25 @@ assistant what the function does, and keep asking until you can explain it.
 
 ---
 
-## Marking
+## Where the value is
 
-| | Weight |
-|---|---|
-| Verification evidence — the hand-worked case and the awkward cases | **60%** |
-| Prompt record — shows real iteration, not one lucky attempt | 20% |
-| The tool itself — runs, and does approximately the right thing | 20% |
+Nothing here is graded, so be honest about which part of this task is worth
+your two hours. It is not the tool — the assistant writes most of the tool.
+It is the verification: the evidence file is the part you could not have
+produced three weeks ago, and the part that makes the tool trustworthy
+rather than merely plausible.
 
-Yes, this is deliberate. Working code with no evidence scores 20%. A partial
-tool with thorough, honest verification scores 80%.
-
-The reason: in the project, and afterwards in your work, nobody will check
-your numbers for you. The only thing standing between a wrong number and a
-decision made on it is whether you looked.
+The reason it matters: in the project weeks, and afterwards in your work,
+nobody will check your numbers for you. The only thing standing between a
+wrong number and a decision made on it is whether you looked.
 
 ---
 
-## Two things that will lose you marks
+## Two habits to avoid from the start
 
-**Submitting code you cannot explain.** In week 4 we will ask you to explain
-it, in person.
+**Keeping code you cannot explain.** In week 4 the instructor will ask you,
+conversationally and in person, what your code does — not to test you, but
+because saying it out loud is how you find out whether you own it.
 
-**A verification section that says "I tested it and it worked."** That is not
-evidence. Evidence contains numbers.
+**Writing "I tested it and it worked."** That is not evidence. Evidence
+contains numbers.
