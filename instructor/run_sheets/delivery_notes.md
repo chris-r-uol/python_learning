@@ -48,6 +48,24 @@ you are running late, cut the environments section down to two sentences and
 protect this. Environments they can pick up from the guide. Reading a traceback
 they cannot.
 
+**Section 4 of the week 1 README ("What the code is actually saying") is new
+and is not optional.** It covers data types, lists and zero-based indexing,
+`if`, and `for`/`while` — at reading level only; week 2 teaches writing
+them. It exists because the traceback safari genuinely requires all four
+(exercise 2 is a type conversion, 3 is a list index, 5 is an indented block,
+6 is an empty-case `if`), and before this section the course never taught
+them. An experienced programmer does not notice the gap, because they
+pattern-match from `first_script.py` instantly; a beginner has nothing to
+pattern-match from. Teach it immediately before the traceback anatomy, so
+the error table's "idea behind it" column lands on material they have just
+seen.
+
+**The tasks are now ordered sweep-first, safari-second.** The parameter
+sweep is the gentler one and continues the demonstration directly; the
+safari is the hard one. If the room is running out of time, the safari is
+the task to let run over into their own time — not the sweep, which is what
+builds the edit → run → look reflex.
+
 **Live-code the modification.** Do not show finished code. Type it, get it
 wrong, read the error out loud, fix it. Watching an expert recover from an error
 is the thing they cannot get from a textbook.

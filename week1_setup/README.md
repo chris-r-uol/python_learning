@@ -4,9 +4,9 @@
 terminal, explain what a virtual environment is for, change a value in a
 script and see the effect, and read an error message.
 
-The session has three parts. First we cover four ideas — everything else this
-week depends on them. Then we work through a real script together. Then you
-do the tasks, in class, with the instructor and the TA circulating. This
+The session has three parts. First we cover five ideas — everything else
+this week depends on them. Then we work through a real script together. Then
+you do the tasks, in class, with the instructor and the TA circulating. This
 document covers all three parts in full, so you can also use it to review, or
 to catch up if you missed the session.
 
@@ -156,7 +156,149 @@ is cheap and disposable. If one ever breaks or confuses you, delete the
 from the setup guide, two minutes. Nothing of value lives inside it; your
 code and data live outside. You never need to be afraid of it.
 
-### 4. How to read an error message
+### 4. What the code is actually saying
+
+You are about to read a real script and then fix six broken ones, so you
+need to recognise four things when you see them. This section is about
+**reading** code, not writing it — week 2 teaches you to write these from
+scratch. For now the goal is that nothing in a script looks like
+unexplained punctuation.
+
+#### Data, and the two types that matter today
+
+**Data** is simply the values a program works with: a count of vehicles, the
+name of a direction, a date. Every value in Python has a **type**, and today
+only two matter.
+
+- **Numbers** — `1703`, `8`, `0.5`. You can do arithmetic on them.
+- **Text** — `"northbound"`, `"1703"`. Text is called a *string*, and you
+  can always spot it by the quotation marks.
+
+The quotation marks are the whole difference between these two lines:
+
+```python
+count = 1703      # a number
+count = "1703"    # text that happens to look like a number
+```
+
+That difference matters more than it sounds, because **a file always gives
+you text.** A CSV file is a plain text file, so when a script reads `1703`
+out of one, it receives the four characters `1`, `7`, `0`, `3` — not the
+number. Text behaves like text:
+
+```python
+1703 + 1        # 1704     - numbers add
+"1703" + "1"    # "17031"  - text joins end to end
+```
+
+So a script must convert before it calculates. `int()` turns text into a
+whole number: `int("1703")` gives `1703`. You will see `int(...)` wrapped
+around values in almost every script this term, and now you know why it is
+there.
+
+Python will not quietly guess for you. If you compare text with a number it
+stops and says `TypeError` — which is the loudest, most helpful thing it
+could do, and one of the six errors in the tasks.
+
+#### Lists, and counting from zero
+
+A **list** holds several values in order, written in square brackets:
+
+```python
+parts = ["2026-03-02", "8", "northbound", "1703"]
+```
+
+You reach an item by its position, and **positions start at zero**:
+
+```python
+parts[0]     # "2026-03-02"  - the first item
+parts[2]     # "northbound"  - the third item
+parts[3]     # "1703"        - the fourth and last
+```
+
+Zero-based counting feels wrong for about a week. The way to hold on to it
+is that the number measures *how far from the start* an item is, and the
+first item is zero steps along. A four-item list therefore has positions 0
+to 3 — and asking for `parts[4]` gets you `IndexError`, another of the six.
+
+Lists appear constantly because a file is naturally a list of lines, and a
+line is naturally a list of comma-separated values.
+
+#### `if` — doing something only sometimes
+
+```python
+if count > 900:
+    print("busy hour")
+```
+
+Read it as written: *if this condition is true, run the indented lines
+underneath.* The parts are the word `if`, a condition, a colon, and then an
+indented block.
+
+The comparisons you will see are `>`, `<`, `>=`, `<=`, `==` (equal to) and
+`!=` (not equal to). Note that **equality is a double `==`**, because a
+single `=` already means "store this value under this name".
+
+The indentation is not decoration — it is how Python knows which lines are
+inside the `if` and which are not. Lines indented under it run only when the
+condition holds; the first line back at the left margin runs either way.
+Getting that spacing wrong is `IndentationError`, and it is the one error
+that stops the program *before it starts*.
+
+An `if` may be followed by `else`, whose block runs when the condition is
+false:
+
+```python
+if len(counts) == 0:
+    print("no data")
+else:
+    print(sum(counts) / len(counts))
+```
+
+That pattern — check for the empty case before dividing — is how you avoid
+`ZeroDivisionError`, which is the sixth error in the tasks.
+
+#### `for` and `while` — doing something repeatedly
+
+A **`for` loop** runs the same block once for each item in a collection:
+
+```python
+for line in data_lines:
+    print(line)
+```
+
+Read it as: *for each item in `data_lines`, one at a time, call it `line`
+and run the indented block.* The name `line` is chosen by whoever wrote the
+loop; it is refilled on every pass. As with `if`, indentation decides what
+is inside the loop.
+
+A **`while` loop** repeats for as long as a condition stays true:
+
+```python
+countdown = 3
+while countdown > 0:
+    print(countdown)
+    countdown = countdown - 1
+```
+
+The difference in plain words: `for` means *"for each of these things"*, and
+`while` means *"keep going until this stops being true"*. Use `for` when you
+know what you are working through — a file, a list, the hours of a day —
+which is nearly always in data work, and why almost every loop in this
+course is a `for`. `while` earns its place when you cannot know in advance
+how many repetitions you need. Its one hazard is worth knowing: if the
+condition never becomes false, the program runs forever, and you stop it
+with **Ctrl-C**.
+
+#### Putting it together
+
+Those four ideas are almost the whole of the script you are about to read: a
+`for` loop over the lines of a file, `int()` converting text to numbers,
+`parts[...]` pulling values out of a list, and an `if` deciding what counts
+as busy. Four of the six errors in the tasks are simply one of these ideas
+going wrong.
+
+### 5. How to read an error message
 
 When a program fails, Python prints a report called a **traceback**. It
 looks alarming, and most beginners' instinct is to look away and re-read
@@ -192,16 +334,16 @@ there is no point looking at what it printed, because it printed nothing.
 You will meet exactly this in the tasks.
 
 The kind of error is itself information. Six kinds cover almost everything
-you will see this term:
+you will see this term, and each one points back at an idea from section 4:
 
-| Error | What it means |
-|---|---|
-| `NameError` | You used a name that has not been defined — often a spelling mistake |
-| `TypeError` | You combined two things whose types do not fit — often text where a number was needed |
-| `IndexError` | You asked a list for a position it does not have |
-| `FileNotFoundError` | The file is not where the program looked — usually a working-directory problem |
-| `IndentationError` | The lines do not line up the way Python requires — the program never started |
-| `ZeroDivisionError` | Something divided by zero — often an empty input nobody planned for |
+| Error | What it means | Idea behind it |
+|---|---|---|
+| `NameError` | You used a name that has not been defined — often a spelling mistake | Names |
+| `TypeError` | You combined two things whose types do not fit — usually text where a number was needed | Data types |
+| `IndexError` | You asked a list for a position it does not have | Lists, counting from zero |
+| `FileNotFoundError` | The file is not where the program looked — usually a working-directory problem | Paths and the working directory |
+| `IndentationError` | The lines do not line up the way Python requires — the program never started | Indented blocks in `if` and `for` |
+| `ZeroDivisionError` | Something divided by zero — often an empty input nobody planned for | `if` and the empty case |
 
 You do not need to memorise the table. You need to know it exists, and to
 read the last line of every traceback before doing anything else. One more
@@ -249,11 +391,29 @@ there to be used: a good rule is to try something yourself for ten minutes,
 and then ask. Both halves of the rule matter — the trying and the asking.
 Anything unfinished at the end of the session, finish before next week.
 
-### Task 1 — The traceback safari
+Do them in this order: the first is a gentle continuation of the
+demonstration, and the second is the harder one.
+
+### Task 1 — The parameter sweep
+
+Run `first_script.py` five times, with `BUSY_THRESHOLD` set to 500, 700,
+900, 1100, and 1300. Record the number of busy hours for each threshold in a
+small table — on paper or in a spreadsheet, either is fine. Then write two
+sentences describing the pattern you see.
+
+Nothing here can break: you are changing one number in a script that already
+works, which makes it the safest possible place to practise the
+edit → run → look loop until it feels automatic.
+
+The point of the task is not the table. It is that changing one number in a
+script, re-running it, and observing the result is a complete, legitimate
+method of investigation — and after today, it is one you have.
+
+### Task 2 — The traceback safari
 
 Six broken scripts are in `exercises/`. Each contains exactly one of the six
-error kinds from the table above. For each script: run it, read the error,
-find the line, fix it.
+error kinds from the table above — one per row, in no particular order. For
+each script: run it, read the error, find the line, fix it.
 
 ```
 cd week1_setup/exercises
@@ -261,19 +421,16 @@ python check.py
 ```
 
 `check.py` tells you which scripts are fixed. It does not tell you how to fix
-them — that is the exercise. When all six pass, you have met, in miniature,
-most of the errors you will see for the rest of the course.
+them — that is the exercise.
 
-### Task 2 — The parameter sweep
+This is the harder task, and it is meant to be. Expect to be stuck at least
+once; that is not a sign you are behind. Three things to lean on when you
+are: the error table above, which names the idea behind each error; section
+4, which explains those ideas; and `first_script.py`, which is a working
+example of every one of them. Then the ten-minute rule — try, then ask.
 
-Run `first_script.py` five times, with `BUSY_THRESHOLD` set to 500, 700,
-900, 1100, and 1300. Record the number of busy hours for each threshold in a
-small table — on paper or in a spreadsheet, either is fine. Then write two
-sentences describing the pattern you see.
-
-The point of the task is not the table. It is that changing one number in a
-script, re-running it, and observing the result is a complete, legitimate
-method of investigation — and after today, it is one you have.
+When all six pass, you have met, in miniature, most of the errors you will
+see for the rest of the course.
 
 ---
 
