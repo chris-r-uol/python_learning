@@ -18,7 +18,7 @@
 
 ## Week 2 drills — 10%
 
-Mechanical. Run their `drills.py`.
+Mechanical. Run `check.py` in their drills folder.
 
 | | |
 |---|---|
