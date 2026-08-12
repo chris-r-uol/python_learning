@@ -39,7 +39,58 @@ your dissertation, and your first job, it is not.
 
 ---
 
-## 2. Three layers of quality control
+## 2. Ask for the plan before the code
+
+The second pre-delegation move, and the one that costs the least for what it
+returns: **before an assistant writes a chapter, make it tell you how it
+intends to write it.**
+
+The arithmetic is simple. You can read a ten-line plan properly in about a
+minute. You cannot read three hundred lines of generated code properly in
+anything like that, and at seven chapters you will not try. A plan is the
+last point where the work is small enough to review honestly.
+
+You do not need a special tool for this. Ask, in words:
+
+> Before writing any code, give me your plan for this chapter as numbered
+> steps: which file you will create, which function does what, which source
+> you will fetch and from which address, and where you will print row
+> counts. Do not write any code yet.
+
+**What you are looking for in the answer.** This is where the list from
+section 1 earns its keep — a plan is short enough that you can actually
+check it against what you know:
+
+- Has it named the **right source and address**, or invented one? "I will
+  look up the ATCO code for the area" is the sound of a plan about to guess.
+- Has it silently changed the **question**? A plan to average what you asked
+  it to count is easier to catch here than in the output.
+- Does it say **where the row counts go**? If not, say so now rather than
+  reading them into the code afterwards.
+- Is it **one chapter**, or has it quietly scoped seven? Scope creep is
+  visible in a plan and invisible in a diff.
+
+Then do one of three things: approve it, correct the step that is wrong, or
+send it back with a narrower scope. Only then let it build.
+
+**Built-in plan modes.** Several assistants can do this as a formal step
+rather than a typed request — GitHub Copilot in VS Code has a plan mode, and
+other assistants have their own equivalents under various names. They are
+worth trying: a plan you can approve step by step is easier to review than a
+paragraph of prose.
+
+Two honest caveats. First, these features differ in what they are allowed to
+do — some produce a plan and then write files directly, others are more
+restricted, and the details change from release to release. If yours will not
+write into your project folder, that is a limitation of the tool and not a
+problem with the approach: the typed request above does the same job in any
+assistant, including the Chinese services in `setup/chinese-services.md`.
+Second, **a plan mode does not review the plan for you.** It makes the plan
+easy to see. Reading it is still the job, and approving a plan you did not
+read is the same mistake as accepting code you did not read, one step
+earlier.
+
+## 3. Three layers of quality control
 
 They behave completely differently, and only one of them is yours.
 
@@ -83,7 +134,7 @@ delegable, and it is the whole of the next section.
 
 ---
 
-## 3. QC theatre, and how to avoid producing it
+## 4. QC theatre, and how to avoid producing it
 
 Here is what happened when a very capable assistant built this atlas.
 
@@ -114,7 +165,7 @@ consistent. It says nothing about whether it is true.**
 
 ---
 
-## 4. A contract to give your agent
+## 5. A contract to give your agent
 
 Paste this, adapt it, and then hold the agent to it:
 
@@ -138,7 +189,7 @@ session, and it is real quality control rather than the appearance of it.
 
 ---
 
-## 5. Look at your output
+## 6. Look at your output
 
 Every data bug in that build failed loudly. Every *presentation* bug failed
 silently and looked confident: a map two zoom levels too far out, a cycling
@@ -162,7 +213,7 @@ you read your row counts.
 
 ---
 
-## 6. Keep your own score
+## 7. Keep your own score
 
 At the end of each chapter, write two numbers at the top of it:
 

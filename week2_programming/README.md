@@ -488,14 +488,28 @@ end of the session, finish before next week.
 
 ### Task 1 — The drills
 
-Twelve short exercises in `drills/drills.py`, one per idea, in rising order
-of difficulty. Fill in each function where it says TODO, then run the file —
-it marks itself and tells you which functions pass.
+Twelve short exercises, one per idea, in rising order of difficulty. They
+work exactly like last week's traceback safari: **one file each**, in
+`drills/`, from `drill_01.py` to `drill_12.py`, with a `check.py` that marks
+them.
+
+Open a drill file. It contains one function with a `TODO` where its body
+should be, and a docstring saying what the function must do, what it should
+return for a couple of example inputs, and which idea from Part 1 it comes
+from. Fill in the body, save, and run the marker:
 
 ```
 cd week2_programming/drills
-python drills.py
+python check.py
 ```
+
+`check.py` reports each drill as `PASS`, `TODO` (it runs but the answer is
+not right yet), `ERROR` (it raised something), or `BROKEN` (the file will
+not even start — usually an indentation problem). It does not tell you how
+to fix anything; that is the exercise.
+
+The drills are independent of one another, so work on one file at a time and
+ignore the rest. There is no need to finish drill 3 before starting drill 4.
 
 Aim to finish the nine unstarred drills; the three marked with a star are
 harder and entirely optional. You are not expected to know any of this from

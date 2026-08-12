@@ -133,7 +133,13 @@ line count. Stage 3 is 15 lines. Stage 5 is 3. Then say the important part:
 new version against my old one. That is the entire idea of week 3, three weeks
 early."*
 
-**The drills are ungraded** — the marker in the file is self-checking, not
+**The drills now match week 1's format** (issue #16): twelve separate files,
+`drill_01.py` to `drill_12.py`, plus a `check.py` that marks them — the same
+open-a-file, fix-it, re-run rhythm as the traceback safari, so the second
+week costs no new navigation. Point out that the drills are independent:
+students can skip one that is fighting them and come back.
+
+**The drills are ungraded** — `check.py` is self-checking, not
 assessment. Encourage at least the nine unstarred; the three starred ones
 identify who will move fastest in the project weeks and can absorb stretch
 chapters.

@@ -59,6 +59,15 @@ quickly and repeatedly without losing control of correctness. It is the
 single most transferable thing this course teaches, and the only way to
 learn it is on a task too big to do any other way.
 
+**Read [`agent_guide.md`](agent_guide.md) before you build anything.** Two
+of its habits belong at the very start rather than partway through: writing
+down what your assistant is likely to invent, and **asking for the plan
+before the code**. That second one is the cheapest quality control
+available — a ten-line plan takes a minute to read, and three hundred lines
+of generated code does not, so the plan is the last point where reviewing
+the work honestly is realistic. Some assistants offer this as a built-in
+plan mode; asking for it in words works everywhere.
+
 ## The chapters
 
 Every chapter has the same shape, and the shape is the method:
