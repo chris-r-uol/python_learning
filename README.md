@@ -58,6 +58,17 @@ nobody spends class time watching an installer.
 | `week2_programming/` | The worked example and the practice drills |
 | `week3_ai/` | The verification checklist and the AI-assisted task |
 | `project/` | Your Patch — the individual transport atlas, and the data source catalogue |
+| `instructor/` | Teaching notes **and the worked solutions to weeks 1 and 2** |
+| `docs/` | How the course was designed, if you are curious |
+
+**Yes, the answers are in there.** `instructor/solutions/` holds the fixed
+versions of the week 1 exercises and all twelve week 2 drills. That is
+deliberate: nothing on this course is graded, so the only person you can
+cheat is yourself, and having the answers available means you can check your
+own work the way you would use the answers in the back of a textbook. Use
+them after a real attempt, or when you have genuinely run out of ideas.
+Reading one first costs you the practice, which is the only thing the task
+was ever going to give you.
 
 ## Three rules that apply all course
 

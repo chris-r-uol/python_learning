@@ -46,7 +46,12 @@ TESTS = [
         f(PROFILE) == 8 and f([5, 5, 1]) == 0
     )),
     (3, False, "count_above", lambda f: (
-        f([10, 20, 30], 15) == 2 and f(PROFILE, 1000) == 5 and f([], 0) == 0
+        f([10, 20, 30], 15) == 2
+        # 20 is exactly ON the threshold. "Strictly greater" excludes it,
+        # so the answer is 1, not 2. This is the case that separates > from >=.
+        and f([10, 20, 30], 20) == 1
+        and f(PROFILE, 1000) == 5
+        and f([], 0) == 0
     )),
     (4, False, "total_flow", lambda f: (
         f([10, 20, 30]) == 60 and f([]) == 0 and f(PROFILE) == sum(PROFILE)
@@ -80,6 +85,9 @@ TESTS = [
     )),
     (11, True, "hours_over", lambda f: (
         np.array_equal(f(np.array(PROFILE), 1000), np.array([8, 9, 16, 17, 18]))
+        # PROFILE[9] is exactly 1100. "Exceeds" excludes an equal value,
+        # so hour 9 must drop out when the threshold is 1100.
+        and np.array_equal(f(np.array(PROFILE), 1100), np.array([8, 16, 17]))
         and len(f(np.array(PROFILE), 99999)) == 0
     )),
     (12, True, "two_way_flow", lambda f: np.array_equal(
