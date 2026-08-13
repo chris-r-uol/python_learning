@@ -1,0 +1,6 @@
+# The course website only. Students never need this - the site is built by
+# GitHub Actions from the markdown already in the repository.
+#
+#     pip install -r requirements-docs.txt
+#     mkdocs serve
+mkdocs-material>=9.5

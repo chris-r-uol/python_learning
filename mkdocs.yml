@@ -1,0 +1,116 @@
+site_name: Python for Transport & Civil Engineering
+site_description: >-
+  Course reference. Five weeks from a first script to a transport atlas of a
+  place you choose, built with an AI assistant and checked by you.
+site_url: https://chris-r-uol.github.io/python_learning/
+repo_url: https://github.com/chris-r-uol/python_learning
+repo_name: chris-r-uol/python_learning
+edit_uri: ""
+
+# The site is a VIEW of the course material, never a copy of it. Every page in
+# site_src/ is a stub that pulls in the real file from the repository with a
+# snippet include, so the file a student opens in their editor and the page
+# they read in the browser are the same text. Editing the site means editing
+# the course; there is no second copy to drift.
+docs_dir: site_src
+
+theme:
+  name: material
+  language: en
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    logo: material/bus-side
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Dark theme
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Light theme
+  features:
+    # Built for a narrow window beside an editor: sections stay open in the
+    # sidebar, the table of contents follows you, and code blocks copy in one
+    # click rather than being selected by hand.
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tooltips
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  # Renders the :material-...: icon shortcodes used on the landing pages.
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      # Snippets are resolved from the repository root, which is what lets a
+      # page say "include week1_setup/README.md" and stay in step with it.
+      base_path: ["."]
+      check_paths: true
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/chris-r-uol/python_learning
+      name: The course repository
+
+extra_css:
+  - stylesheets/course.css
+
+nav:
+  - Start here: index.md
+  - Setting up:
+      - setup/index.md
+      - Windows: setup/windows.md
+      - macOS: setup/macos.md
+      - GitHub Codespaces: setup/codespaces.md
+      - Locked-down laptop: setup/locked-down-laptop.md
+      - Google Colab: setup/colab-fallback.md
+      - Using Chinese services: setup/chinese-services.md
+  - Week 1 — Getting Python working: week1_setup/README.md
+  - Week 2 — Actually programming: week2_programming/README.md
+  - Week 3 — AI acceleration:
+      - week3_ai/README.md
+      - The failure demonstration: week3_ai/failure_demo/README.md
+      - The task: week3_ai/task.md
+      - Verification checklist: week3_ai/verification_checklist.md
+  - The project — finding the data:
+      - project/index.md
+      - The brief: project/brief.md
+      - Data discovery: project/data_sources.md
+      - Directing an agent: project/agent_guide.md
+  - Quick reference: reference.md
