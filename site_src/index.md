@@ -15,8 +15,7 @@ you can read a task on one side of the screen and do it on the other.
 !!! tip "Two things worth knowing before you start"
 
     **Nothing here is graded.** No submissions, no presentations, nobody
-    reviewing your work. The only thing you ever send us is the setup check
-    below, and that is a report on your machine rather than on you.
+    reviewing your work. Nothing is collected from you at any point.
 
     **The answers are published too.** Worked solutions to weeks 1 and 2 live
     in `instructor/solutions/`. Use them the way you would use the answers in
@@ -24,7 +23,7 @@ you can read a task on one side of the screen and do it on the other.
 
 ## Before week 1
 
-Set up your machine, then run the check and send us what it prints.
+Set up your machine, then run the check and read what it tells you.
 
 <div class="grid cards" markdown>
 
@@ -68,6 +67,30 @@ Then, in the course folder:
 ```bash
 python check_setup.py
 ```
+
+## If something does not work
+
+It will, at some point, and that is not a sign you have gone wrong. Working
+out *why* something is broken is the actual subject of this course; the
+setup is simply the first place you get to practise it.
+
+When something fails, in this order:
+
+1. **Read the message**, properly and to the end. It usually says what is
+   wrong, and often says what to do about it.
+2. **Check the "If this fails" notes** in your setup guide. The failures
+   almost everyone hits are listed there with their fixes.
+3. **Paste the exact error into an AI assistant** and ask what it means.
+   Installation problems are the most thoroughly documented problems in
+   computing. From week 3 you will be doing a far more demanding version of
+   this.
+4. **Search the exact error text.** Somebody has had it before you.
+5. **Half an hour gone? Stop, and use [Codespaces](setup/codespaces.md).**
+   Nothing to install, nothing your laptop can block, and no part of the
+   course is lost. Choosing it is good judgement, not defeat.
+6. **Still stuck when the session starts?** Bring it with you. Studio time,
+   with an instructor and a TA in the room, is exactly what that time is
+   for.
 
 ## The five weeks
 

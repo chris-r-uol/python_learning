@@ -192,7 +192,7 @@ def main():
     if blockers:
         print("NOT READY YET.")
         print("")
-        print("These need fixing before week 1:")
+        print("These need fixing before week 1. Each one below says what to do:")
         print("")
         for blocker in blockers:
             print("  " + blocker)
@@ -214,13 +214,19 @@ def main():
         for note in notes:
             print("  " + note)
 
-    print("")
-    print("Copy everything above and send it to us, whichever result you got.")
-    print("This is a report on your machine, not on you - it is how we fix")
-    print("setup problems before the session rather than during it.")
     if blockers:
-        print("Do not try to fix it alone - we will sort it out with you")
-        print("before the session.")
+        print("")
+        print("Working through it:")
+        print("")
+        print("  1. Read the lines above. They name the problem and the fix.")
+        print("  2. Check the 'If this fails' notes in your setup guide -")
+        print("     the common failures are listed there with their answers.")
+        print("  3. Paste the exact error into an AI assistant and ask what")
+        print("     it means. Setup problems are the best-documented problems")
+        print("     in computing, and this is good practice for week 3.")
+        print("  4. Half an hour gone? Stop, and use GitHub Codespaces")
+        print("     instead - see setup/codespaces.md. Nothing to install,")
+        print("     and nothing your machine can block.")
     print(LINE)
 
 

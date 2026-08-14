@@ -4,9 +4,16 @@ This guide takes you from a bare Windows machine to a working course setup. It
 takes most people 30 to 45 minutes. Follow the steps in order, and do not skip
 the checks — each one confirms that the step before it worked.
 
-If a step fails, do not spend your evening fighting it. Copy the error message,
-note which step you were on, and send us that instead of the check output.
-We will fix it with you before the first session.
+**If a step fails, work it out.** That is not a brush-off: it is the first
+piece of real practice this course offers, and the failures below are all
+ones that thousands of people have hit and written up. Read the error, check
+the "If this fails" notes under each step, and paste the exact message into
+an AI assistant if it still makes no sense.
+
+And keep an eye on the clock. If half an hour disappears into fighting your
+own machine, stop and use [GitHub Codespaces](codespaces.md) instead —
+nothing to install, nothing your laptop can block, and no part of the course
+is lost.
 
 > Screenshots for each step are marked **[screenshot]**. If your screen does not
 > match the description, stop and ask rather than guessing.
@@ -127,7 +134,7 @@ This downloads the libraries the course uses. It can take a few minutes.
 
 **If this fails** with an error mentioning SSL, certificates, or a proxy, you
 are probably on a managed or corporate network — see
-[`locked-down-laptop.md`](locked-down-laptop.md), and tell us.
+[`locked-down-laptop.md`](locked-down-laptop.md).
 
 ## 8. Run the setup check
 
@@ -137,9 +144,8 @@ Still in the course folder, with the environment active:
 python check_setup.py
 ```
 
-Copy everything it prints and send it to us. If it reports problems, send
-that output — it is designed to tell us exactly what to fix, and that is just as
-useful as a pass.
+Read what it prints. If it reports problems, it names each one and the fix
+for it — work through them in order.
 
 ## 9. Install Git (needed from week 4)
 

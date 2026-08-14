@@ -6,11 +6,15 @@ title: Setting up
 
 Pick the guide that matches your situation. All of them end in the same
 place: a working Python, a virtual environment, the course packages, and a
-setup check you send us.
+setup check that tells you whether it worked.
 
-**Budget about 45 minutes, and stop if it fights you.** If a step fails, copy
-the error, note which step you were on, and send us that instead. We would
-rather fix it before the first session than watch you fix it during.
+**Budget about 45 minutes, and watch the clock.** If a step fails, that is
+the first genuine piece of practice this course offers — read the error,
+check the "If this fails" notes under the step, and paste the exact message
+into an AI assistant if it is still opaque. But if half an hour disappears
+into fighting your own machine, stop and use
+[Codespaces](codespaces.md) instead. Knowing when to change approach is a
+professional judgement, not a concession.
 
 <div class="grid cards" markdown>
 
@@ -66,7 +70,9 @@ Running `python check_setup.py` ends in one of three verdicts.
 |---|---|
 | **ALL CHECKS PASSED** | Nothing to do. |
 | **READY, WITH NOTES** | **Also a pass.** Everything the course needs works. Some notes are entirely normal — "no virtual environment" is expected on Colab. |
-| **NOT READY YET** | Something genuinely blocks you: Python too old, the wrong Python, or packages missing. Send it and we will fix it with you. |
+| **NOT READY YET** | Something genuinely blocks you: Python too old, the wrong Python, or packages missing. The check names each problem and its fix, in order. |
 
-Send the output whichever verdict you get. It is a report on your machine,
-not on you, and it is the only thing all term that we ask you to send.
+Nothing is collected — the check is for you. Work through whatever it
+reports, and if the obvious fix does not land, the
+[start-here page](../index.md) has a short section on getting yourself
+unstuck.

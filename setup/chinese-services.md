@@ -105,9 +105,10 @@ Term breaks happen. If you take the project home, three things change:
 
 ## If you do not have a Google account
 
-Only the Colab fallback needs one. If you would rather not create one, say
-so during setup week — the local installation works without any Google
-services, and we would rather set that up with you than have you stuck.
+Only the Colab fallback needs one. A local installation uses no Google
+services at all, and [Codespaces](codespaces.md) needs a GitHub account
+rather than a Google one — so if you would rather not create a Google
+account, either route works and neither costs you anything.
 
 ---
 

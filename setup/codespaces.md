@@ -43,7 +43,6 @@ Now run the setup check:
 python check_setup.py
 ```
 
-Copy everything it prints and send it to us, exactly as students on laptops do.
 It should report `Running on: GitHub Codespaces` and `ALL CHECKS PASSED`.
 
 **If it says "no virtual environment is active":** the check itself will
@@ -130,6 +129,6 @@ any file or folder in the sidebar and choose **Download**.
   to work from China during the course, a local installation is the more
   resilient choice — see [`chinese-services.md`](chinese-services.md).
 
-If any of this does not behave as described, tell us during setup week. A
-Codespace is the one environment where we can see exactly what you see,
-which makes helping you straightforward.
+A Codespace is the one environment where everybody's machine is identical,
+so if something here does not behave as described, the answer is very
+likely in this guide or one search away.

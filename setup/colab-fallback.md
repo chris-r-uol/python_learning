@@ -19,11 +19,14 @@ Two things to say clearly at the start:
 - There are a few real differences from a local setup, listed at the end.
   Read them once so they do not surprise you.
 
-You need a Google account. If you do not have one or cannot use one, tell us
-and we will sort something out — and note that Colab does not work from
-mainland China, so if you expect to spend part of the course there, the
-local setup is the resilient choice (see
-[`chinese-services.md`](chinese-services.md)).
+You need a Google account. If you cannot have one, use
+[Codespaces](codespaces.md) instead — it needs a GitHub account rather than
+a Google one, and it keeps the terminal and the virtual environment, so it
+is the better fallback anyway.
+
+Note also that Colab does not work from mainland China. If you expect to
+spend part of the course there, a local setup is the resilient choice — see
+[`chinese-services.md`](chinese-services.md).
 
 ## 1. Open Colab
 
@@ -64,7 +67,7 @@ live in your Google Drive, which persists.
 !python check_setup.py
 ```
 
-Copy everything it prints and send it to us, exactly as local students do.
+Read what it prints, exactly as students on laptops do.
 
 One expected difference: the check will report that no virtual environment is
 active. On Colab that is normal — Colab manages the environment for you — and
@@ -98,14 +101,14 @@ the libraries the course uses.
 
 Because of this, the parts of week 1 about terminals, folders, and virtual
 environments will partly not apply to you. That material matters — it is what
-makes you employable on machines that are not Colab — so we will run a short
-separate catch-up with you rather than leaving the gap. Remind us if we do not
-offer it.
+makes you employable on machines that are not Colab. Read those sections of
+the week 1 page anyway, even though you cannot run the commands: knowing
+what a working directory and a virtual environment are is worth having
+before you next meet a real terminal.
 
 ## Getting your project out at the end
 
 Your atlas is yours to keep, so it is worth getting a copy off Colab at the
 end. Right-click any file or folder in the file browser and choose
 **Download**; for notebooks there is also **File → Save a copy in GitHub**.
-Ask us in the project weeks if you want a hand with it — nothing about this
-needs solving now.
+None of this needs solving now — come back to it in the project weeks.

@@ -40,7 +40,8 @@ optional: the first session builds on it.
    python check_setup.py
    ```
 
-3. Copy everything it prints and send it to us.
+3. Read what it prints. It tells you whether you are ready, and if not, what
+   to do about it.
 
 ### What counts as a pass
 
@@ -49,14 +50,32 @@ The check ends with one of three verdicts:
 | Verdict | Meaning |
 |---|---|
 | **ALL CHECKS PASSED** | Everything is installed and configured. Nothing to do. |
-| **READY, WITH NOTES** | **This is also a pass.** Everything the course needs works. The notes are things to be aware of — and some of them, such as "no virtual environment" on Colab or a missing one on the day you install, are entirely normal. Read them, then carry on. |
-| **NOT READY YET** | Something genuinely blocks you: Python is too old, the wrong Python is being used, or the packages are not installed. Send us the output and we will fix it with you. |
+| **READY, WITH NOTES** | **This is also a pass.** Everything the course needs works. The notes are things to be aware of — and some, such as "no virtual environment" on Colab, are entirely normal. Read them, then carry on. |
+| **NOT READY YET** | Something genuinely blocks you: Python is too old, the wrong Python is being used, or the packages are not installed. The check names each problem and the fix for it. |
 
-**Send us the output whichever verdict you get.** To be clear about what
-this is: it is a report on *your machine*, not on you, and it is the only
-thing all term that we ask you to send. A "not ready" result is just as
-useful to us as a pass — it tells us what to fix before the session, so that
-nobody spends class time watching an installer.
+## If something does not work
+
+It will, at some point, and that is not a sign you have gone wrong. Working
+out *why* something is broken is the actual subject of this course; the
+setup is simply the first place you get to practise it.
+
+When something fails, in this order:
+
+1. **Read the message.** Properly, to the end. It usually says what is
+   wrong, and often says what to do about it.
+2. **Check the "If this fails" notes in your setup guide.** The failures
+   almost everyone hits are listed there, with their fixes.
+3. **Paste the exact error into an AI assistant and ask what it means.**
+   Installation problems are the most thoroughly documented problems in
+   computing, and an assistant is genuinely good at them. From week 3 you
+   will be doing a far more demanding version of this.
+4. **Search the exact error text.** Somebody has had it before you.
+5. **Half an hour gone? Stop, and use [Codespaces](setup/codespaces.md).**
+   Nothing to install, nothing your laptop can block, and no part of the
+   course is lost. Choosing it is good judgement, not defeat.
+6. **Still stuck when the session starts?** Bring it with you. Studio time,
+   with an instructor and a TA in the room, is exactly what that time is
+   for.
 
 ## What is in this folder
 
