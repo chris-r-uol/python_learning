@@ -1,0 +1,63 @@
+name: Build and deploy the course site
+
+# The site is a view of the course material: every page pulls its text from
+# the markdown files in the repository, so a change to a week's README is a
+# change to the site. Deploy on every push to main so the two never diverge.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site_src/**"
+      - "mkdocs.yml"
+      - "requirements-docs.txt"
+      - "setup/**.md"
+      - "week1_setup/README.md"
+      - "week2_programming/README.md"
+      - "week3_ai/**.md"
+      - "project/**.md"
+      - ".github/workflows/pages.yml"
+  # Lets you publish by hand from the Actions tab if you need to.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; do not cancel a run half-way through publishing.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install the site tooling
+        run: pip install -r requirements-docs.txt
+
+      - name: Build
+        # --strict turns broken internal links and missing snippet files into
+        # build failures. A course whose links rot is worse than no site.
+        run: mkdocs build --strict
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

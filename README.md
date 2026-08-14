@@ -1,5 +1,14 @@
 # Python for Transport & Civil Engineering
 
+**📖 Read this course as a website: <https://chris-r-uol.github.io/python_learning/>**
+
+The site holds the same text as the files in this repository, with a search
+box and a contents list. It is built to sit in half a screen beside your
+editor or Codespace, so you can read a task on one side and do it on the
+other. Everything here works equally well read as files, if you prefer that.
+
+---
+
 This course runs for five weeks. By the end of it you will be able to take a
 messy transport dataset, clean it, analyse it, and produce a figure that
 supports an argument. You will also be able to work out what has gone wrong
