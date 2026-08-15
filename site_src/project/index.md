@@ -38,6 +38,13 @@ without losing rows you needed.
     How to delegate this much work and still know whether it is right. Read
     before you build anything.
 
+-   :material-book-open-page-variant: **[A worked atlas](../atlas/index.md)**
+
+    ---
+
+    The whole project, built for Leeds by an AI assistant, with its plan, its
+    figures and its mistakes. Not a model answer. An example of the scale.
+
 </div>
 
 ## The seven chapters

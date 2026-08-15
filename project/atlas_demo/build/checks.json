@@ -1,0 +1,218 @@
+[
+ {
+  "number": 1,
+  "claim": "Leeds City Bus Station is in the data",
+  "against": "Its real address on Dyer Street (53.7975 N, 1.5372 W)",
+  "anchored": true,
+  "passed": true,
+  "detail": "The nearest access point to the real bus station is **Dyer Street** (Leeds City Centre), 71 m away. Anything under about 150 m is the bus station itself or a stand inside it."
+ },
+ {
+  "number": 2,
+  "claim": "Leeds Rail Station is in the data",
+  "against": "It exists, and it is the busiest station in the North outside Manchester",
+  "anchored": true,
+  "passed": true,
+  "detail": "Rail stations found in the patch: Burley Park Rail Station, Cottingley Rail Station, Headingley Rail Station, Leeds Rail Station."
+ },
+ {
+  "number": 3,
+  "claim": "Every kept stop is inside the bounding box",
+  "against": "The box coordinates themselves",
+  "anchored": false,
+  "passed": true,
+  "detail": "Tests the filter, not the data. It would pass just as happily on the wrong ATCO area."
+ },
+ {
+  "number": 4,
+  "claim": "Stop density is credible for an English city",
+  "against": "A plausible urban range of 5\u201340 stops per km\u00b2",
+  "anchored": true,
+  "passed": true,
+  "detail": "17.5 stops per km\u00b2 across 76 km\u00b2."
+ },
+ {
+  "number": 5,
+  "claim": "Every stop appears in exactly one category on the map",
+  "against": "The category counts, summed against the total",
+  "anchored": false,
+  "passed": true,
+  "detail": "1,314 bus + 4 rail + 10 other = 1,328, against 1,328 stops. The 'other' category is Rail station entrance (RSE), which the first version of this chapter drew nowhere."
+ },
+ {
+  "number": 6,
+  "claim": "The severity codes are the right way round",
+  "against": "Reality: fatal collisions are far rarer than slight injuries",
+  "anchored": true,
+  "passed": true,
+  "detail": "15 fatal, 244 serious, 470 slight. If this order were reversed the mapping would be upside down \u2014 and the code would run exactly the same, produce exactly the same figures, and every sentence in the chapter would be wrong."
+ },
+ {
+  "number": 7,
+  "claim": "Distances are in metres, not degrees",
+  "against": "0.01\u00b0 of latitude, which is 1,111 m by definition",
+  "anchored": true,
+  "passed": true,
+  "detail": "`distance_metres` returns **1111.3 m** for a tenth of a hundredth of a degree of latitude, against 1,111.3 m from the definition. Pythagoras on raw degrees would have returned 0.01."
+ },
+ {
+  "number": 8,
+  "claim": "Casualty numbers are the right order of magnitude",
+  "against": "Leeds district reports roughly 300\u2013450 active-mode casualties a year",
+  "anchored": true,
+  "passed": true,
+  "detail": "729 casualties over 2 years is 364 a year across 76 km\u00b2, or 4.8 per km\u00b2 per year. Leeds district is about 552 km\u00b2; this patch is its densest 14%."
+ },
+ {
+  "number": 9,
+  "claim": "The live build reproduces the independent cached extract",
+  "against": "casualties.geojson, built earlier by a different script",
+  "anchored": false,
+  "passed": true,
+  "detail": "This build counted 729 active-mode casualties in the patch. The cached extract, produced by `project/starter/fetch_external.py` on a different date with different code, contains 729. Two pipelines agreeing is worth having, but both read the same four files, so a fault in the source would pass unnoticed by both."
+ },
+ {
+  "number": 10,
+  "claim": "Every casualty carries a mode and a severity",
+  "against": "The mapped columns, checked for gaps",
+  "anchored": false,
+  "passed": true,
+  "detail": "A code outside the published set would arrive as a blank here, not as an error."
+ },
+ {
+  "number": 11,
+  "claim": "Decile 1 really is the most deprived, not the least",
+  "against": "The IMD score itself, which rises with deprivation",
+  "anchored": true,
+  "passed": true,
+  "detail": "Mean IMD score in deciles 1\u20132: **52.8**. In deciles 9\u201310: **6.1**. Higher score means more deprived, so decile 1 is the deprived end. Reverse this and every sentence in the chapter inverts while every figure still draws."
+ },
+ {
+  "number": 12,
+  "claim": "The 2011-code join did not silently drop the patch",
+  "against": "Matched rows against centroids in the box",
+  "anchored": false,
+  "passed": true,
+  "detail": "172 of 172 centroids matched an IMD row: **100.0%**. A join against the *2021* centroid file would have matched far fewer, and produced a thinner map rather than an error."
+ },
+ {
+  "number": 13,
+  "claim": "Deciles cover the full 1\u201310 range as published",
+  "against": "The set of distinct decile values found",
+  "anchored": false,
+  "passed": true,
+  "detail": "Distinct deciles present: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10."
+ },
+ {
+  "number": 14,
+  "claim": "The car-free share is credible for a dense city centre",
+  "against": "The published England and Wales figure of 23.5%",
+  "anchored": true,
+  "passed": true,
+  "detail": "The patch is **42.6%** car-free against **23.5%** for England and Wales \u2014 1.8 times the national rate. A core city patch below the national figure would mean the numerator and denominator had been swapped."
+ },
+ {
+  "number": 15,
+  "claim": "Percentages are of households, not of people",
+  "against": "Each neighbourhood's no-car count against its stated total",
+  "anchored": false,
+  "passed": true,
+  "detail": "125,373 households in the patch, of which 53,366 have no car. No neighbourhood reports more car-free households than households, which it would if the two columns were different populations."
+ },
+ {
+  "number": 16,
+  "claim": "The statistics request was not silently truncated",
+  "against": "The number of areas asked for against the number returned",
+  "anchored": false,
+  "passed": true,
+  "detail": "Asked for 176 areas, received 176. The obvious query \u2014 every LSOA in England and Wales \u2014 returns exactly 25,000 rows, which is the API's default cap and about a third of the 71,344 that exist. It arrives as a valid CSV with no warning of any kind."
+ },
+ {
+  "number": 17,
+  "claim": "The 2021-code join matched the patch",
+  "against": "Matched rows against centroids in the box",
+  "anchored": false,
+  "passed": true,
+  "detail": "176 of 176 centroids matched a TS045 row (100.0%)."
+ },
+ {
+  "number": 18,
+  "claim": "Chapters 3 and 4 use genuinely different geographies",
+  "against": "The 2011 codes from chapter 3, intersected with these 2021 codes",
+  "anchored": false,
+  "passed": true,
+  "detail": "Only **166 of 176** 2021 codes in this patch (94.3%) also exist as 2011 codes. Joining chapter 3 to chapter 4 on these codes would therefore lose about **5.7%** of the patch \u2014 silently, as a smaller table, with no error anywhere."
+ },
+ {
+  "number": 19,
+  "claim": "The scenario columns are the right way round",
+  "against": "The definitions: today \u2264 government target \u2264 Dutch, by construction",
+  "anchored": true,
+  "passed": true,
+  "detail": "Today **14,362**, government target **26,214**, Dutch **94,537** cyclist-km per day. The Dutch scenario cannot be below today's level; if this ordering broke, the columns would be misread and every sentence here would invert."
+ },
+ {
+  "number": 20,
+  "claim": "Segment lengths are in metres and are plausible",
+  "against": "A city network: total length of the same order as the patch size",
+  "anchored": true,
+  "passed": true,
+  "detail": "558 km of network across 76 km\u00b2 of city. Degrees treated as metres would have produced a total near 5.02."
+ },
+ {
+  "number": 21,
+  "claim": "The region name is the right one",
+  "against": "A non-empty network inside the patch",
+  "anchored": false,
+  "passed": true,
+  "detail": "`west-yorkshire` returned 3,552 segments touching the patch. PCT regions are **historic counties**: Leeds is `west-yorkshire`, but Bristol is `avon`, a county abolished in 1996. A wrong region name returns a valid, empty answer."
+ },
+ {
+  "number": 22,
+  "claim": "Both Leeds universities appear in the amenities",
+  "against": "They exist, and both have campuses inside this box",
+  "anchored": true,
+  "passed": true,
+  "detail": "University of Leeds found: **yes**. Leeds Beckett found: **yes**. 15 universities and 19 colleges in total. If either were missing, the tag list or the bounding box would be wrong \u2014 and the map would still look full."
+ },
+ {
+  "number": 23,
+  "claim": "Amenity counts are plausible for a city of this size",
+  "against": "A city-centre patch should hold dozens of schools, not two or two thousand",
+  "anchored": true,
+  "passed": true,
+  "detail": "102 schools, 68 supermarkets, 63 pharmacies, 15 hospitals."
+ },
+ {
+  "number": 24,
+  "claim": "The 400 m access threshold is applied in metres",
+  "against": "The same conversion tested in chapter 2 against a known distance",
+  "anchored": false,
+  "passed": true,
+  "detail": "100.0% of amenities are within 400 m of a stop. In raw degrees the threshold would be 400 degrees and the answer would be 100%."
+ },
+ {
+  "number": 25,
+  "claim": "Annual rainfall is credible for this part of England",
+  "against": "Met Office 1991\u20132020 average near Leeds, about 660 mm",
+  "anchored": true,
+  "passed": true,
+  "detail": "756 mm in 2025, against a long-run average of about 660 mm \u2014 **114%** of normal. This is the check that would catch a units error: the same figure in inches would read about 30, and in metres about 0.76."
+ },
+ {
+  "number": 26,
+  "claim": "The year is complete and hourly",
+  "against": "8760 hours in a 365-day year",
+  "anchored": true,
+  "passed": true,
+  "detail": "8,760 observations returned, against 8,760 hours in 2025."
+ },
+ {
+  "number": 27,
+  "claim": "The parallel arrays are still in step",
+  "against": "The lengths of time, precipitation and temperature",
+  "anchored": false,
+  "passed": true,
+  "detail": "time 8,760, precipitation 8,760, temperature 8,760. open-meteo returns arrays, not records: if these ever differed, every hour after the gap would carry the wrong weather and nothing would raise an error."
+ }
+]

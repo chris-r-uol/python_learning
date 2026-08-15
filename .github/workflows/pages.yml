@@ -15,6 +15,9 @@ on:
       - "week2_programming/README.md"
       - "week3_ai/**.md"
       - "project/**.md"
+      # The worked atlas writes its pages and figures into site_src/atlas/,
+      # so a rebuild of the atlas is a rebuild of the site.
+      - "project/atlas_demo/**"
       - ".github/workflows/pages.yml"
   # Lets you publish by hand from the Actions tab if you need to.
   workflow_dispatch:

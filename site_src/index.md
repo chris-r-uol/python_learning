@@ -127,6 +127,15 @@ what is wrong with it.
 
     [The project](project/index.md)
 
+-   **A worked example**
+
+    ---
+
+    The same project, built for Leeds by an AI assistant. Its plan, its
+    figures, and the four things it got wrong.
+
+    [The worked atlas](atlas/index.md)
+
 </div>
 
 ## Three rules
