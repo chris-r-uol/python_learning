@@ -1,0 +1,132 @@
+[
+ {
+  "key": "naptan_bus",
+  "name": "NaPTAN access nodes, ATCO area 450 (West Yorkshire)",
+  "url": "https://naptan.api.dft.gov.uk/v1/access-nodes?atcoAreaCodes=450&dataFormat=csv",
+  "licence": "OGL v3.0, \u00a9 Crown copyright",
+  "live": true,
+  "retrieved": "2026-08-15 11:42 UTC",
+  "rows": 16691,
+  "note": ""
+ },
+ {
+  "key": "naptan_rail",
+  "name": "NaPTAN access nodes, ATCO area 910 (national rail)",
+  "url": "https://naptan.api.dft.gov.uk/v1/access-nodes?atcoAreaCodes=910&dataFormat=csv",
+  "licence": "OGL v3.0, \u00a9 Crown copyright",
+  "live": true,
+  "retrieved": "2026-08-15 11:42 UTC",
+  "rows": 2767,
+  "note": ""
+ },
+ {
+  "key": "stats19_collision_2022",
+  "name": "STATS19 collisions 2022",
+  "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2022.csv",
+  "licence": "OGL v3.0, \u00a9 Crown copyright",
+  "live": true,
+  "retrieved": "2026-08-15 11:42 UTC",
+  "rows": 106004,
+  "note": ""
+ },
+ {
+  "key": "stats19_casualty_2022",
+  "name": "STATS19 casualties 2022",
+  "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2022.csv",
+  "licence": "OGL v3.0, \u00a9 Crown copyright",
+  "live": true,
+  "retrieved": "2026-08-15 11:42 UTC",
+  "rows": 135480,
+  "note": ""
+ },
+ {
+  "key": "stats19_collision_2023",
+  "name": "STATS19 collisions 2023",
+  "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2023.csv",
+  "licence": "OGL v3.0, \u00a9 Crown copyright",
+  "live": true,
+  "retrieved": "2026-08-15 11:42 UTC",
+  "rows": 104258,
+  "note": ""
+ },
+ {
+  "key": "stats19_casualty_2023",
+  "name": "STATS19 casualties 2023",
+  "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2023.csv",
+  "licence": "OGL v3.0, \u00a9 Crown copyright",
+  "live": true,
+  "retrieved": "2026-08-15 11:42 UTC",
+  "rows": 132977,
+  "note": ""
+ },
+ {
+  "key": "imd2019",
+  "name": "English Indices of Deprivation 2019, File 7",
+  "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/845345/File_7_-_All_IoD2019_Scores__Ranks__Deciles_and_Population_Denominators_3.csv",
+  "licence": "OGL v3.0, \u00a9 Crown copyright",
+  "live": true,
+  "retrieved": "2026-08-15 11:42 UTC",
+  "rows": 32844,
+  "note": ""
+ },
+ {
+  "key": "lsoa_2011_centroids",
+  "name": "ONS LSOA 2011 population-weighted centroids",
+  "url": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/LSOA_Dec_2011_PWC_in_England_and_Wales_2022/FeatureServer/0/query?geometry=-1.62,53.75,-1.49,53.83&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=lsoa11cd,lsoa11nm&outSR=4326&returnGeometry=true&f=geojson",
+  "licence": "OGL v3.0, \u00a9 Crown copyright and database right",
+  "live": true,
+  "retrieved": "2026-08-15 11:42 UTC",
+  "rows": 174,
+  "note": ""
+ },
+ {
+  "key": "lsoa_2021_centroids",
+  "name": "ONS LSOA 2021 population-weighted centroids",
+  "url": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/LSOA_PopCentroids_EW_2021_V4/FeatureServer/0/query?geometry=-1.62,53.75,-1.49,53.83&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=LSOA21CD&outSR=4326&returnGeometry=true&f=geojson",
+  "licence": "OGL v3.0, \u00a9 Crown copyright and database right",
+  "live": true,
+  "retrieved": "2026-08-15 11:42 UTC",
+  "rows": 177,
+  "note": ""
+ },
+ {
+  "key": "census_ts045",
+  "name": "Census 2021 table TS045, car or van availability (Nomis NM_2063_1)",
+  "url": "https://www.nomisweb.co.uk/api/v01/dataset/NM_2063_1.data.csv?date=latest&geography=E01011281,E01011283,E01011284,E01011286,E01011292,E01011293,E01011294,E01011295,E01011312,E01011313,E01011314,E01011315,E01011316,E01011317,E01011318,E01011319,E01011320,E01011321,E01011322,E01011324,E01011332,E01011338,E01011339,E01011340,E01011342,E01011344,E01011347,E01011348,E01011349,E01011350,E01011352,E01011353,E01011354,E01011355,E01011356,E01011357,E01011358,E01011359,E01011360,E01011361,E01011362,E01011363,E01011364,E01011366,E01011368,E01011369,E01011370,E01011371,E01011372,E01011373,E01011374,E01011375,E01011421,E01011422,E01011423,E01011424,E01011426,E01011427,E01011428,E01011429,E01011430,E01011431,E01011432,E01011433,E01011434,E01011435,E01011440,E01011441,E01011442,E01011443,E01011444,E01011445,E01011446,E01011447,E01011448,E01011449,E01011450,E01011451,E01011466,E01011467,E01011468,E01011469,E01011470,E01011471,E01011472,E01011473,E01011474,E01011475,E01011476,E01011477,E01011478,E01011479,E01011480,E01011481,E01011482,E01011483,E01011485,E01011488,E01011489,E01011502,E01011518,E01011524,E01011525,E01011526,E01011528,E01011531,E01011532,E01011615,E01011617,E01011618,E01011621,E01011623,E01011625,E01011626,E01011630,E01011642,E01011643,E01011644,E01011645,E01011646,E01011647,E01011648,E01011668,E01011669,E01011670,E01011671,E01011673,E01011677,E01011678,E01011681,E01011690,E01011691,E01011692,E01011693,E01011694,E01011725,E01011729,E01011730,E01011731,E01011732,E01011733,E01011734,E01011735,E01011736,E01011737,E01032493,E01032494,E01032497,E01032499,E01032500,E01032606,E01032607,E01032608,E01032946,E01033002,E01033003,E01033008,E01033010,E01033011,E01033013,E01033015,E01033016,E01033021,E01033031,E01033033,E01033034,E01033035,E01035040,E01035041,E01035042,E01035043,E01035044,E01035045,E01035046,E01035047,E01035054&c2021_cars_5=0,1&measures=20100&select=geography_code,geography_name,c2021_cars_5_name,obs_value",
+  "licence": "OGL v3.0, \u00a9 Crown copyright",
+  "live": true,
+  "retrieved": "2026-08-15 11:42 UTC",
+  "rows": 352,
+  "note": ""
+ },
+ {
+  "key": "pct_rnet",
+  "name": "Propensity to Cycle Tool, commute route network, west-yorkshire",
+  "url": "https://npttile.vs.mythic-beasts.com/commute/v2/west-yorkshire/rnet.geojson",
+  "licence": "OGL v3.0 / see pct.bike",
+  "live": false,
+  "retrieved": "2026-08-11",
+  "rows": 3552,
+  "note": "Live fetch failed (SSLError) after 3 attempts; used the cached copy."
+ },
+ {
+  "key": "osm_amenities",
+  "name": "OpenStreetMap amenities via the Overpass API",
+  "url": "https://overpass-api.de/api/interpreter",
+  "licence": "ODbL 1.0, \u00a9 OpenStreetMap contributors \u2014 attribution required",
+  "live": true,
+  "retrieved": "2026-08-15 11:42 UTC",
+  "rows": 287,
+  "note": ""
+ },
+ {
+  "key": "open_meteo",
+  "name": "open-meteo historical archive, hourly, 2025",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=53.7900&longitude=-1.5550&start_date=2025-01-01&end_date=2025-12-31&hourly=precipitation,temperature_2m&timezone=GMT",
+  "licence": "CC-BY 4.0 \u2014 attribution required",
+  "live": true,
+  "retrieved": "2026-08-15 11:42 UTC",
+  "rows": 8760,
+  "note": ""
+ }
+]

@@ -113,4 +113,17 @@ nav:
       - The brief: project/brief.md
       - Data discovery: project/data_sources.md
       - Directing an agent: project/agent_guide.md
+  - The worked atlas:
+      - atlas/index.md
+      - The plan: atlas/plan.md
+      - 1 — The patch and its stops: atlas/chapter-01.md
+      - 2 — Road safety: atlas/chapter-02.md
+      - 3 — Deprivation: atlas/chapter-03.md
+      - 4 — Who has no car: atlas/chapter-04.md
+      - 5 — Cycling potential: atlas/chapter-05.md
+      - 6 — What is there: atlas/chapter-06.md
+      - 7 — A year of weather: atlas/chapter-07.md
+      - The atlas: atlas/atlas.md
+      - The scorecard: atlas/scorecard.md
+      - Build your own: atlas/build-your-own.md
   - Quick reference: reference.md
