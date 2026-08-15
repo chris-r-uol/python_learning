@@ -1,13 +1,12 @@
 """Helper used by the exercises. You do not need to change this file.
 
-It is worth reading, though: several exercises call `load_rows()`, and
-knowing what shape it hands back tells you what those exercises are working
-with.
+It is worth reading. Several exercises call `load_rows()`. Knowing what it
+returns tells you what those exercises are working with.
 """
 import os
 
-# Build the path to the data file relative to THIS file's location, so the
-# exercises work no matter which folder you run them from.
+# Build the path to the data file from THIS file's location, so the
+# exercises work from any folder.
 DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                     "..", "data", "site_counts_small.csv")
 

@@ -1,30 +1,29 @@
 """
 Atlas skeleton.
 
-You do not have to use this file, but its shape is the one the studio
-teaches: one function per chapter, every chapter with the same internal
-rhythm, and a main() that rebuilds everything in order.
+Using this file is optional. Its shape is the one the sessions teach: one
+function per chapter, the same steps inside every chapter, and a main() that
+rebuilds everything in order.
 
     python atlas.py
 
-The rhythm, for every chapter:
+The steps, in every chapter:
 
-    fetch (state the source and date)
+    fetch (record the source and date)
       -> cut to the patch (count what you cut)
       -> clean (count again)
       -> figure (labelled axes, units, place name in the title)
-      -> write the numbers you will mention in your three sentences
+      -> record the numbers your three sentences will use
 
-Build ONE chapter at a time, with the assistant, and verify it before
-starting the next. The week 3 method is the whole method; this file is only
-its skeleton.
+Build ONE chapter at a time with the assistant. Check it before starting the
+next. The method is the week 3 method. This file is only the skeleton.
 """
 
 import os
 
 # ---------------------------------------------------------------------------
-# The patch. Chapter 1's first job is to replace these four numbers with a
-# bounding box you have drawn on a map and can defend as "my patch".
+# The patch. Chapter 1 replaces these four numbers with a bounding box you
+# have drawn on a map.
 # south, west, north, east - in that order, in decimal degrees.
 # ---------------------------------------------------------------------------
 
@@ -37,9 +36,9 @@ CACHE = os.path.join(HERE, "cache")           # raw downloads, fetched once
 
 
 # ---------------------------------------------------------------------------
-# Chapters. Each returns a dict of the numbers its three sentences will use -
-# returning them (rather than only printing) lets the report builder reuse
-# them, and gives you something concrete to hand-check.
+# Chapters. Each returns a dict of the numbers its three sentences will use.
+# Returning them, rather than only printing them, lets the report builder
+# reuse them. It also gives you something to hand-check.
 # ---------------------------------------------------------------------------
 
 def chapter_1_stops():
@@ -48,13 +47,13 @@ def chapter_1_stops():
     Fetch the stops for your ATCO area, cut to BBOX, drop stops marked
     inactive, figure: where the stops are, sized or coloured by type.
 
-    Look your ATCO area code up in data/external/atco_area_codes.csv - do
-    not guess it and do not ask the assistant, because the codes look
-    guessable and are not. If your bounding-box filter leaves you with zero
-    stops, suspect the area code before anything else.
+    Look up your ATCO area code in data/external/atco_area_codes.csv. Do
+    not guess it. Do not ask the assistant. The codes look guessable and are
+    not. If your bounding-box filter leaves zero stops, check the area code
+    first.
 
-    Hand-check: pick one stop you know personally and confirm its
-    coordinates put it where it really is.
+    Hand-check: take one stop you know, and confirm its coordinates put it
+    where it really is.
     """
     raise NotImplementedError
 
@@ -63,7 +62,7 @@ def chapter_2_safety():
     """Road safety (STATS19, two years).
 
     fetch_external.py in this folder is this chapter, finished. Read it,
-    run it, then adapt rather than retype.
+    run it, then adapt it. Do not retype it.
     """
     raise NotImplementedError
 
@@ -71,8 +70,8 @@ def chapter_2_safety():
 def chapter_3_deprivation():
     """Deprivation (IMD 2019 + the ONS point-in-LSOA lookup).
 
-    The known trap: IMD 2019 carries 2011 LSOA codes and the boundary
-    service returns 2021 codes. Count what survives your join.
+    The trap: IMD 2019 uses 2011 LSOA codes. The boundary service returns
+    2021 codes. Count how many rows survive the join.
     """
     raise NotImplementedError
 
@@ -88,36 +87,34 @@ def chapter_5_cycling_potential():
 
 
 def chapter_6_what_is_there():
-    """What is there (OpenStreetMap via Overpass - POST, never GET)."""
+    """What is there (OpenStreetMap via Overpass. Use POST, never GET)."""
     raise NotImplementedError
 
 
 def chapter_7_weather():
-    """A year of weather (open-meteo archive; JSON, no key needed)."""
+    """A year of weather (open-meteo archive. JSON, no key needed)."""
     raise NotImplementedError
 
 
 # ---------------------------------------------------------------------------
 # The report. Plain HTML is enough: one page per chapter, each with its
 # figure and your three sentences. Ask the assistant for a small function
-# that writes this from a list of (title, figure_path, text) entries -
-# and read what it gives you before you run it.
+# that writes this from a list of (title, figure_path, text) entries. Read
+# what it gives you before you run it.
 #
-# Writing a file is the one thing here you have not done before. Reading
-# used open(path) - writing is the same call with "w" added, and it
-# REPLACES whatever was there:
+# Writing a file is the one new thing here. Reading used open(path). Writing
+# is the same call with "w" added. It REPLACES whatever was in the file:
 #
 #     with open("atlas_output/index.html", "w") as handle:
 #         handle.write("<h1>My patch</h1>")
 #
-# Two things to know. The folder must already exist, which is what the
-# os.makedirs call in main() below is for. And a script that writes a file
-# succeeds silently - there is no output to tell you it worked, so check
-# the file afterwards rather than assuming.
+# Two things to know. The folder must already exist. That is what the
+# os.makedirs call in main() is for. And writing a file prints nothing, so
+# open the file afterwards and check it.
 # ---------------------------------------------------------------------------
 
 def build_report(chapters):
-    """Write atlas_output/index.html pulling every chapter together."""
+    """Write atlas_output/index.html, combining every chapter."""
     raise NotImplementedError
 
 
@@ -127,8 +124,8 @@ def main():
     print("Atlas of:", PLACE_NAME)
     print("Bounding box (S, W, N, E):", BBOX)
     print()
-    print("No chapters are implemented yet. Start with chapter_1_stops() -")
-    print("it defines the patch every other chapter reuses.")
+    print("No chapters are written yet. Start with chapter_1_stops().")
+    print("It defines the patch that every other chapter uses.")
 
 
 if __name__ == "__main__":

@@ -5,13 +5,11 @@ This is what came back from the request:
 
     "analyse this traffic data and tell me the average speed on each link"
 
-It runs. It has a docstring. It prints a neat, professional-looking table with
-one decimal place.
+It runs. It has a docstring. It prints a neat table with one decimal place.
 
 It is wrong.
 
-Do not fix this file. It is kept broken on purpose, so that we can come back
-to it.
+Do not fix this file. It is kept broken on purpose.
 """
 
 import csv

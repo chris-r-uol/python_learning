@@ -1,89 +1,82 @@
 # Week 3 task — build something, then prove it works
 
-**Done in class, with the instructor and TA around. About 2 hours of work.
-Anything unfinished at the end of the session is worth finishing before
-week 4 — the project weeks build directly on this way of working.**
+**Done in class, with the instructor and TA present. About 2 hours. Finish
+anything unfinished before week 4.**
 
-You are going to build a small tool with AI assistance. Building the tool is
-the easy part. The real exercise is proving to *yourself* that it is
-correct — nothing here is collected or graded, and that is precisely why the
-proof matters: the only reason to verify is the only reason that will exist
-after this course, which is that nobody else is going to.
+You will build a small tool with AI assistance. Building it is the easy
+part. The exercise is proving to yourself that it is correct.
 
-The instructor and the TA are circulating, and this task is designed to make
-you need them at least once. Try for ten minutes, then ask — and note that
-"how do I check this?" is a better question to bring than "why is this
-broken?", though both are welcome.
+Nothing is collected. Verify it anyway, because after this course nobody
+else will.
+
+Try something for ten minutes, then ask. "How do I check this?" is a better
+question than "why is this broken?", though both are welcome.
 
 ---
 
 ## The task
 
-Create a file `journey_time.py` in this folder (`week3_ai/`). The data it
-works on is the project's arrival records, at `project/data/arrivals.csv`
-relative to the top of the repository.
+Create a file `journey_time.py` in this folder (`week3_ai/`).
 
-Given a *from* stop, a *to* stop, and a time band (for example 08:00 to
-09:00), your tool should:
+It works on the arrival records at `project/data/arrivals.csv`, measured
+from the top of the repository.
 
-1. Find the journey time between those two stops for every trip that departs
+Given a *from* stop, a *to* stop, and a time band such as 08:00 to 09:00,
+your tool should:
+
+1. Find the journey time between those two stops for every trip that leaves
    within the band.
-2. Report the mean, the median, and the 90th percentile.
-3. State how many trips it used — and how many it dropped, and why.
+2. Report the mean, the median and the 90th percentile.
+3. State how many trips it used, how many it dropped, and why.
 
-Requirement 3 is not decoration. It is the requirement.
+Point 3 is part of the task, not an extra.
 
-You may use pandas. You have not been taught pandas; that is deliberate. Ask
-the assistant for help, and apply the checklist to everything it gives you.
-Section 2 of this week's README gives you enough of a reading-level grasp of
-dictionaries and DataFrames to judge what comes back.
+You may use pandas. This course has not taught pandas. Ask the assistant for
+help, and apply the checklist to everything it gives you. Section 2 of this
+week's README covers enough about dictionaries and DataFrames to judge what
+comes back.
 
-### The three numbers, defined
+### The three numbers
 
-You cannot verify a number whose definition you never fixed, so fix them
-before you ask for code:
+Fix the definitions before you ask for code. You cannot check a number whose
+definition you never decided.
 
-- **Mean** — add the journey times up, divide by how many there are. You
-  wrote this in week 2.
-- **Median** — sort the journey times and take the middle one. With an even
-  count, take the average of the two middle values. The median is worth
-  having next to the mean because a handful of very slow trips drag a mean
-  upwards while barely moving a median; if your two numbers differ
-  noticeably, that difference is itself a finding.
-- **90th percentile** — the value below which 90% of the journeys fall. In
-  other words, the slow-but-not-freak trip: nine journeys in ten were at
-  least this quick.
+- **Mean.** Add the journey times, divide by how many there are. You wrote
+  this in week 2.
+- **Median.** Sort the journey times and take the middle one. With an even
+  count, average the two middle values. The median is useful next to the
+  mean because a few very slow trips pull the mean up but barely move the
+  median. If your two numbers differ, that difference is a result.
+- **90th percentile.** The value below which 90% of journeys fall. Nine
+  journeys in ten were at least this quick.
 
-A warning about that last one. There is more than one accepted way to
-compute a percentile, and they disagree slightly — mostly in how they
-interpolate between two neighbouring values. `numpy.percentile(values, 90)`
-and pandas' `.quantile(0.9)` use the same default, and either is fine here.
-**Say in your verification which one you used.** "The 90th percentile is
-56.5 minutes, using `numpy.percentile`'s default method" is a defensible
-sentence; "the 90th percentile is 56.5 minutes" is one you cannot fully
-defend, because the reader does not know what you computed.
+There is more than one accepted way to calculate a percentile, and they
+disagree slightly. `numpy.percentile(values, 90)` and pandas'
+`.quantile(0.9)` use the same default. Either is fine.
 
-### One thing you will need and have not been taught
+**Say which one you used.** "The 90th percentile is 56.5 minutes, using
+`numpy.percentile`'s default method" is a statement you can defend. "The
+90th percentile is 56.5 minutes" is not, because the reader does not know
+what you calculated.
 
-The data contains rows that appear more than once. Removing them is
-straightforward with the right tool and effectively impossible with only
-what weeks 1 and 2 gave you, so this is not a trick — it is your first real
-instance of needing to ask for a capability by name. Ask the assistant how
-to remove exact duplicate rows, then do what you always do: count the rows
+### One thing you have not been taught
+
+The data contains rows that appear more than once. Removing them is simple
+with the right tool and very hard with only weeks 1 and 2.
+
+Ask the assistant how to remove exact duplicate rows. Then count the rows
 before and after, and check that the number removed is a number you can
 explain.
 
-It matters more than it sounds. On this data, leaving the duplicates in
-inflates the number of trips counted in a morning-peak band by more than a
-tenth — and every figure that follows still looks entirely reasonable.
+It matters. On this data, leaving the duplicates in adds more than a tenth
+to the number of trips counted in a morning peak. Every figure after that
+still looks reasonable.
 
 ---
 
 ## What you end up with
 
-Three files, which you keep. Nobody collects them. Together they are the
-template for every piece of AI-assisted work you do in the project weeks,
-and afterwards.
+Three files. You keep them. Nobody collects them.
 
 ### 1. `journey_time.py`
 
@@ -91,72 +84,72 @@ The tool.
 
 ### 2. `prompts.md`
 
-Every prompt you used, in order, including the ones that did not work. If you
-rewrote a prompt, include both versions and say what you changed and why.
+Every prompt you used, in order, including the ones that did not work. If
+you rewrote a prompt, include both versions and say what you changed.
 
-The point is not elegant prompts. The point is knowing, afterwards, which
-ones worked and being able to say why — that record is how the skill
-compounds instead of resetting every session.
+The point is not elegant prompts. The point is knowing afterwards which ones
+worked, and why.
 
 ### 3. `verification.md`
 
-**This is the part that matters.** It has three sections.
+This is the part that matters. It has three sections.
 
 **a. A hand-worked case.**
-Choose one pair of stops and one specific trip. Work out the journey time
-yourself, from the raw CSV, with a calculator or a spreadsheet. Show the two
-timestamps you used and the arithmetic. Then show your tool's answer for the
-same trip, and state whether the two agree.
 
-If they do not agree, that is a finding, not a failure. Write down what you
-found and what you did about it.
+Choose one pair of stops and one trip. Work out the journey time yourself,
+from the raw CSV, with a calculator or a spreadsheet. Show the two
+timestamps and the arithmetic. Then show your tool's answer for the same
+trip, and say whether they agree.
+
+If they do not agree, write down what you found and what you did about it.
 
 **b. The awkward cases.**
-For each case below, establish what your tool does, and state whether that
-behaviour is correct. Be careful: some of these cases occur in the data, and
-some may not. If you check and find that a case does not occur, say so — that
-check is itself verification — and then test your tool against a small input
-you construct yourself, so you still know how it would behave.
 
-- A trip that has no record at one of the two stops
+For each case below, find out what your tool does, and say whether that is
+correct.
+
+Some of these cases exist in the data and some may not. If you check and
+find that a case does not occur, say so. That check is part of the work.
+Then test your tool on a small input you build yourself, so you still know
+how it behaves.
+
+- A trip with no record at one of the two stops
 - A journey time that comes out negative
 - A trip that crosses midnight
 - A stop that appears under two different names
 - Rows that appear twice
 
-You will not have anticipated all of these. Finding out which ones your tool
-handles, and which ones break it, *is the exercise*. A tool that handles
-three of the five, with the other two documented honestly, is worth more
-than one that claims to handle all five without evidence — here and
-everywhere after this course.
+You will not have thought of all of these in advance. Finding out which ones
+your tool handles is the exercise. A tool that handles three of five, with
+the other two written down honestly, is worth more than one that claims all
+five with no evidence.
 
 **c. One sentence per function.**
+
 For every function in your file, write one sentence saying what it does. If
-you cannot write that sentence, you do not yet own that code — ask the
-assistant what the function does, and keep asking until you can explain it.
+you cannot write that sentence, ask the assistant what the function does.
+Keep asking until you can.
 
 ---
 
 ## Where the value is
 
-Nothing here is graded, so be honest about which part of this task is worth
-your two hours. It is not the tool — the assistant writes most of the tool.
-It is the verification: the evidence file is the part you could not have
-produced three weeks ago, and the part that makes the tool trustworthy
-rather than merely plausible.
+The tool is not the valuable part. The assistant writes most of it.
 
-The reason it matters: in the project weeks, and afterwards in your work,
-nobody will check your numbers for you. The only thing standing between a
-wrong number and a decision made on it is whether you looked.
+The verification is the part you could not have produced three weeks ago,
+and the part that makes the tool trustworthy.
+
+In the project weeks, and afterwards, nobody will check your numbers. The
+only thing between a wrong number and a decision made on it is whether you
+looked.
 
 ---
 
-## Two habits to avoid from the start
+## Two habits to avoid
 
-**Keeping code you cannot explain.** Try saying what each function does out
-loud, to yourself, before you move on. It takes a minute, nobody is
-listening, and it is the fastest way to find the lines you have accepted
-without understanding.
+**Keeping code you cannot explain.** Say what each function does out loud,
+to yourself, before moving on. It takes a minute and finds the lines you
+accepted without understanding.
 
 **Writing "I tested it and it worked."** That is not evidence. Evidence
 contains numbers.

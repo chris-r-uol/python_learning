@@ -2,7 +2,7 @@
 The same task, done properly.
 
 The difference between this file and lazy_analysis.py is not programming
-skill. It is that someone asked what -1 meant.
+skill. Someone asked what -1 meant.
 """
 
 import csv

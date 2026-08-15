@@ -3,21 +3,21 @@ Worked example: one complete atlas chapter fetcher.
 
     python starter/fetch_external.py
 
-This is chapter 2 of the atlas — road safety — finished, as the pattern for
-every chapter you build. It fetches STATS19, the Department for Transport's
-register of every reported road casualty in Great Britain, and cuts it down
-to the patch defined below.
+This is chapter 2 of the atlas, road safety, finished. Use it as the pattern
+for every chapter you build. It fetches STATS19, the Department for
+Transport's record of every reported road casualty in Great Britain, and cuts
+it down to the patch defined below.
 
-The pattern is four steps, and it is the same for every source:
+The pattern is four steps. It is the same for every source:
 
-    1. Say where the data came from, in the file, in writing.
-    2. Pull it.
-    3. Cut it down to your patch - and COUNT what you cut.
-    4. Save the small local copy. Never re-download in your analysis code.
+    1. Write down where the data came from, in the file.
+    2. Download it.
+    3. Cut it down to your patch, and COUNT what you cut.
+    4. Save the small local copy. Never download again in analysis code.
 
-Step 3 is the one that matters. A national file has 100,000+ rows and your
-patch has a few hundred. If you do not print the counts, you will not notice
-when a filter takes everything, or nothing.
+Step 3 is the one that matters. A national file has 100,000 rows or more.
+Your patch has a few hundred. Without printed counts, you will not notice a
+filter that takes everything, or nothing.
 
 Data: STATS19, (c) Crown copyright, Open Government Licence v3.0.
       https://www.data.gov.uk/dataset/road-accidents-safety-data
@@ -29,7 +29,7 @@ import os
 import pandas as pd
 
 # ---------------------------------------------------------------------------
-# The patch. Replace with your own place and box (chapter 1 defines them).
+# The patch. Replace with your own place and box. Chapter 1 defines them.
 # south, west, north, east - decimal degrees.
 # ---------------------------------------------------------------------------
 
@@ -42,16 +42,15 @@ OUT = os.path.join(HERE, "..", "data", "external", "casualties.geojson")
 BASE = "https://data.dft.gov.uk/road-accidents-safety-data"
 YEARS = [2022, 2023]
 
-# STATS19 codes. These are in the data guide, not in the file. This is
-# exactly the "convention that lives outside the file" from week 3 - an
-# assistant cannot know that casualty_type 0 is a pedestrian unless you say
-# so. Severity 1 is FATAL, not slight; assistants guess this wrong.
+# STATS19 codes. These are in the data guide, not in the file. An assistant
+# cannot know that casualty_type 0 is a pedestrian unless you tell it.
+# Severity 1 is FATAL, not slight. Assistants guess this wrong.
 SEVERITY = {1: "fatal", 2: "serious", 3: "slight"}
 CASUALTY_TYPE = {0: "pedestrian", 1: "cyclist"}
 
 
 def fetch_year(year):
-    """Download one year of collisions and casualties. Returns two frames."""
+    """Download one year of collisions and casualties. Returns two tables."""
     collisions = pd.read_csv(
         f"{BASE}/dft-road-casualty-statistics-collision-{year}.csv",
         usecols=["collision_index", "longitude", "latitude",
@@ -83,10 +82,10 @@ def main():
         print(f"  collisions downloaded (GB)      {len(collisions):>8}")
         print(f"  casualties downloaded (GB)      {len(casualties):>8}")
 
-        # Coordinates arrive as text and a few rows have none. Coercing to a
-        # number turns those into NaN rather than crashing - which means they
-        # silently fail the bounding-box test below. That is acceptable here,
-        # but only because we count them first.
+        # Coordinates arrive as text, and a few rows have none. Converting
+        # to a number turns those into NaN instead of stopping the program.
+        # NaN rows then fail the bounding-box test below without a warning.
+        # That is acceptable here only because the next line counts them.
         collisions["longitude"] = pd.to_numeric(collisions["longitude"], errors="coerce")
         collisions["latitude"] = pd.to_numeric(collisions["latitude"], errors="coerce")
         no_coords = int(collisions["longitude"].isna().sum())
@@ -98,13 +97,13 @@ def main():
         ]
         print(f"  collisions inside the patch     {len(in_box):>8}")
 
-        # Only pedestrians and cyclists - the people street design affects
-        # most, and the atlas's safety chapter is about them.
+        # Only pedestrians and cyclists. Street design affects them most,
+        # and this chapter is about them.
         active = casualties[casualties["casualty_type"].isin(CASUALTY_TYPE)]
 
-        # An inner merge. Count both sides: if this number is not what you
-        # expect, the join key is wrong, and a wrong join key is the single
-        # most common way to get a confident wrong answer out of pandas.
+        # An inner merge. Count both sides. If this number is not what you
+        # expect, the join key is wrong. A wrong join key is the most common
+        # way to get a wrong answer out of pandas that still looks right.
         joined = in_box.merge(active, on="collision_index", how="inner")
         print(f"  active-mode casualties in patch {len(joined):>8}")
         print()
@@ -139,12 +138,12 @@ def main():
     print(f"TOTAL active-mode casualties kept: {len(features)}")
     print(f"Written to {os.path.relpath(OUT, HERE)}")
     print()
-    print("Before you use this: sanity-check the total against the size of")
-    print("your patch. A town-sized box with two casualties in two years, or")
-    print("with ten thousand, means the box or the filter is wrong - find out")
-    print("which before you draw the figure. And remember what a box is: a")
-    print("rectangle includes fringes you may not think of as your patch.")
-    print("Defining the box honestly is part of the chapter.")
+    print("Before using this, check the total against the size of your")
+    print("patch. A town-sized box with two casualties in two years, or with")
+    print("ten thousand, means the box or the filter is wrong. Find out")
+    print("which before you draw the figure.")
+    print("Remember what a box is. A rectangle includes edges you would not")
+    print("call your patch. Defining the box is part of the chapter.")
 
 
 if __name__ == "__main__":

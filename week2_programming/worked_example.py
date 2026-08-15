@@ -8,13 +8,13 @@ Run it:
 
     python worked_example.py
 
-Each STAGE below is a step we take together in the session. The stages build
-on each other, but each one produces output of its own - you can comment out
-the later ones and the earlier ones still run.
+Each STAGE below is one step of the session. The stages build on each other,
+but each produces its own output. Comment out the later ones and the earlier
+ones still run.
 
-Stages 1-3 solve the problem with loops, deliberately spelled out. Stage 4
-packages the repeated work into a function. Stage 5 solves the same problem
-again in NumPy - the contrast with stage 3 is the point. Stage 6 is the figure.
+Stages 1-3 solve the problem with loops, written out in full. Stage 4 puts the
+repeated work into a function. Stage 5 solves the same problem again in NumPy.
+Compare it with stage 3. Stage 6 draws the figure.
 """
 
 import csv
@@ -43,10 +43,10 @@ hours = []
 directions = []
 counts = []
 
-# `csv.reader` does the same job as the `split(",")` we used in week 1 - it
-# cuts each line at the commas - but it is the standard tool, and it handles
-# awkward cases (such as commas inside quoted text) that `split` does not.
-# `next(reader)` reads one row and moves past it; here, that removes the header.
+# `csv.reader` does the same job as `split(",")` in week 1: it cuts each line
+# at the commas. It is the standard tool, and it handles awkward cases that
+# `split` does not, such as commas inside quoted text.
+# `next(reader)` reads one row and moves past it. Here it removes the header.
 with open(DATA_FILE) as handle:
     reader = csv.reader(handle)
     next(reader)                       # skip the header row
@@ -64,14 +64,13 @@ print()
 
 
 # ===========================================================================
-# STAGE 2 - Decide. Keep only the rows we want.
+# STAGE 2 - Decide. Keep only the rows that are needed.
 # ===========================================================================
 #
 # New here: `if`, and comparison.
 #
-# Note we build a SECOND pair of lists rather than modifying the first. Deleting
-# from a list while looping over it is a classic way to get a wrong answer with
-# no error message.
+# Note the SECOND pair of lists. The first is not modified. Deleting from a
+# list while looping over it gives a wrong answer with no error message.
 
 chosen_hours = []
 chosen_counts = []
@@ -93,8 +92,8 @@ print()
 #
 # New here: nested loops, accumulating a total, integer division.
 #
-# This is deliberately long-winded. You need to see the machinery once before
-# we hide it.
+# This is written out in full. Stage 5 does the same work in one line. Seeing
+# the long version first is what makes the short version readable.
 
 average_by_hour = []
 
@@ -115,9 +114,8 @@ for hour_of_day in range(24):
 print("STAGE 3")
 for hour_of_day in range(24):
     bar = "#" * int(average_by_hour[hour_of_day] / 40)
-    # :02d pads the hour to two digits (so 8 prints as 08), and :7.1f gives
-    # a number 7 characters wide with 1 decimal place, which lines the
-    # column up.
+    # :02d pads the hour to two digits, so 8 prints as 08. :7.1f gives a
+    # number 7 characters wide with 1 decimal place. Both line the columns up.
     print(f"  {hour_of_day:02d}:00  {average_by_hour[hour_of_day]:7.1f}  {bar}")
 print()
 
@@ -128,9 +126,9 @@ print()
 #
 # New here: `def`, arguments, `return`.
 #
-# We wrote stage 3 for northbound. We now want southbound too. Rather than
-# copying and pasting it and changing one word - which is how bugs get in -
-# we give it a name and hand it the direction we want.
+# Stage 3 was written for northbound. Southbound needs the same work. Copying
+# the block and changing one word is how bugs get in. Instead, give the block
+# a name and pass it the direction.
 
 def hourly_average(direction):
     """Return a list of 24 average counts, one per hour, for this direction."""
@@ -162,9 +160,9 @@ print(f"  southbound peak hour: {peak_hour(southbound):02d}:00  "
 print()
 
 # Check that stage 4 agrees with stage 3. If they disagree, one of them is
-# wrong, and we would rather find out here than in the figure. `assert` stops
-# the program with the given message if the condition is false; if the
-# condition is true, nothing happens and the program carries on.
+# wrong, and here is a better place to find that out than in the figure.
+# `assert` stops the program with the given message when the condition is
+# false. When it is true, nothing happens and the program continues.
 assert abs(northbound[8] - average_by_hour[8]) < 0.001, "stage 3 and 4 disagree"
 
 
@@ -174,9 +172,8 @@ assert abs(northbound[8] - average_by_hour[8]) < 0.001, "stage 3 and 4 disagree"
 #
 # New here: arrays, boolean masks, vectorised arithmetic.
 #
-# Everything above still stands - this is not a better answer, it is the same
-# answer written shorter. You now know what it is doing underneath, which is
-# why we did it the long way first.
+# This is not a better answer. It is the same answer written shorter. Stage 3
+# shows what these lines do underneath.
 
 hours_array = np.array(hours)
 counts_array = np.array(counts)
@@ -193,9 +190,8 @@ print("STAGE 5")
 print("  loop result and NumPy result agree:",
       np.allclose(numpy_average, average_by_hour))
 print("  peak hour:", int(numpy_average.argmax()))
-# The standard deviation at the peak is surprisingly large. That is not a
-# mistake - it is telling you that the days in this file are not all alike.
-# Task 2 will find out why.
+# The standard deviation at the peak is large. That is not a mistake. It means
+# the days in this file are not all alike. Task 2 finds out why.
 peak_counts = counts_array[mask & (hours_array == numpy_average.argmax())]
 print(f"  std dev at peak: {peak_counts.std():.0f} veh/h")
 print()
@@ -208,14 +204,14 @@ print()
 # New here: matplotlib.
 #
 # Rule for the rest of this course: a figure with an unlabelled axis is not
-# finished. Someone should be able to read it with no other context.
+# finished. A stranger should be able to read it with no other context.
 
 figure, axes = plt.subplots(figsize=(9, 5))
 
 axes.plot(range(24), northbound, color=BLUE, linewidth=2, label="Northbound")
 axes.plot(range(24), southbound, color=ORANGE, linewidth=2, label="Southbound")
 
-# Mark the peak so the reader does not have to hunt for it.
+# Mark the peak so the reader does not have to search for it.
 peak = peak_hour(northbound)
 axes.plot(peak, northbound[peak], "o", color=BLUE, markersize=9)
 axes.annotate(
@@ -232,7 +228,7 @@ axes.set_title("Average hourly flow by direction\nCount site A34/012, 2-15 March
 axes.set_xticks(range(0, 24, 2))
 axes.set_xlim(0, 23)
 axes.set_ylim(0, max(max(northbound), max(southbound)) * 1.15)
-axes.grid(axis="y", alpha=0.25)          # recessive: the data is the subject
+axes.grid(axis="y", alpha=0.25)          # faint, so the data stays the subject
 axes.spines["top"].set_visible(False)
 axes.spines["right"].set_visible(False)
 axes.legend(frameon=False)

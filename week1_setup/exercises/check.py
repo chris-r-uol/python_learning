@@ -3,9 +3,9 @@ Traceback safari - the marker.
 
     python check.py
 
-This runs each exercise and tells you whether it is fixed. It does not tell
-you how to fix anything - that is the exercise. Read the traceback: the last
-line says what went wrong, and the line above it says where.
+This runs each exercise and reports whether it is fixed. It does not say how
+to fix anything. That is the exercise. Read the traceback. The last line says
+what went wrong. The line above it says where.
 """
 
 import os
@@ -49,7 +49,7 @@ def main():
             print(f"  PASS   {filename:<16} {stdout}")
             passed += 1
         elif code == 0:
-            print(f"  WRONG  {filename:<16} it runs, but the answer is not right")
+            print(f"  WRONG  {filename:<16} it runs, but the answer is wrong")
             shown = stdout or "(nothing printed)"
             print(f"         got:      {shown}")
             print(f"         expected: {expected_output}")
@@ -64,11 +64,11 @@ def main():
     print("=" * 64)
     print(f"{passed} of {len(EXPECTED)} fixed.")
     if passed == len(EXPECTED):
-        print("All six fixed. You can now read a traceback, and that is most")
-        print("of debugging.")
+        print("All six fixed. You can read a traceback. That is most of")
+        print("debugging.")
     else:
-        print("Keep going. Work on one file at a time, and always read the")
-        print("last line of the error first.")
+        print("Keep going. Work on one file at a time. Always read the last")
+        print("line of the error first.")
     print("=" * 64)
 
 

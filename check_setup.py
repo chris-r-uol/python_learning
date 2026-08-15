@@ -1,22 +1,21 @@
 from __future__ import print_function
 
 """
-check_setup.py - Week 1 diagnostic.
-
-Run this and send us everything it prints. If it fails, send us the error text.
-Either outcome is useful - you are not expected to fix it yourself.
+check_setup.py - Week 1 setup check.
 
     python check_setup.py
 
-Written to be parseable by Python 2 as well as Python 3, so that students who
-run it with an old interpreter get a clear message instead of a SyntaxError.
+It reports whether your machine is ready. Nothing is collected. Read what it
+prints: each problem comes with its fix.
 
-DO NOT convert this file to f-strings. The rest of the course uses them, and
-they are the better choice everywhere else - but the `f"..."` prefix did not
-exist before Python 3.6, so on any older interpreter this file would fail to
-parse and the student would see a SyntaxError instead of the message telling
-them their Python is too old. That message is the entire point of the file.
-Keep .format() here.
+This file is written so that Python 2 can parse it. A student running an old
+interpreter then sees a clear message instead of a SyntaxError.
+
+DO NOT convert this file to f-strings. The rest of the course uses them and
+should. But the `f"..."` prefix did not exist before Python 3.6, so on an
+older interpreter this file would fail to parse. The student would see a
+SyntaxError instead of the message saying their Python is too old. That
+message is the point of the file. Keep .format() here.
 """
 
 import os
@@ -55,7 +54,7 @@ def check_python_version():
 
 
 def check_macos_system_python():
-    """The macOS system Python cannot install packages. Catch it by name."""
+    """The macOS system Python cannot install packages. Catch it by path."""
     if platform.system() != "Darwin":
         return []
     path = sys.executable
@@ -68,7 +67,7 @@ def check_macos_system_python():
 
 
 def check_windows_store_python():
-    """The Windows Store shim is a common source of confusing failures."""
+    """The Windows Store version causes confusing failures. Catch it."""
     if platform.system() != "Windows":
         return []
     if "WindowsApps" in sys.executable:
@@ -93,7 +92,7 @@ def running_on_codespaces():
 
 
 def describe_environment():
-    """Say where this is running. Useful to us when you send the output."""
+    """Report where this is running."""
     if running_on_colab():
         where = "Google Colab"
     elif running_on_codespaces():
@@ -114,16 +113,16 @@ def check_virtual_environment():
 
     if running_on_colab():
         return [
-            "No virtual environment is active. On Colab that is normal -",
-            "Colab manages the environment for you. Nothing to fix.",
+            "No virtual environment is active. On Colab this is normal.",
+            "Colab manages the environment. Nothing to fix.",
         ]
 
     if running_on_codespaces():
         return [
-            "No virtual environment is active, and on Codespaces there should",
+            "No virtual environment is active. On Codespaces there should",
             "be one. Two likely reasons:",
             "  - the setup step was still running when this terminal opened.",
-            "    Close the terminal, open a new one, and run this again.",
+            "    Close the terminal, open a new one, run this again.",
             "  - your Codespace was created before the course configuration",
             "    was added. Rebuild it: press F1, then choose",
             "    'Codespaces: Rebuild Container'.",
@@ -131,9 +130,9 @@ def check_virtual_environment():
 
     return [
         "No virtual environment is active. Python still works, so you can",
-        "carry on today, but you will need one from week 2 onwards. The",
-        "activation command is in your setup guide - it is the step people",
-        "most often forget, and it applies per terminal window.",
+        "carry on today. You will need one from week 2 onwards.",
+        "The activation command is in your setup guide. Run it in every new",
+        "terminal window. This is the step most often forgotten.",
     ]
 
 
@@ -159,8 +158,8 @@ def check_working_directory():
     here = os.path.dirname(os.path.abspath(__file__))
     if os.path.abspath(cwd) != here:
         return [
-            "You are running this from a different folder to the one it lives",
-            "in. Nothing is broken, but this is the most common cause of",
+            "You are running this from a different folder to the one it is",
+            "in. Nothing is broken. This is the most common cause of",
             "'file not found' errors later.",
             "Try: cd {0}".format(here),
         ]
@@ -175,8 +174,8 @@ def main():
     say("Operating system", "{0} {1}".format(platform.system(), platform.release()))
     describe_environment()
 
-    # Blockers stop you working. Notes do not - they are things to be aware
-    # of, and some of them are entirely normal depending on where you run.
+    # Blockers stop you working. Notes do not. Some notes are normal,
+    # depending on where the check is run.
     blockers = []
     blockers += check_python_version()
     blockers += check_macos_system_python()
@@ -192,16 +191,16 @@ def main():
     if blockers:
         print("NOT READY YET.")
         print("")
-        print("These need fixing before week 1. Each one below says what to do:")
+        print("Fix these before week 1. Each line below says what to do:")
         print("")
         for blocker in blockers:
             print("  " + blocker)
     elif notes:
         print("READY, WITH NOTES.")
         print("")
-        print("Everything the course needs is installed and working. This")
-        print("counts as a pass. Read the notes below - some are normal for")
-        print("where you are running, and some are worth acting on.")
+        print("Everything the course needs is installed and working.")
+        print("This is a pass. Read the notes below. Some are normal for")
+        print("where you are running. Some are worth acting on.")
     else:
         print("ALL CHECKS PASSED.")
         print("")
@@ -216,17 +215,16 @@ def main():
 
     if blockers:
         print("")
-        print("Working through it:")
+        print("What to do:")
         print("")
         print("  1. Read the lines above. They name the problem and the fix.")
-        print("  2. Check the 'If this fails' notes in your setup guide -")
-        print("     the common failures are listed there with their answers.")
-        print("  3. Paste the exact error into an AI assistant and ask what")
-        print("     it means. Setup problems are the best-documented problems")
-        print("     in computing, and this is good practice for week 3.")
-        print("  4. Half an hour gone? Stop, and use GitHub Codespaces")
-        print("     instead - see setup/codespaces.md. Nothing to install,")
-        print("     and nothing your machine can block.")
+        print("  2. Read the 'If this fails' notes in your setup guide.")
+        print("     Common failures are listed there with their fixes.")
+        print("  3. Paste the exact error into an AI assistant. Ask what it")
+        print("     means. Setup errors are well documented.")
+        print("  4. After 30 minutes, stop. Use GitHub Codespaces instead:")
+        print("     see setup/codespaces.md. Nothing to install, and nothing")
+        print("     your machine can block.")
     print(LINE)
 
 

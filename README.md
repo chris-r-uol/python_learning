@@ -1,109 +1,81 @@
 # Python for Transport & Civil Engineering
 
-**📖 Read this course as a website: <https://chris-r-uol.github.io/python_learning/>**
+**Website: <https://chris-r-uol.github.io/python_learning/>**
 
-The site holds the same text as the files in this repository, with a search
-box and a contents list. It is built to sit in half a screen beside your
-editor or Codespace, so you can read a task on one side and do it on the
-other. Everything here works equally well read as files, if you prefer that.
+The website has the same text as these files, with a search box. Use it
+beside your editor.
 
----
-
-This course runs for five weeks. By the end of it you will be able to take a
-messy transport dataset, clean it, analyse it, and produce a figure that
-supports an argument. You will also be able to work out what has gone wrong
-when your code does not run — which matters just as much.
+Five weeks. You will learn to take a transport dataset, clean it, analyse
+it, and produce a figure. You will also learn what to do when your code does
+not work.
 
 ## Start here
 
-**Before week 1**, complete the setup. It takes about an hour, and it is not
-optional: the first session builds on it.
+Set up your machine before week 1. This takes about 45 minutes.
 
-1. Follow the setup guide for your machine:
+1. Follow the guide for your machine:
    - Windows → [`setup/windows.md`](setup/windows.md)
    - macOS → [`setup/macos.md`](setup/macos.md)
-   - Work laptop with no admin rights → [`setup/locked-down-laptop.md`](setup/locked-down-laptop.md)
-   - **Installation not working, or you would rather skip it entirely** →
-     [`setup/codespaces.md`](setup/codespaces.md). GitHub runs a machine for
-     you with everything already installed; you need only a browser and a
-     free GitHub account.
+   - No installation possible → [`setup/codespaces.md`](setup/codespaces.md)
+   - Work laptop, no admin rights → [`setup/locked-down-laptop.md`](setup/locked-down-laptop.md)
    - No GitHub account possible → [`setup/colab-fallback.md`](setup/colab-fallback.md)
 
-   If you prefer Chinese services — Baidu, DeepSeek, WeChat sign-in, Chinese
-   documentation — read [`setup/chinese-services.md`](setup/chinese-services.md)
-   as well. Everything in this course works with them.
+   If you use Chinese services such as Baidu, DeepSeek or WeChat sign-in,
+   also read [`setup/chinese-services.md`](setup/chinese-services.md).
 
-2. At the end of the guide you will run the setup check. From this folder, with
-   your virtual environment active:
+2. In the course folder, with your virtual environment active, run:
 
    ```
    python check_setup.py
    ```
 
-3. Read what it prints. It tells you whether you are ready, and if not, what
-   to do about it.
+3. Read what it prints.
 
-### What counts as a pass
+### The three results
 
-The check ends with one of three verdicts:
-
-| Verdict | Meaning |
+| Result | Meaning |
 |---|---|
-| **ALL CHECKS PASSED** | Everything is installed and configured. Nothing to do. |
-| **READY, WITH NOTES** | **This is also a pass.** Everything the course needs works. The notes are things to be aware of — and some, such as "no virtual environment" on Colab, are entirely normal. Read them, then carry on. |
-| **NOT READY YET** | Something genuinely blocks you: Python is too old, the wrong Python is being used, or the packages are not installed. The check names each problem and the fix for it. |
+| **ALL CHECKS PASSED** | Nothing to do. |
+| **READY, WITH NOTES** | Also a pass. Everything needed works. Read the notes. Some are normal, such as "no virtual environment" on Colab. |
+| **NOT READY YET** | Something is missing or wrong. The check names each problem and its fix. |
 
 ## If something does not work
 
-It will, at some point, and that is not a sign you have gone wrong. Working
-out *why* something is broken is the actual subject of this course; the
-setup is simply the first place you get to practise it.
+Try these in order.
 
-When something fails, in this order:
-
-1. **Read the message.** Properly, to the end. It usually says what is
-   wrong, and often says what to do about it.
-2. **Check the "If this fails" notes in your setup guide.** The failures
-   almost everyone hits are listed there, with their fixes.
-3. **Paste the exact error into an AI assistant and ask what it means.**
-   Installation problems are the most thoroughly documented problems in
-   computing, and an assistant is genuinely good at them. From week 3 you
-   will be doing a far more demanding version of this.
-4. **Search the exact error text.** Somebody has had it before you.
-5. **Half an hour gone? Stop, and use [Codespaces](setup/codespaces.md).**
-   Nothing to install, nothing your laptop can block, and no part of the
-   course is lost. Choosing it is good judgement, not defeat.
-6. **Still stuck when the session starts?** Bring it with you. Studio time,
-   with an instructor and a TA in the room, is exactly what that time is
-   for.
+1. **Read the message to the end.** It usually names the problem.
+2. **Read the "If this fails" notes** in your setup guide. Common problems
+   are listed there with their fixes.
+3. **Paste the exact error into an AI assistant.** Ask what it means.
+   Installation errors are well documented.
+4. **Search for the exact error text.**
+5. **After 30 minutes, stop. Use [Codespaces](setup/codespaces.md).** It
+   needs no installation. It runs in your browser. You lose nothing from the
+   course.
+6. **Still stuck at the session?** Bring it. The instructor and TA are
+   there.
 
 ## What is in this folder
 
 | Folder | Contents |
 |---|---|
-| `setup/` | Installation guides, one for each situation |
-| `week1_setup/` | Your first scripts, and the traceback exercises |
-| `week2_programming/` | The worked example and the practice drills |
-| `week3_ai/` | The verification checklist and the AI-assisted task |
-| `project/` | Your Patch — the individual transport atlas, and the data source catalogue |
-| `instructor/` | Teaching notes **and the worked solutions to weeks 1 and 2** |
-| `docs/` | How the course was designed, if you are curious |
+| `setup/` | Installation guides |
+| `week1_setup/` | First scripts and the traceback exercises |
+| `week2_programming/` | The worked example and the drills |
+| `week3_ai/` | The verification checklist and the AI task |
+| `project/` | The transport atlas project and the data catalogue |
+| `instructor/` | Teaching notes and the answers to weeks 1 and 2 |
+| `docs/` | How the course was designed |
 
-**Yes, the answers are in there.** `instructor/solutions/` holds the fixed
-versions of the week 1 exercises and all twelve week 2 drills. That is
-deliberate: nothing on this course is graded, so the only person you can
-cheat is yourself, and having the answers available means you can check your
-own work the way you would use the answers in the back of a textbook. Use
-them after a real attempt, or when you have genuinely run out of ideas.
-Reading one first costs you the practice, which is the only thing the task
-was ever going to give you.
+The answers are in `instructor/solutions/`. Nothing is graded, so nobody
+loses marks by reading them. Use them to check your work after you have
+tried a task, or when you are stuck. If you read them first, you get no
+practice.
 
-## Three rules that apply all course
+## Three rules
 
-- **A figure with an unlabelled axis is not finished.** Every chart you produce
-  needs labelled axes with units, and a title a stranger could understand.
-- **Code that works but that you cannot explain is not finished either.** From
-  week 3 onwards you will be asked how you know your answer is right.
-- **Getting stuck is a normal part of this work, not a sign you are failing.**
-  When it happens, bring the error message. The error message is where the
-  answer starts.
+1. **A figure with an unlabelled axis is not finished.** Label both axes.
+   Give units. Write a title a stranger can understand.
+2. **Code you cannot explain is not finished.** From week 3 you check
+   whether your answers are right.
+3. **Getting stuck is normal.** Read the error message first.
