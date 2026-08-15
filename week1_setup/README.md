@@ -1,19 +1,18 @@
 # Week 1 — Getting Python working
 
 **By the end of this week you can:** run a `.py` file, move to a folder in a
-terminal, explain what a virtual environment is for, change a value in a
-script and see the effect, and read an error message.
+terminal, say what a virtual environment is for, change a value in a script
+and see the effect, and read an error message.
 
-The session has three parts. First we cover five ideas — everything else
-this week depends on them. Then we work through a real script together. Then
-you do the tasks, in class, with the instructor and the TA circulating. This
-document covers all three parts in full, so you can also use it to review, or
-to catch up if you missed the session.
+The session has three parts. First the ideas. Then a script we work through
+together. Then the tasks, which you do in class.
 
-**Before the session:** complete the setup guide for your machine (see
-`setup/`), run `check_setup.py` from the top of this repository, and send us
-what it prints. If it fails, send the error text instead — that is just as
-useful to us.
+This page contains all three parts. Use it to review, or to catch up if you
+missed the session.
+
+**Before the session:** follow the setup guide for your machine in `setup/`.
+Then run `check_setup.py` and read what it prints. If it reports a problem,
+it also names the fix.
 
 ---
 
@@ -21,20 +20,19 @@ useful to us.
 
 ### 1. A program is a text file
 
-A Python program is a plain text file. That is the whole of it. You could
-open one in Notepad and read every character. VS Code, the editor you
-installed, is a text editor with conveniences added — colouring, underlining
-of likely mistakes, a built-in terminal — but the file it saves contains
-nothing except the text you typed.
+A Python program is a plain text file. You could open it in Notepad and read
+every character. VS Code adds colour and other helpers, but the file it
+saves contains only the text you typed.
 
-The file does nothing on its own. To make it do something, you hand it to a
-second program called the **interpreter** — that is what Python actually is.
-When you type `python first_script.py`, you are saying: *run the program
-called `python`, and give it my file to work through.* The interpreter reads
-your file from the top, carries out each line in turn, and stops when it
-reaches the end — or when it hits a line it cannot carry out.
+The file does nothing by itself. To run it, you give it to a program called
+the **interpreter**. That is what Python is. When you type
+`python first_script.py`, you are saying: run the program called `python`,
+and give it my file.
 
-Here is a complete four-line program:
+The interpreter reads your file from the top. It carries out each line in
+order. It stops at the end, or at the first line it cannot carry out.
+
+Here is a complete program:
 
 ```python
 speed_kph = 48
@@ -43,186 +41,164 @@ seconds = length_m / (speed_kph * 1000 / 3600)
 print(seconds)
 ```
 
-Walk through it the way the interpreter does. Line 1: store the value 48
-under the name `speed_kph`. Line 2: store 1200 under `length_m`. Line 3:
-convert the speed to metres per second, divide the length by it, and store
-the result under `seconds`. Line 4: display the value of `seconds` on the
-screen.
+Read it the way Python does:
 
-That last line matters more than it looks. A program only shows you what you
-ask it to show. Without `print`, the interpreter would still compute
-`seconds` — correctly — and then finish in silence. When one of your
-programs runs and appears to do nothing, this is usually why: it worked, and
-nobody asked it to report.
+- Line 1 stores the value 48 under the name `speed_kph`.
+- Line 2 stores 1200 under `length_m`.
+- Line 3 converts the speed to metres per second, divides, and stores the
+  result under `seconds`.
+- Line 4 displays `seconds` on screen.
 
-If you are used to spreadsheets, notice one deep difference. A spreadsheet
-is *alive*: change one cell, and everything that depends on it recalculates
-instantly. A program is not alive. It runs once, from top to bottom, and
-finishes. If you change the file, nothing happens until you run it again.
-This is why the working method for the whole course is a loop of three
-steps — **edit → run → look** — and why "did you re-run it after the
-change?" is a serious debugging question, not a joke. Programmers with
-twenty years of experience still work in this loop; they have simply become
-fast at it.
+The last line matters. A program only shows what you tell it to show.
+Without `print`, Python calculates `seconds` and then stops. Nothing
+appears. If your program runs and shows nothing, this is often the reason.
 
-One consequence of top-to-bottom reading: a name must be given its value
-*above* the place it is used. The interpreter does not read ahead. If line 3
-mentions `speed_kph` and nothing above line 3 has defined it, the program
-stops there with an error, regardless of what line 10 says.
+A spreadsheet updates itself. Change one cell and every formula recalculates
+at once. A program does not do this. It runs once, top to bottom, then
+stops. If you change the file, nothing happens until you run it again.
 
-### 2. The terminal, and where you are standing
+So the working method is three steps: **edit, run, look**. Change one thing.
+Run it. Look at what changed.
 
-The terminal is a window where you type commands instead of clicking. It
-looks old-fashioned. It has survived because text has two properties that
-clicking does not: a command can be *written down exactly* — in a guide like
-this one, in your notes, in a report someone else must reproduce — and a
-command can be *repeated exactly*. Every piece of professional data work
-leans on both.
+One more rule. A name must be given a value **above** the line that uses it.
+Python does not read ahead. If line 3 uses `speed_kph` and no line above
+defines it, the program stops at line 3.
 
-The mechanics are plain. The terminal shows a *prompt*, which means "type
-here". You type one command and press Enter. The computer carries it out,
-prints any response, and shows the prompt again. Three commands cover this
-course:
+### 2. The terminal, and where you are
+
+The terminal is a window where you type commands instead of clicking.
+
+You type one command and press Enter. The computer carries it out, prints
+any response, and waits for the next one.
+
+Three commands cover this course:
 
 | Command | What it does |
 |---|---|
-| `cd foldername` | Move into a folder ("change directory") |
-| `ls` (macOS) / `dir` (Windows) | List what is in the current folder |
-| `python script.py` | Run a script with Python |
+| `cd foldername` | Move into a folder |
+| `ls` (macOS) / `dir` (Windows) | List what is in this folder |
+| `python script.py` | Run a script |
 
-The idea underneath them is the **working directory**. At every moment, your
-terminal is "standing" in exactly one folder — most terminals print its name
-as part of the prompt — and every command is interpreted from that position.
-`ls` lists *this* folder. `cd data` moves into a folder called `data` *inside
-this one*. It is the same idea as having one folder open in File Explorer or
-Finder, except that nothing on the screen reminds you visually, so you must
-hold the position in your head — or ask, with `ls` or `dir`, which is what
-experienced people actually do.
+The idea behind them is the **working directory**. Your terminal is always
+in exactly one folder. Every command works from that folder. `ls` lists
+*this* folder. `cd data` moves into a folder called `data` *inside this
+one*.
 
-Files are found by their **path** — the file's address. An *absolute* path
-gives the address from the very top of the disk:
-`C:\Users\you\python_learning\week1_setup\data\site_counts_small.csv`. A
-*relative* path gives it from where you are standing:
-`data/site_counts_small.csv`, meaning "the folder `data`, right here, and
-the file inside it". Scripts almost always use relative paths, because the
-project may be copied to another machine where the absolute address would be
-wrong — but a relative path only works if you are standing in the right
-place when you run the script.
+It is like having one folder open in File Explorer or Finder. The difference
+is that nothing on screen shows you where you are, so you check with `ls` or
+`dir`.
 
-That single fact explains the most common error of week 1. When a script
-says `open("data/site_counts_small.csv")` and you see `FileNotFoundError`,
-the file almost always exists. The problem is your position: Python looked
-for a `data` folder inside the folder your terminal was standing in, did not
-find one, and reported the full path it tried. Read that path, run `ls` or
-`dir` to see where you actually are, `cd` to the right place, and run the
-script again.
+Files have a **path**, which is the file's address. There are two kinds:
 
-Finally, take apart the command you will type most: `python first_script.py`.
-The first word names the program to run — the Python interpreter. The second
-is handed to that program as its input — the path to your file, relative to
-where you stand. Two words, both of them now meaningful.
+- An **absolute path** starts from the top of the disk:
+  `C:\Users\you\python_learning\week1_setup\data\site_counts_small.csv`
+- A **relative path** starts from where you are:
+  `data/site_counts_small.csv`. This means "the folder `data`, here, and the
+  file inside it".
+
+Scripts use relative paths, so the project still works when it is copied to
+another machine. But a relative path only works if you are in the right
+folder when you run the script.
+
+This explains the most common error of week 1. A script says
+`open("data/site_counts_small.csv")` and you get `FileNotFoundError`. The
+file exists. You are in the wrong folder. Python looked for a `data` folder
+inside your current folder and did not find one.
+
+To fix it: read the path in the error, run `ls` or `dir` to see where you
+are, `cd` to the right folder, and run the script again.
+
+Now look again at the command you will type most: `python first_script.py`.
+The first word is the program to run. The second is the file you give it.
 
 ### 3. Virtual environments
 
-When your code says `import numpy`, it is asking to use a **library** — a
-collection of code written by someone else and published for reuse. NumPy
-does not come with Python; before your machine can import it, it must be
-*installed*, which means downloaded from a public archive and saved into
-your Python's folders. The installing tool is called `pip`, and you used it
-in the setup guide: `pip install -r requirements.txt` means "install
-everything named in this list".
+When your code says `import numpy`, it asks to use a **library**. A library
+is code written by someone else. NumPy does not come with Python. It must be
+**installed** first, which means downloaded and saved into your Python's
+folders. The tool that installs it is called `pip`. You used it in the setup
+guide: `pip install -r requirements.txt` installs everything in that list.
 
-Now the problem. Suppose everything you install lands in the one Python on
-your machine. This term, project A needs version 1 of some library. Next
-year, project B needs version 2, so you upgrade — and project A quietly
-breaks, and you find out months later, when you reopen it the night before
-you need it. One shared Python means every project can damage every other.
-This is not a rare misfortune; it is the natural fate of any machine used
-for real work over several years.
+Here is the problem it creates. Suppose everything installs into the one
+Python on your machine. This year, project A needs version 1 of a library.
+Next year, project B needs version 2, so you upgrade. Project A now breaks,
+and you find out months later.
 
-A **virtual environment** removes the problem by giving each project its own
-private Python. Concretely, it is nothing more than a folder — ours is
-called `.venv`, sitting inside the project — containing a copy of the
-interpreter and its own separately installed libraries. **Activation**, the
-step you do each session, tells your current terminal window: *while this
-window is open, when I say `python`, use the one in this project's `.venv`.*
-Nothing outside the window, and nothing outside the project, is affected.
+A **virtual environment** solves this. Each project gets its own private
+Python. It is a folder, called `.venv`, inside the project. It holds a copy
+of the interpreter and its own libraries.
 
-Two practical consequences. First, activation is per terminal window: a new
-window knows nothing about it, which is why the `(.venv)` marker in your
-prompt is worth glancing at before you run anything. Second, an environment
-is cheap and disposable. If one ever breaks or confuses you, delete the
-`.venv` folder and rebuild it — create, activate, install, three commands
-from the setup guide, two minutes. Nothing of value lives inside it; your
-code and data live outside. You never need to be afraid of it.
+**Activation** tells your terminal: while this window is open, `python`
+means the one in this project's `.venv`. Nothing outside the window changes.
 
-### 4. What the code is actually saying
+Two things follow:
 
-You are about to read a real script and then fix six broken ones, so you
-need to recognise four things when you see them. This section is about
-**reading** code, not writing it — week 2 teaches you to write these from
-scratch. For now the goal is that nothing in a script looks like
-unexplained punctuation.
+- Activation applies to one terminal window. A new window needs the command
+  again. Check for `(.venv)` in your prompt before you run anything.
+- An environment is disposable. If one breaks, delete the `.venv` folder and
+  build it again: create, activate, install. Your code and data are outside
+  it, so you lose nothing.
 
-#### Data, and the two types that matter today
+### 4. What the code is saying
 
-**Data** is simply the values a program works with: a count of vehicles, the
-name of a direction, a date. Every value in Python has a **type**, and today
-only two matter.
+You are about to read a real script, then fix six broken ones. This section
+covers what you need to recognise. It is about **reading** code. Week 2
+covers writing it.
 
-- **Numbers** — `1703`, `8`, `0.5`. You can do arithmetic on them.
-- **Text** — `"northbound"`, `"1703"`. Text is called a *string*, and you
-  can always spot it by the quotation marks.
+#### Data and types
 
-The quotation marks are the whole difference between these two lines:
+**Data** means the values a program works with: a count, a name, a date.
+
+Every value has a **type**. Two types matter now:
+
+- **Numbers**: `1703`, `8`, `0.5`. You can do arithmetic on them.
+- **Text**: `"northbound"`, `"1703"`. Text is called a *string*. You can
+  always spot it by the quotation marks.
+
+The quotation marks are the only difference here:
 
 ```python
 count = 1703      # a number
-count = "1703"    # text that happens to look like a number
+count = "1703"    # text
 ```
 
-That difference matters more than it sounds, because **a file always gives
-you text.** A CSV file is a plain text file, so when a script reads `1703`
-out of one, it receives the four characters `1`, `7`, `0`, `3` — not the
-number. Text behaves like text:
+This matters because **a file always gives you text**. A CSV file is a text
+file. When a script reads `1703` from one, it gets four characters, not a
+number. Text behaves differently:
 
 ```python
-1703 + 1        # 1704     - numbers add
-"1703" + "1"    # "17031"  - text joins end to end
+1703 + 1        # 1704     numbers add
+"1703" + "1"    # "17031"  text joins together
 ```
 
-So a script must convert before it calculates. `int()` turns text into a
-whole number: `int("1703")` gives `1703`. You will see `int(...)` wrapped
-around values in almost every script this term, and now you know why it is
-there.
+So a script must convert text before it calculates. `int()` turns text into
+a whole number. `int("1703")` gives `1703`. You will see `int(...)` in
+almost every script this term.
 
-Python will not quietly guess for you. If you compare text with a number it
-stops and says `TypeError` — which is the loudest, most helpful thing it
-could do, and one of the six errors in the tasks.
+Python does not guess. If you compare text with a number, it stops and says
+`TypeError`.
 
-#### Lists, and counting from zero
+#### Lists, counting from zero
 
-A **list** holds several values in order, written in square brackets:
+A **list** holds several values in order. It is written in square brackets:
 
 ```python
 parts = ["2026-03-02", "8", "northbound", "1703"]
 ```
 
-You reach an item by its position, and **positions start at zero**:
+You reach an item by its position. **Positions start at zero:**
 
 ```python
-parts[0]     # "2026-03-02"  - the first item
-parts[2]     # "northbound"  - the third item
-parts[3]     # "1703"        - the fourth and last
+parts[0]     # "2026-03-02"   the first item
+parts[2]     # "northbound"   the third item
+parts[3]     # "1703"         the fourth item
 ```
 
-Zero-based counting feels wrong for about a week. The way to hold on to it
-is that the number measures *how far from the start* an item is, and the
-first item is zero steps along. A four-item list therefore has positions 0
-to 3 — and asking for `parts[4]` gets you `IndexError`, another of the six.
+A list of four items has positions 0 to 3. Asking for `parts[4]` gives
+`IndexError`.
 
-Lists appear constantly because a file is naturally a list of lines, and a
-line is naturally a list of comma-separated values.
+Counting from zero feels wrong at first. The number means how far the item
+is from the start. The first item is zero steps from the start.
 
 #### `if` — doing something only sometimes
 
@@ -231,22 +207,20 @@ if count > 900:
     print("busy hour")
 ```
 
-Read it as written: *if this condition is true, run the indented lines
-underneath.* The parts are the word `if`, a condition, a colon, and then an
-indented block.
+This means: if the condition is true, run the indented lines below it.
 
-The comparisons you will see are `>`, `<`, `>=`, `<=`, `==` (equal to) and
-`!=` (not equal to). Note that **equality is a double `==`**, because a
-single `=` already means "store this value under this name".
+The parts are the word `if`, a condition, a colon, then indented lines.
 
-The indentation is not decoration — it is how Python knows which lines are
-inside the `if` and which are not. Lines indented under it run only when the
-condition holds; the first line back at the left margin runs either way.
-Getting that spacing wrong is `IndentationError`, and it is the one error
-that stops the program *before it starts*.
+Conditions use `>`, `<`, `>=`, `<=`, `==` (equal to) and `!=` (not equal
+to). Equality uses **two** equals signs, because one equals sign already
+means "store this value".
 
-An `if` may be followed by `else`, whose block runs when the condition is
-false:
+The indentation is not decoration. It tells Python which lines are inside
+the `if`. Lines that are indented run only when the condition is true. The
+first line back at the left margin runs either way. Wrong indentation gives
+`IndentationError`.
+
+`if` can have a partner, `else`. Its lines run when the condition is false:
 
 ```python
 if len(counts) == 0:
@@ -255,24 +229,22 @@ else:
     print(sum(counts) / len(counts))
 ```
 
-That pattern — check for the empty case before dividing — is how you avoid
-`ZeroDivisionError`, which is the sixth error in the tasks.
+Checking for an empty list before dividing avoids `ZeroDivisionError`.
 
-#### `for` and `while` — doing something repeatedly
+#### `for` and `while` — doing something many times
 
-A **`for` loop** runs the same block once for each item in a collection:
+A **`for` loop** runs the same lines once for each item:
 
 ```python
 for line in data_lines:
     print(line)
 ```
 
-Read it as: *for each item in `data_lines`, one at a time, call it `line`
-and run the indented block.* The name `line` is chosen by whoever wrote the
-loop; it is refilled on every pass. As with `if`, indentation decides what
-is inside the loop.
+This means: take each item in `data_lines`, one at a time, call it `line`,
+and run the indented lines. The name `line` is chosen by whoever wrote the
+loop. Indentation decides what is inside the loop.
 
-A **`while` loop** repeats for as long as a condition stays true:
+A **`while` loop** repeats while a condition stays true:
 
 ```python
 countdown = 3
@@ -281,71 +253,60 @@ while countdown > 0:
     countdown = countdown - 1
 ```
 
-The difference in plain words: `for` means *"for each of these things"*, and
-`while` means *"keep going until this stops being true"*. Use `for` when you
-know what you are working through — a file, a list, the hours of a day —
-which is nearly always in data work, and why almost every loop in this
-course is a `for`. `while` earns its place when you cannot know in advance
-how many repetitions you need. Its one hazard is worth knowing: if the
-condition never becomes false, the program runs forever, and you stop it
-with **Ctrl-C**.
+`for` means "for each of these things". `while` means "keep going until this
+stops being true".
 
-#### Printing values inside a sentence
+Use `for` when you know what you are working through: a file, a list, the
+hours of a day. That is almost always the case in data work, and almost
+every loop in this course is a `for` loop.
 
-Programs constantly need to report a number inside a line of text. Joining
-the pieces by hand is awkward, because text and numbers cannot simply be
-added together:
+`while` has one danger. If the condition never becomes false, the program
+runs forever. Press **Ctrl-C** to stop it.
+
+#### Putting values inside text
+
+Programs often print a number inside a sentence. You cannot add text and
+numbers together:
 
 ```python
-print("Total: " + total)      # TypeError - you cannot add a number to text
+print("Total: " + total)      # TypeError
 ```
 
-Python's answer is the **f-string**. Put the letter `f` immediately before
-the opening quotation mark, and anything you write inside `{curly braces}`
-is worked out and dropped into the text:
+Use an **f-string** instead. Put `f` before the quotation mark. Anything
+inside `{curly braces}` is worked out and placed in the text:
 
 ```python
 total = 32083
 print(f"Total: {total}")              # Total: 32083
-print(f"Half of it is {total / 2}")   # Half of it is 16041.5
+print(f"Half is {total / 2}")         # Half is 16041.5
 ```
 
-The `f` stands for *formatted*. Anything can go inside the braces — a name,
-a calculation, a function call — and the result is converted to text for
-you. You will see this in every script in this course.
+The `f` means "formatted". You will see f-strings in every script here.
 
-There is a second part you will meet in the scripts, after a colon, which
-controls the layout rather than the value:
+After a colon you can control the layout:
 
 ```python
 print(f"{count:>8}")      # pad to 8 characters, right-aligned
-print(f"{speed:.1f}")     # show 1 decimal place
-print(f"{hour:02d}")      # pad a whole number to 2 digits, so 8 becomes 08
+print(f"{speed:.1f}")     # one decimal place
+print(f"{hour:02d}")      # pad to two digits, so 8 becomes 08
 ```
 
-Those are worth recognising rather than memorising: they are how a script
-lines its output up into readable columns. Look them up when you need one.
+Recognise these when you see them. Look them up when you need one.
 
-> You may also see `"Total: {}".format(total)` in older code, which does the
-> same job in an older style. One file in this course still uses it —
-> `check_setup.py`, deliberately, because f-strings do not work on very old
-> versions of Python and that file has to run on them to tell you so.
+> Older code uses `"Total: {}".format(total)` instead. It does the same job.
+> One file here still uses it: `check_setup.py`. F-strings do not work on
+> very old versions of Python, and that file must run on them.
 
-#### Putting it together
+#### Together
 
-Those four ideas are almost the whole of the script you are about to read: a
-`for` loop over the lines of a file, `int()` converting text to numbers,
-`parts[...]` pulling values out of a list, and an `if` deciding what counts
-as busy. Four of the six errors in the tasks are simply one of these ideas
-going wrong.
+Those ideas make up most of the script you are about to read: a `for` loop
+over the lines of a file, `int()` to convert text to numbers, `parts[...]`
+to take values out of a list, and `if` to decide what counts as busy.
 
 ### 5. How to read an error message
 
-When a program fails, Python prints a report called a **traceback**. It
-looks alarming, and most beginners' instinct is to look away and re-read
-their code. Resist that. The traceback is the most informative thing on the
-screen, and it is written for you — the name means it *traces back* from the
-failure to show where the program was when it stopped.
+When a program fails, Python prints a **traceback**. It looks alarming. It
+is the most useful thing on your screen.
 
 ```
 Traceback (most recent call last):
@@ -354,136 +315,117 @@ Traceback (most recent call last):
 IndexError: list index out of range
 ```
 
-Read it in this order. **Last line first**: the kind of error
-(`IndexError`) and a plain description (`list index out of range` — you
-asked a list for a position it does not have). Then the line above: the file
-and the **line number** where execution stopped, with the offending line
-printed underneath. What went wrong, and where. With those two facts you can
-go to line 61 and look at it with a specific question in mind, instead of
-re-reading the whole file with a vague sense of dread.
+Read it in this order:
 
-Two further things sharpen the diagnosis. First, an error stops the program
-at that line: everything *above* it ran; nothing *below* it did. If your
-script printed three things and then failed, those three prints are
-evidence about what was true just before the failure. Second, there are two
-moments an error can happen, and they mean different things. Most errors
-happen *while the program runs*, at the line reported. But Python reads your
-whole file before starting, to check that it is well-formed — and a file
-that is not well-formed fails *before any line runs at all*. `SyntaxError`
-and `IndentationError` are this second kind: the program never started, so
-there is no point looking at what it printed, because it printed nothing.
-You will meet exactly this in the tasks.
+1. **The last line.** It gives the kind of error (`IndexError`) and a
+   description (`list index out of range`).
+2. **The line above it.** It gives the file and the **line number** where
+   the program stopped, and prints that line.
 
-The kind of error is itself information. Six kinds cover almost everything
-you will see this term, and each one points back at an idea from section 4:
+Now you know what went wrong and where. Go to that line and look at it.
 
-| Error | What it means | Idea behind it |
+Two more things help.
+
+**An error stops the program at that line.** Everything above it ran.
+Nothing below it ran. If your script printed three lines and then failed,
+those three lines are evidence.
+
+**Some errors happen before the program starts.** Python reads the whole
+file first to check it is well formed. `SyntaxError` and `IndentationError`
+happen at this stage. The program never started, so it printed nothing.
+
+Six kinds of error cover almost everything this term:
+
+| Error | Meaning | Idea behind it |
 |---|---|---|
-| `NameError` | You used a name that has not been defined — often a spelling mistake | Names |
-| `TypeError` | You combined two things whose types do not fit — usually text where a number was needed | Data types |
+| `NameError` | A name that was never defined. Often a spelling mistake | Names |
+| `TypeError` | Two types that do not fit. Usually text where a number was needed | Data types |
 | `IndexError` | You asked a list for a position it does not have | Lists, counting from zero |
-| `FileNotFoundError` | The file is not where the program looked — usually a working-directory problem | Paths and the working directory |
-| `IndentationError` | The lines do not line up the way Python requires — the program never started | Indented blocks in `if` and `for` |
-| `ZeroDivisionError` | Something divided by zero — often an empty input nobody planned for | `if` and the empty case |
+| `FileNotFoundError` | The file is not where the program looked. Usually the wrong folder | Paths |
+| `IndentationError` | Lines do not line up. The program never started | Indented blocks |
+| `ZeroDivisionError` | Something divided by zero. Often an empty input | `if` and the empty case |
 
-You do not need to memorise the table. You need to know it exists, and to
-read the last line of every traceback before doing anything else. One more
-thing, said once because it matters: an error message is not an accusation
-and not a grade. It is the machine reporting, precisely and without any
-opinion of you, the exact place it could not continue. People who progress
-fastest in this course are not the ones who make fewer errors; they are the
-ones who read them.
+You do not need to memorise this table. Read the last line of the traceback
+first, every time.
 
 ---
 
-## Part 2 — Demonstration: `first_script.py`
+## Part 2 — The script: `first_script.py`
 
-We do this together. The script reads two days of hourly traffic counts and
-reports which hours were busy. With your virtual environment active:
+We work through this together. It reads two days of hourly traffic counts
+and lists the busy hours.
+
+With your virtual environment active:
 
 ```
 cd week1_setup
 python first_script.py
 ```
 
-The sequence, which you can also follow on your own:
+The steps:
 
-1. **Read the script from top to bottom before running it.** Every line has a
-   comment. Predict what it will print.
-2. **Run it.** Compare what you predicted with what appeared.
-3. **Change something.** Set `BUSY_THRESHOLD` to 500 and run again. The
-   edit → run → look loop, in its natural habitat.
-4. **Change something else.** Set `DIRECTION` to `"southbound"`. Does the
-   busiest hour move?
-5. **Break it, on purpose, three ways** — the suggestions are at the bottom
-   of the script. Each produces a different traceback. Read each one: last
-   line first, then the line number. Put the code back afterwards.
+1. **Read the script from top to bottom before running it.** Every line has
+   a comment. Predict what it will print.
+2. **Run it.** Compare the output with your prediction.
+3. **Change `BUSY_THRESHOLD` to 500.** Run it again.
+4. **Change `DIRECTION` to `"southbound"`.** Does the busiest hour move?
+5. **Break it three ways.** The suggestions are at the bottom of the script.
+   Read each traceback: last line first, then the line number. Put the code
+   back afterwards.
 
-Breaking a program deliberately, in a place where nothing matters, is the
-fastest way to lose your fear of error messages. That fear is the main thing
-standing between a beginner and progress.
+Breaking a program on purpose, where nothing matters, is the fastest way to
+get used to error messages.
 
 ---
 
 ## Part 3 — The tasks
 
-You do these in class, under supervision. The instructor and the TA are
-there to be used: a good rule is to try something yourself for ten minutes,
-and then ask. Both halves of the rule matter — the trying and the asking.
-Anything unfinished at the end of the session, finish before next week.
+You do these in class. Try something for ten minutes, then ask. The
+instructor and the TA are there for this.
 
-Do them in this order: the first is a gentle continuation of the
-demonstration, and the second is the harder one.
+Finish anything unfinished before next week.
 
 ### Task 1 — The parameter sweep
 
-Run `first_script.py` five times, with `BUSY_THRESHOLD` set to 500, 700,
-900, 1100, and 1300. Record the number of busy hours for each threshold in a
-small table — on paper or in a spreadsheet, either is fine. Then write two
-sentences describing the pattern you see.
+Run `first_script.py` five times. Set `BUSY_THRESHOLD` to 500, 700, 900,
+1100 and 1300.
 
-Nothing here can break: you are changing one number in a script that already
-works, which makes it the safest possible place to practise the
-edit → run → look loop until it feels automatic.
+Record the number of busy hours for each threshold in a small table. Use
+paper or a spreadsheet. Then write two sentences describing the pattern.
 
-The point of the task is not the table. It is that changing one number in a
-script, re-running it, and observing the result is a complete, legitimate
-method of investigation — and after today, it is one you have.
+Nothing can break here. You are changing one number in a script that already
+works.
 
 ### Task 2 — The traceback safari
 
-Six broken scripts are in `exercises/`. Each contains exactly one of the six
-error kinds from the table above — one per row, in no particular order. For
-each script: run it, read the error, find the line, fix it.
+There are six broken scripts in `exercises/`. Each one contains one of the
+six error kinds from the table above.
+
+For each script: run it, read the error, find the line, fix it.
 
 ```
 cd week1_setup/exercises
 python check.py
 ```
 
-`check.py` tells you which scripts are fixed. It does not tell you how to fix
-them — that is the exercise.
+`check.py` tells you which scripts are fixed. It does not tell you how to
+fix them.
 
-This is the harder task, and it is meant to be. Expect to be stuck at least
-once; that is not a sign you are behind. Three things to lean on when you
-are: the error table above, which names the idea behind each error; section
-4, which explains those ideas; and `first_script.py`, which is a working
-example of every one of them. Then the ten-minute rule — try, then ask.
+This task is harder than task 1. Expect to be stuck at least once. Three
+things help:
 
-Fixed versions of all six exist in `instructor/solutions/week1/`, and that
-is not an accident — nothing in this course is graded, so the only person
-you can cheat is yourself. Use them the way you would use the answers in
-the back of a textbook: after a real attempt, to check yourself, or to get
-unstuck when you have genuinely run out of ideas. Reading them first costs
-you the practice, which is the only thing the task exists to give you.
+- the error table above, which names the idea behind each error
+- section 4, which explains those ideas
+- `first_script.py`, which is a working example of all of them
 
-When all six pass, you have met, in miniature, most of the errors you will
-see for the rest of the course.
+The fixed versions are in `instructor/solutions/week1/`. Nothing is graded,
+so nobody loses marks by reading them. Use them to check your work after you
+have tried, or when you are stuck. If you read them first, you get no
+practice.
 
 ---
 
-## The one thing to take away
+## The main point of this week
 
-When something breaks, read the **last line** of the error message first — it
-says what went wrong. Then find the line number — it says where. That is most
-of debugging, and after this week you have it.
+When something breaks, read the **last line** of the error first. It says
+what went wrong. Then find the line number. It says where.

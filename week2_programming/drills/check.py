@@ -3,18 +3,17 @@ Week 2 drills - the marker.
 
     python check.py
 
-This runs every drill file in this folder and tells you which ones pass. It
-does not tell you how to fix anything - that is the exercise.
+This runs every drill file in this folder and reports which ones pass. It
+does not say how to fix a failure. That is the exercise.
 
-Each drill lives in its own file, `drill_01.py` to `drill_12.py`. Open one,
-fill in the function where it says TODO, save, and run this again. Work in
-order; the drills get harder.
+Each drill is in its own file, `drill_01.py` to `drill_12.py`. Open one, fill
+in the function where it says TODO, save, then run this again. Work in order.
+The drills get harder.
 
 The three drills marked with a star are optional. Aim for the other nine.
 
-You do not need to read the rest of this file - but you may find it useful,
-because the tests below are roughly what checking your own work looks like,
-and from week 3 onwards you will be writing checks like these yourself.
+You do not need to read the rest of this file. It may be worth reading later:
+the tests below are the kind of check you write yourself from week 3.
 """
 
 import importlib
@@ -30,14 +29,14 @@ sys.path.insert(0, HERE)
 
 
 def load(number):
-    """Import drill_NN.py fresh and hand back the module."""
+    """Import drill_NN.py again and return the module."""
     name = f"drill_{number:02d}"
     module = importlib.import_module(name)
     return importlib.reload(module)
 
 
 # Each entry: (number, starred, function name, test)
-# The test receives the function and returns True if it behaves correctly.
+# The test is given the function and returns True if the answers are right.
 TESTS = [
     (1, False, "to_minutes", lambda f: (
         f("00:00") == 0 and f("08:45") == 525 and f("23:59") == 1439
@@ -111,7 +110,7 @@ def main():
             module = load(number)
         except SyntaxError as error:
             print(f"  BROKEN {label:<28} {type(error).__name__}: {error.msg}")
-            print(f"         line {error.lineno} - the file will not even start")
+            print(f"         line {error.lineno} - the file does not start")
             print()
             continue
         except Exception as error:                       # noqa: BLE001
@@ -138,7 +137,7 @@ def main():
             if not starred:
                 core_passed += 1
         else:
-            print(f"  TODO   {label:<28} runs, but not the right answer yet")
+            print(f"  TODO   {label:<28} runs, but the answer is not right yet")
 
     print("-" * 64)
     print(f"{passed} of {len(TESTS)} passed  ({core_passed} of 9 unstarred).")
@@ -148,7 +147,7 @@ def main():
         print("All nine unstarred drills done. The starred three are a bonus.")
     else:
         print("Keep going. Open the first file that is not passing and work on")
-        print("that one alone - the drills are independent of each other.")
+        print("that one alone. The drills do not depend on each other.")
     print("=" * 64)
 
 

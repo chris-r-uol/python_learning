@@ -15,39 +15,42 @@ five minutes with only a browser and a free GitHub account — and unlike
 Colab it keeps the terminal, files, and virtual environment, so the week 1
 material is not lost and no separate catch-up is needed.
 
-**Triaging the submitted checks.** The script reports one of three
-verdicts, and only the third needs you:
+**Nothing is submitted, and no setup triage happens.** This is deliberate
+and it is a capacity decision: fault-finding thirty machines in a week is
+not a service that exists, and pretending otherwise in the material would
+have set an expectation that broke on contact with the first busy week. The
+student material now offers no route by which a student sends you an error
+and waits for a reply.
 
-- `ALL CHECKS PASSED` — nothing to do.
-- `READY, WITH NOTES` — **also a pass.** Everything works; the notes are
-  advisory. "No virtual environment" is expected on Colab, and common on a
-  laptop the day someone installs. Do not triage these as failures; the
-  script previously reported them as failures and it caused exactly that
-  confusion.
-- `NOT READY YET` — a real blocker: Python too old, system/Store Python, or
-  packages missing. These are your triage list.
+What replaces it, in the order students are told to try:
 
-The output also reports `Running on:` (own machine / Codespaces / Colab),
-which tells you at a glance how much of the cohort is on each route.
+1. Read the message — the check names each blocker and its fix.
+2. The "If this fails" notes in each setup guide, which cover the failures
+   that actually recur (the PATH checkbox, the Store Python, the macOS
+   certificates step, the PowerShell execution policy).
+3. **Paste the error into an AI assistant.** Setup errors are the
+   best-documented problems in computing, and this is the course's own
+   method arriving a fortnight early.
+4. Search the error text.
+5. **Thirty minutes, then Codespaces.** This is the load-bearing one, and
+   it is why the support model can be this thin: a Codespace removes the
+   entire class of installation problems for the cost of a browser tab.
+6. Bring it to the session.
+
+Point 5 is what to repeat in the pre-work email. The message worth sending
+is not "tell me if it breaks" but "if it fights you for half an hour, use
+Codespaces and come to week 1 working".
+
+**Send the pre-work 10 days out**, so there is room for a student to hit a
+wall, switch to Codespaces, and still arrive ready.
 
 Two things to do yourself before term: launch one Codespace from the repo so
 you have seen the flow, and check the free-allowance figures quoted in the
-guide are still current (GitHub changes them). Mention the route in the
-pre-work email — some students will prefer it to installing, and that is a
-perfectly good choice, not a concession.
+guide are still current (GitHub changes them).
 
-**Send the pre-work 10 days out, not 3.** You need time to triage.
-
-**Triage the `check_setup.py` submissions the day before.** Sort them into:
-
-- *passed* — nothing to do
-- *no venv* — fine, that's expected, we cover it in the session
-- *wrong Python* (system Python, Store Python, 3.9) — email the specific fix
-- *nothing at all* — phone call, or put them straight on Colab
-
-Walk into week 1 knowing which category every student is in. The 10-minute
-triage slot at the start is for the ones who ignored the email, and there will
-be some.
+**Expect to spend the first ten minutes of week 1 on stragglers anyway.**
+The difference is that the answer is now always the same — open a
+Codespace — rather than a diagnosis per laptop.
 
 ---
 

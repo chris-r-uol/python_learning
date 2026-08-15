@@ -1,119 +1,97 @@
 # Setup — using Chinese services
 
-Many students on this course are from China, and many prefer the services
-they already use at home. That is fine. Nothing in this course requires a
-Western account, a Western AI assistant, or a Western search engine — this
-page says what works, service by service, so you do not have to find out by
-trial and error.
+Many students on this course are from China and prefer the services they use
+at home. Nothing in this course requires a Western account, a Western AI
+assistant or a Western search engine.
 
-The short version: **the course teaches a method, not a product.** Specify
-precisely, generate one piece at a time, verify against a case you can check
-by hand. That method works identically with every assistant on this page.
+This page lists what works.
 
 ---
 
 ## AI assistants
 
-From week 3 onwards you work with an AI assistant. The in-class
-demonstrations use whichever assistant the university licenses, but for your
-own work any capable assistant is acceptable, and the Chinese services are
-fully capable of everything this course asks:
+From week 3 you work with an AI assistant. The class demonstrations use the
+assistant the university licenses. For your own work, any capable assistant
+is fine. The Chinese services below can do everything this course asks.
 
-| Service | Where | Worth knowing |
+| Service | Where | Notes |
 |---|---|---|
-| **DeepSeek** (深度求索) | chat.deepseek.com | Free, and very strong at code. If you want one recommendation from this list, this is it. |
-| **Kimi** (Moonshot) | kimi.moonshot.cn | Popular with students; handles long documents well — useful when pasting large error output. |
+| **DeepSeek** (深度求索) | chat.deepseek.com | Free and strong at code. Choose this one if you are unsure. |
+| **Kimi** (Moonshot) | kimi.moonshot.cn | Handles long documents well. Useful for long error messages. |
 | **Tongyi Qianwen** (通义千问, Alibaba) | tongyi.aliyun.com | Strong general assistant. |
 | **Ernie Bot** (文心一言, Baidu) | yiyan.baidu.com | Baidu's assistant. |
-| **Doubao** (豆包, ByteDance) | doubao.com | Widely used; capable for course-level code. |
+| **Doubao** (豆包, ByteDance) | doubao.com | Widely used and capable. |
 
-Practical notes:
+Notes:
 
-- These services usually sign in with a **+86 phone number or WeChat** — for
-  most of you that is easier than creating a new Western account, which is
-  exactly why this page exists.
-- All of them are reachable from the UK without any special arrangement.
-- Pick one and stay with it for the rest of the course. The skill you are
-  building — specifying and verifying — transfers between assistants, but
-  switching mid-project costs you the feel you have developed for how yours
-  behaves.
+- Most sign in with a **+86 phone number or WeChat**. For many of you this
+  is easier than creating a new account.
+- All of them work from the UK with no special setup.
+- Choose one and keep using it. Switching often costs you time.
 
-**One rule applies whatever you choose:** the verification checklist from
-week 3 is not optional with any assistant, Chinese or Western. Every one of
-them produces confident, plausible, wrong answers in exactly the way the
-week 3 demonstration shows, and the checks are how you catch it.
+The week 3 checklist applies to every assistant. All of them produce
+answers that look right and are wrong.
 
 ## Prompting in Chinese
 
-Prompt in whichever language you specify most precisely in. A specification
-written in clear Chinese is worth more than a vague one written in English —
-the code comes back in Python either way. Asking the assistant to *explain
-code in Chinese* is also a legitimate and excellent use of it: "逐行解释这段
-代码" ("explain this code line by line") is exactly check 4 of the
-verification checklist, in the language you think fastest in.
+Write your prompt in the language you can be most precise in. A clear
+Chinese prompt is better than a vague English one. The code comes back in
+Python either way.
 
-One practical recommendation: keep the **names in your code** — variables,
-functions — in English. Not because anyone will inspect your work, but
-because Python's own keywords, every library you call, and every error
-message you will ever read are in English, and mixing the two makes a line
-harder to read at a glance. It also makes it easier for the TA to help you
-quickly when you ask.
+Asking the assistant to explain code in Chinese is also useful. "逐行解释这
+段代码" means "explain this code line by line". That is check 4 of the
+verification checklist.
 
-Everything else is yours. Comments, your `prompts.md` record, the sentences
-you write about each chapter of your atlas — write them in whichever
-language you think in. The atlas is yours to keep and nobody else's to
-read.
+Keep **variable and function names in English**. Python keywords, library
+names and error messages are all in English. Mixing languages in one line
+makes it harder to read. It also makes it faster for the TA to help you.
 
-## Search and learning resources
+Comments, your `prompts.md` notes and the sentences in your atlas can be in
+any language you choose.
 
-Baidu works fine for finding things, with one caution: Python answers on
-Chinese forums are sometimes several versions out of date. Two resources
-worth knowing instead:
+## Search and learning
 
-- **The official Python documentation, in Chinese:**
-  [docs.python.org/zh-cn/3/](https://docs.python.org/zh-cn/3/) — a full,
-  official translation, always current.
-- **Liao Xuefeng's Python tutorial** (廖雪峰) and **runoob** (菜鸟教程) — the
-  two standard Chinese-language Python learning sites. Good for a second
-  explanation of anything from weeks 1–2, in Chinese.
+Baidu works for finding answers. One caution: Python answers on Chinese
+forums are sometimes several versions out of date.
 
-## If you work from China during the course
+Two current sources:
 
-Term breaks happen. If you take the project home, three things change:
+- **Python documentation in Chinese:**
+  [docs.python.org/zh-cn/3/](https://docs.python.org/zh-cn/3/). A full
+  official translation.
+- **Liao Xuefeng** (廖雪峰) and **runoob** (菜鸟教程). Both are good for a
+  second explanation of anything in weeks 1 and 2.
 
-- **Google Colab does not work in China.** If you are on the Colab fallback,
-  plan around this — or better, get the local setup working before you
-  travel; it needs no Google services at all.
-- **GitHub Codespaces depends on GitHub**, which is usually reachable from
-  China but can be slow or intermittent. It is an excellent option while you
-  are in the UK; it is not the one to depend on for a working trip home. A
-  local installation is.
-- **PyPI and GitHub can be slow or unreliable.** For package installs, the
-  Tsinghua mirror is the standard fix:
+## Working from China during the course
+
+Four things change:
+
+- **Google Colab does not work in China.** If you use Colab, plan for this.
+  A local installation is better, and needs no Google services.
+- **GitHub Codespaces depends on GitHub**, which is usually reachable but
+  can be slow. Good in the UK. Do not rely on it for a trip home.
+- **PyPI and GitHub can be slow.** For package installs, use the Tsinghua
+  mirror:
 
   ```
   pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
   ```
 
-  For GitHub, commit locally as usual and push when the connection
-  cooperates; your university VPN, if you have one, usually resolves both.
-- **The course data is already on your machine.** The atlas is designed
-  cache-first: every data source has a fallback copy in
-  `project/data/external/`, and your own fetched copies live in your project
-  folder. Fetch everything you need while you are in the UK, and the whole
-  project works offline afterwards.
+  For GitHub, save your work locally and push when the connection allows. A
+  university VPN usually solves both.
+- **The course data is already on your machine.** Every data source has a
+  copy in `project/data/external/`. Download what you need in the UK, and
+  the project works offline.
 
 ## If you do not have a Google account
 
-Only the Colab fallback needs one. If you would rather not create one, say
-so during setup week — the local installation works without any Google
-services, and we would rather set that up with you than have you stuck.
+Only Colab needs one. A local installation uses no Google services.
+[Codespaces](codespaces.md) needs a GitHub account instead. Either route
+works.
 
 ---
 
-One more thing, because it is the point of the page: using DeepSeek instead
-of the licensed assistant, prompting in Chinese, and reading the
-documentation in Chinese are not workarounds or second-best options. They
-are you configuring your tools to think at full speed, which is what a
-professional does. The only thing this course insists on is what comes
-after the generation: that you check.
+Using DeepSeek instead of the licensed assistant, prompting in Chinese, and
+reading documentation in Chinese are all fine. Work in the language you
+think fastest in. The course asks one thing of every assistant: check what
+it gives you.

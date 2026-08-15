@@ -4,27 +4,26 @@ title: Start here
 
 # Python for Transport & Civil Engineering
 
-Five weeks. You start by running someone else's script and end by building a
-transport atlas of a place you choose, assembled from national open data with
-an AI assistant, and checked by you.
+Five weeks. You start by running someone else's script. You finish by
+building a transport atlas of a place you choose, using national open data
+and an AI assistant.
 
-**Keep this page open beside your editor.** It is a reference, not a
-textbook: everything here is the same text as the files in the repository, so
-you can read a task on one side of the screen and do it on the other.
+Keep this page open beside your editor. It has the same text as the files in
+the repository, so you can read a task on one side of the screen and do it
+on the other.
 
-!!! tip "Two things worth knowing before you start"
+!!! note "Two things before you start"
 
     **Nothing here is graded.** No submissions, no presentations, nobody
-    reviewing your work. The only thing you ever send us is the setup check
-    below, and that is a report on your machine rather than on you.
+    reviewing your work. Nothing is collected at any point.
 
-    **The answers are published too.** Worked solutions to weeks 1 and 2 live
-    in `instructor/solutions/`. Use them the way you would use the answers in
-    the back of a textbook — after a real attempt.
+    **The answers are published.** Worked solutions to weeks 1 and 2 are in
+    `instructor/solutions/`. Use them to check your work after you have
+    tried a task.
 
 ## Before week 1
 
-Set up your machine, then run the check and send us what it prints.
+Set up your machine. This takes about 45 minutes.
 
 <div class="grid cards" markdown>
 
@@ -32,7 +31,7 @@ Set up your machine, then run the check and send us what it prints.
 
     ---
 
-    The PATH checkbox is the one that matters.
+    Tick "Add python.exe to PATH" on the first installer screen.
 
     [Setup guide](setup/windows.md)
 
@@ -44,16 +43,15 @@ Set up your machine, then run the check and send us what it prints.
 
     [Setup guide](setup/macos.md)
 
--   :material-github: **No installation at all**
+-   :material-github: **No installation**
 
     ---
 
-    A Codespace runs in your browser. Nothing to install, nothing your
-    laptop can block.
+    A Codespace runs in your browser. Nothing to install.
 
     [Codespaces guide](setup/codespaces.md)
 
--   :material-lock-outline: **Managed or restricted laptop**
+-   :material-lock-outline: **Restricted laptop**
 
     ---
 
@@ -69,11 +67,28 @@ Then, in the course folder:
 python check_setup.py
 ```
 
+Read what it prints. If it reports a problem, it also names the fix.
+
+## If something does not work
+
+Try these in order.
+
+1. **Read the message to the end.** It usually names the problem.
+2. **Read the "If this fails" notes** in your setup guide. Common problems
+   are listed there with their fixes.
+3. **Paste the exact error into an AI assistant.** Ask what it means.
+   Installation errors are well documented.
+4. **Search for the exact error text.**
+5. **After 30 minutes, stop. Use [Codespaces](setup/codespaces.md).** It
+   needs no installation. You lose nothing from the course.
+6. **Still stuck at the session?** Bring it. The instructor and TA are
+   there.
+
 ## The five weeks
 
-Weeks 1 to 3 are about **doing the work**: reading code, writing it, and
-learning to tell whether it is right. Weeks 4 and 5 are one project, and that
-project is mostly about **finding data and knowing what is wrong with it**.
+Weeks 1 to 3 teach you to read code, write it, and check whether it is
+right. Weeks 4 and 5 are one project, mostly about finding data and knowing
+what is wrong with it.
 
 <div class="grid cards" markdown>
 
@@ -82,7 +97,7 @@ project is mostly about **finding data and knowing what is wrong with it**.
     ---
 
     What a program is, where files live, how to read an error message. Then
-    two tasks: a parameter sweep, and six broken scripts to fix.
+    two tasks: a parameter sweep and six broken scripts.
 
     [Week 1](week1_setup/README.md)
 
@@ -90,8 +105,8 @@ project is mostly about **finding data and knowing what is wrong with it**.
 
     ---
 
-    Variables, types, `if`, loops, functions, NumPy, and your first figure —
-    each introduced at the moment it becomes necessary. Twelve drills.
+    Variables, types, `if`, loops, functions, NumPy, and your first figure.
+    Then twelve drills.
 
     [Week 2](week2_programming/README.md)
 
@@ -99,8 +114,8 @@ project is mostly about **finding data and knowing what is wrong with it**.
 
     ---
 
-    You have been promoted: you now specify the work and sign it off. Built
-    around a demonstration of an assistant being confidently, silently wrong.
+    Your job becomes describing the work and checking the result. Built
+    around a demonstration of an assistant being wrong.
 
     [Week 3](week3_ai/README.md)
 
@@ -108,22 +123,16 @@ project is mostly about **finding data and knowing what is wrong with it**.
 
     ---
 
-    Seven chapters of real national data about a British town you choose.
-    Too big to hand-write, which is the point.
+    Seven chapters of national data about a British town you choose.
 
     [The project](project/index.md)
 
 </div>
 
-## The three rules
+## Three rules
 
-They apply from week 1 to the end, and they are the whole course in three
-lines.
-
-1. **A figure with an unlabelled axis is not finished.** Axis labels with
-   units, and a title a stranger could read.
-2. **Code that works but that you cannot explain is not finished either.**
-   From week 3 you will be asked how you know your answer is right — by
-   yourself, of yourself.
-3. **Getting stuck is the work, not a failure at it.** When it happens, read
-   the error message. It is the most helpful thing on your screen.
+1. **A figure with an unlabelled axis is not finished.** Label both axes.
+   Give units. Write a title a stranger can understand.
+2. **Code you cannot explain is not finished.** From week 3 you check
+   whether your answers are right.
+3. **Getting stuck is normal.** Read the error message first.

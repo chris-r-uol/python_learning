@@ -1,31 +1,29 @@
 # Setup — Windows
 
-This guide takes you from a bare Windows machine to a working course setup. It
-takes most people 30 to 45 minutes. Follow the steps in order, and do not skip
-the checks — each one confirms that the step before it worked.
+This guide sets up your machine for the course. It takes about 45 minutes.
+Follow the steps in order. Do not skip the checks.
 
-If a step fails, do not spend your evening fighting it. Copy the error message,
-note which step you were on, and send us that instead of the check output.
-We will fix it with you before the first session.
+If a step fails, read the error, then read the "If this fails" notes under
+that step. If you are still stuck after 30 minutes, use
+[Codespaces](codespaces.md) instead. It needs no installation.
 
-> Screenshots for each step are marked **[screenshot]**. If your screen does not
-> match the description, stop and ask rather than guessing.
+> Steps marked **[screenshot]** have a picture in the session slides. If
+> your screen does not match the description, stop and ask.
 
 ---
 
 ## 1. Install Python
 
-1. Go to [python.org/downloads](https://www.python.org/downloads/) and download
-   the latest Python for Windows. Any version from 3.11 upwards is fine.
+1. Go to [python.org/downloads](https://www.python.org/downloads/). Download
+   the latest Python for Windows. Any version from 3.11 upwards works.
 2. Run the installer.
-3. **On the first screen, tick the box that says "Add python.exe to PATH".**
-   [screenshot] This single checkbox prevents the most common failure in the
-   whole course. If you clicked past it, run the installer again — it will let
-   you repair the installation.
-4. Click "Install Now" and wait for it to finish.
+3. **On the first screen, tick "Add python.exe to PATH".** [screenshot] This
+   checkbox causes most week 1 problems. If you missed it, run the installer
+   again and choose "Modify".
+4. Click "Install Now". Wait for it to finish.
 
-**Check it worked.** Open a *new* terminal (press the Windows key, type
-`terminal`, press Enter) and run:
+**Check it worked.** Open a *new* terminal. Press the Windows key, type
+`terminal`, press Enter. Then run:
 
 ```
 python --version
@@ -37,54 +35,58 @@ You should see something like `Python 3.12.4`.
 
 - *"'python' is not recognized"* — the PATH box was not ticked. Run the
   installer again, choose "Modify", and tick "Add Python to environment
-  variables". Then open a **new** terminal window; old windows do not see the
-  change.
-- *The Microsoft Store opens instead* — Windows has intercepted the command.
-  Search the Start menu for "Manage app execution aliases" and switch **off**
-  the two entries for `python.exe` and `python3.exe`. Then open a new terminal
-  and try again.
+  variables". Then open a **new** terminal. Old terminal windows do not see
+  the change.
+- *The Microsoft Store opens* — Windows has taken over the command. Open the
+  Start menu, search for "Manage app execution aliases", and switch **off**
+  `python.exe` and `python3.exe`. Open a new terminal and try again.
 
-## 2. Do not use the Microsoft Store version of Python
+## 2. Do not use the Microsoft Store Python
 
-If you already installed Python from the Microsoft Store, uninstall it and
-install from python.org as described above. The Store version keeps its files
-in unusual places and causes confusing failures later. The course's check
-script detects it and will tell you if you have it.
+If you installed Python from the Microsoft Store, uninstall it. Install from
+python.org instead, as above. The Store version stores files in unusual
+places and causes problems later. The setup check detects it.
 
 ## 3. Install VS Code
 
-1. Download VS Code from [code.visualstudio.com](https://code.visualstudio.com/)
-   and run the installer. The default options are fine.
-2. Open VS Code. On the left-hand edge, click the Extensions icon (four
-   squares). [screenshot]
-3. Search for **Python**, and install the extension published by Microsoft.
+1. Download VS Code from
+   [code.visualstudio.com](https://code.visualstudio.com/). Run the
+   installer. The default options are correct.
+2. Open VS Code. Click the Extensions icon on the left edge. It looks like
+   four squares. [screenshot]
+3. Search for **Python**. Install the extension published by Microsoft.
 
 ## 4. Get the course folder
 
-Download the course folder from the link you were given, and unzip it somewhere
-sensible — for example `Documents\python_learning`. Avoid OneDrive-synced
-folders if you can; syncing sometimes locks files while Python is using them.
+Download the course folder and unzip it. Put it somewhere simple, such as
+`Documents\python_learning`.
+
+Avoid OneDrive folders. OneDrive sometimes locks files while Python is using
+them.
 
 ## 5. Open a terminal in the course folder
 
-Two ways; use whichever you prefer:
+Use either method:
 
-- In File Explorer, open the course folder, right-click on empty space, and
-  choose **Open in Terminal**.
-- In VS Code, open the folder (File → Open Folder), then open the built-in
-  terminal (Terminal → New Terminal).
+- In File Explorer, open the course folder. Right-click empty space. Choose
+  **Open in Terminal**.
+- In VS Code, choose File → Open Folder, then Terminal → New Terminal.
 
-**Check it worked.** Run `dir` and confirm you can see `check_setup.py` in the
-listing. If you cannot, you are in the wrong folder — this is worth fixing now,
-because "wrong folder" is the most common cause of errors in week 1.
+**Check it worked.** Run:
+
+```
+dir
+```
+
+You should see `check_setup.py` in the list. If you do not, you are in the
+wrong folder. Fix this now. The wrong folder causes most errors in week 1.
 
 ## 6. Create and activate a virtual environment
 
-A virtual environment is a private copy of Python for this course, so that the
-packages we install cannot interfere with anything else on your machine. You
-create it once, and activate it each time you work.
+A virtual environment is a private copy of Python for this course. Packages
+you install cannot affect anything else on your machine.
 
-Create it (this takes a minute):
+Create it once:
 
 ```
 python -m venv .venv
@@ -96,24 +98,23 @@ Activate it:
 .venv\Scripts\activate
 ```
 
-**Check it worked.** Your prompt should now start with `(.venv)`.
+**Check it worked.** Your prompt now starts with `(.venv)`.
 
 **If this fails:**
 
-- *"running scripts is disabled on this system"* — PowerShell is blocking the
-  activation script. Run this once, answer `Y`, then try activating again:
+- *"running scripts is disabled on this system"* — PowerShell is blocking
+  the script. Run this once and answer `Y`:
 
   ```
   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
   ```
 
-  If your machine will not allow that either, use the Command Prompt instead of
-  PowerShell (in the terminal's dropdown menu choose "Command Prompt") and run
+  Then activate again. If your machine blocks that too, open Command Prompt
+  instead of PowerShell. Use the dropdown in the terminal panel. Then run
   `.venv\Scripts\activate.bat`.
 
-Remember: **every time** you open a new terminal to work on the course, run the
-activate command again. If the `(.venv)` prefix is missing, you are not in the
-environment.
+**Activate the environment every time you open a new terminal.** If you do
+not see `(.venv)`, it is not active.
 
 ## 7. Install the course packages
 
@@ -123,34 +124,31 @@ With the environment active:
 pip install -r requirements.txt
 ```
 
-This downloads the libraries the course uses. It can take a few minutes.
+This takes a few minutes.
 
-**If this fails** with an error mentioning SSL, certificates, or a proxy, you
-are probably on a managed or corporate network — see
-[`locked-down-laptop.md`](locked-down-laptop.md), and tell us.
+**If this fails** with an error about SSL, certificates or a proxy, your
+network is blocking the download. Use [Codespaces](codespaces.md) instead.
+It runs on GitHub's machines, so your network cannot block it.
 
 ## 8. Run the setup check
 
-Still in the course folder, with the environment active:
+In the course folder, with the environment active:
 
 ```
 python check_setup.py
 ```
 
-Copy everything it prints and send it to us. If it reports problems, send
-that output — it is designed to tell us exactly what to fix, and that is just as
-useful as a pass.
+Read the result. If it reports a problem, it also names the fix.
 
-## 9. Install Git (needed from week 4)
+## 9. Install Git
 
-Git keeps a history of your own work and lets you get back to any version
-that worked. You do not need it in weeks 1 to 3, but installing it now saves
-time later.
+Git saves versions of your work. You can return to any saved version. You
+need it from week 4. Installing it now saves time.
 
-1. Download Git from [git-scm.com](https://git-scm.com/download/win) and run
-   the installer. The default options are fine.
-2. Open a new terminal and introduce yourself to it (use your real name and
-   email; they are attached to your work):
+1. Download Git from [git-scm.com](https://git-scm.com/download/win). Run
+   the installer. The default options are correct.
+2. Open a new terminal. Set your name and email. Git attaches them to your
+   saved versions.
 
 ```
 git config --global user.name "Your Name"
@@ -160,11 +158,11 @@ git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 ```
 
-The handful of commands you will actually use — `status`, `add`, `commit`,
-`log`, `restore`, and `push` — are taught in the project brief, in the
-section "Saving your progress with Git", at the point you need them.
+You will use six commands: `status`, `add`, `commit`, `log`, `restore` and
+`push`. The project brief teaches them in the section "Saving your progress
+with Git".
 
 ---
 
-**You are done.** Keep this guide; the activate command in step 6 is the one
-line people forget.
+**Setup is complete.** Keep this guide. The activate command in step 6 is
+the one people forget.

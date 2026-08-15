@@ -18,13 +18,13 @@ def hours_over(counts, threshold):
     the HOUR NUMBERS where flow exceeds `threshold`.
 
     Hint: look up `np.where`, or index an `np.arange` with a mask. Neither
-    has been taught - finding out what an unfamiliar function does is part
-    of this starred drill, and good practice for week 3.
+    has been taught. Reading the documentation for an unfamiliar function is
+    part of this drill.
 
     hours_over(np.array([10]*24), 5) -> array([0,1,2,...,23])
     hours_over(np.array([10]*24), 10) -> array([])   <- 10 does not exceed 10
 
-    "Exceeds" excludes a value equal to the threshold, exactly as in drill 3.
+    "Exceeds" excludes a value equal to the threshold, as in drill 3.
 
     Idea: boolean masks (Part 1, section 5).
     """

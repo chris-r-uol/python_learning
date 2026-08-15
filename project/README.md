@@ -1,110 +1,127 @@
 # Project — Your Patch: a transport atlas
 
-Weeks 4 and 5. **An individual project: your own place, your own atlas.**
-Nothing here is graded, collected, or shown to anybody. The sessions are
-studios — short teaching at the start, then working time, with the
-instructor and the TA there for whenever you want them.
+Weeks 4 and 5. **Your own project: your own place, your own atlas.**
+
+Nothing here is graded, collected or shown to anyone. The sessions are
+studios: a short teach at the start, then working time, with the instructor
+and the TA there when you want them.
 
 **Read [`brief.md`](brief.md) first.**
 
 | | |
 |---|---|
 | `brief.md` | The project: seven chapters, one patch, one command |
-| `agent_guide.md` | **Read this before you start building.** How to direct an agent at this much work without losing control of whether it is right |
-| `data_sources.md` | The source catalogue — addresses, licences, and known traps |
-| `starter/atlas.py` | The atlas skeleton: chapter stubs and the report builder's shape |
-| `starter/fetch_external.py` | A complete, worked chapter fetcher (STATS19), the pattern for all of them |
-| `data/` | The corridor dataset used by the week 3 task, and `data/external/` cached fallbacks |
+| `agent_guide.md` | **Read before you build.** How to direct an agent at this much work |
+| `data_sources.md` | The data catalogue: addresses, licences, known problems |
+| `starter/atlas.py` | The skeleton: chapter stubs and the report builder |
+| `starter/fetch_external.py` | One finished chapter fetcher, as the pattern for the rest |
+| `data/` | The week 3 task data, and cached copies in `data/external/` |
 
 ---
 
-## The ideas
+## Two techniques
 
-Two techniques carry every chapter. Everything else you need, you already
-have.
+These carry the whole project. You already have everything else.
 
 ### 1. Group, summarise, compare
 
-Almost every chapter's figure has the same underlying shape: *split the
-records into groups, compute one number per group, and put the groups side by
-side.* Casualties by year and severity — group, count, compare. Deprivation
-by decile — group, count, compare. Stops by locality, rain by month: the
-same move every time.
+Most chapters have the same shape: **split the records into groups, work out
+one number per group, then compare the groups.**
 
-If you have ever built a pivot table, you have already done this. In pandas
-it is one line:
+Casualties by year and severity: group, count, compare. Deprivation by
+decile: group, count, compare. Stops by locality, rain by month. The same
+move.
+
+If you have used a pivot table, you have done this. In pandas it is one
+line:
 
 ```python
 casualties.groupby("severity").size()
 ```
 
-Read it in two pieces: `groupby("severity")` conceptually sorts every row
-into one bucket per severity value; `.size()` collapses each bucket to a
-count. Swap `.size()` for `.median()` or `.mean()` on a chosen column and
-you have the whole family. You can group by two things at once —
-`groupby(["year", "severity"])` — which is how most two-series figures in
-your atlas will start.
+Read it in two parts. `groupby("severity")` sorts every row into a group,
+one per severity value. `.size()` reduces each group to a count.
 
-The line is easy; the thinking is in two choices it quietly encodes. *What
-defines a group* — choose the grouping that matches the chapter's question,
-not the easiest column. And *which single number honestly summarises the
-group* — counts are safe; means are frequently not, because skewed data
-drags a mean away from the typical case, and a median or a percentile often
-says what you actually mean. When a grouped result surprises you, apply the
-week 3 checks before believing it: pull one group's raw rows and work the
-number out by hand. In grouped data, a wrong answer looks like a tidy,
-plausible table.
+Replace `.size()` with `.median()` or `.mean()` on a column and you have the
+whole family. Group by two things at once with
+`groupby(["year", "severity"])`.
 
-One warning from bitter experience: **group by identifiers, never by
-names.** Names get renamed, misspelled, and duplicated; codes do not. You
-met the consequences in the week 3 data.
+The line is easy. The thinking is in two choices it hides.
 
-### 2. Joining and cutting datasets
+**What defines a group.** Choose the grouping that answers the chapter's
+question, not the easiest column.
+
+**Which number summarises the group.** Counts are safe. Means often are not.
+Skewed data pulls a mean away from the typical value, so a median or a
+percentile is often closer to what you mean.
+
+When a grouped result surprises you, apply the week 3 checks. Take one
+group, pull its rows, work the number out by hand. A wrong grouped answer
+does not look wrong. It looks like a tidy table.
+
+One rule from experience: **group by codes, never by names.** Names get
+renamed, misspelled and duplicated. Codes do not. You saw the result of this
+in the week 3 data.
+
+### 2. Joining and cutting data
 
 Every chapter starts with a national file and ends with your patch. Getting
-from one to the other is one of exactly three operations — the atlas
-deliberately needs no others:
+from one to the other uses three operations. The atlas needs no others.
 
-- **A key join.** Rows in two tables match because they share a code — an
-  LSOA code joins your patch's areas to their IMD deciles. The discipline
-  that makes joins safe is **counting rows before and after, every time**. A
-  join silently drops rows that found no partner, and silently *multiplies*
-  rows when a key you assumed unique appears twice; both produce
-  healthy-looking tables and wrong figures. Know your counts and both
-  failures announce themselves.
-- **A bounding-box filter.** Keep rows whose coordinates fall inside your
-  patch's rectangle — four comparisons. Be honest about what a rectangle is:
-  it will include fringes you do not think of as your patch. Defining the
-  box *is* defining the patch, which is why chapter 1 comes first.
-- **A distance.** How far is each casualty from the nearest stop? The trap
-  is units: coordinates are in degrees, and **degrees are not metres, and
-  degrees of longitude are not degrees of latitude** — at British latitudes
-  one degree of latitude spans about 111 km and one degree of longitude
-  about 68 km. Convert both to metres before applying Pythagoras — ask the
-  assistant for exactly that, in those words — and sanity-check one distance
-  against a map before trusting thousands.
+**A key join.** Rows in two tables match because they share a code. An LSOA
+code joins your patch's areas to their deprivation deciles.
+
+**Count the rows before and after, every time.** A join drops rows that
+found no match. A join also *multiplies* rows when a key you thought was
+unique appears twice. Both give you a healthy-looking table and a wrong
+figure. Knowing your counts catches both.
+
+**A bounding box filter.** Keep rows whose coordinates fall inside your
+rectangle. That is four comparisons.
+
+Be honest about what a rectangle is. It includes edges you would not call
+your patch. Defining the box is defining the patch, which is why chapter 1
+comes first.
+
+**A distance.** How far is each casualty from the nearest stop?
+
+The problem is units. Coordinates are in degrees. **Degrees are not metres,
+and a degree of longitude is not a degree of latitude.** At British
+latitudes one degree of latitude is about 111 km and one degree of longitude
+about 68 km.
+
+Convert both to metres before using Pythagoras. Ask the assistant for
+exactly that. Then check one distance against a map before trusting a
+thousand of them.
 
 The scope rule in [`data_sources.md`](data_sources.md) explains why these
-three operations are the whole toolkit, and what to say when an assistant
-proposes something heavier.
+three are the whole toolkit, and what to say when an assistant suggests
+something heavier.
 
----
+## The worked examples
 
-## The demonstrations
+The instructor builds the same atlas for **Leeds**, live, in the week 4
+session: chapters 1 and 2, with the assistant, thinking aloud. That build is
+your reference for every chapter shape.
 
-The instructor builds the same atlas, live, for **Leeds** — chapters 1 and 2
-in the week 4 session, with the assistant, thinking aloud, including at least
-one wrong generation caught by a row count. That build is your worked
-reference for every chapter shape.
+`starter/fetch_external.py` is one finished chapter fetcher: from national
+file to a counted, cached, patch-sized copy.
 
-`starter/fetch_external.py` is the finished pattern on paper: one complete
-chapter fetcher, from national file to counted, cached, patch-sized copy.
-`starter/atlas.py` is the skeleton the whole atlas hangs on.
+`starter/atlas.py` is the skeleton the atlas hangs on.
+
+## Before you analyse anything
+
+Look at the data. Open it, sort it, count things.
+
+There are at least five problems in the week 3 data, and the dangerous ones
+do not stop your code. They give you a wrong answer that looks reasonable.
 
 ## The one command
 
-**`python atlas.py` should rebuild your entire atlas from scratch on a
-machine that is not yours.** No hardcoded paths, dependencies written down,
-sources recorded, no step that needs you standing over it. That sentence is
-the finish line, and testing it costs five minutes: fresh folder, clean
-copy, one command.
+**`python atlas.py` rebuilds your whole atlas from nothing.**
+
+No fixed paths, dependencies written down, sources recorded, no step that
+needs you watching it.
+
+Test it: copy your project to a new folder, delete anything the script
+should create, run the one command.

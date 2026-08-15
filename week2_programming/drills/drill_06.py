@@ -16,7 +16,7 @@ def congestion_band(volume_capacity_ratio):
         0.9 up to 1.0      -> "at capacity"
         1.0 and above      -> "over capacity"
 
-    Watch the boundaries. 0.7 is "busy", not "free flow".
+    Check the boundaries. 0.7 is "busy", not "free flow".
 
     Idea: branching, and boundaries as a decision you make (Part 1,
     section 2). A chain of separate `if` statements works if each one
