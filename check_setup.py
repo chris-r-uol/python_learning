@@ -224,7 +224,9 @@ def main():
         print("     means. Setup errors are well documented.")
         print("  4. After 30 minutes, stop. Use GitHub Codespaces instead:")
         print("     see setup/codespaces.md. Nothing to install, and nothing")
-        print("     your machine can block.")
+        print("     your machine can block. Apply for free student benefits")
+        print("     at https://github.com/education - see")
+        print("     setup/github-education.md.")
     print(LINE)
 
 

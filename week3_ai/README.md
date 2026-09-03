@@ -395,3 +395,8 @@ That includes your choice of assistant. The demonstrations use the one the
 university licenses. The method works with any of them, including DeepSeek
 and Kimi, and you can prompt in Chinese. See
 [`setup/chinese-services.md`](../setup/chinese-services.md).
+
+**GitHub Copilot is free for verified students** and runs inside VS Code.
+Apply at <https://github.com/education>. Verification takes a few days, so
+if you want it for this week, apply now. See
+[`setup/github-education.md`](../setup/github-education.md).

@@ -11,6 +11,10 @@ in the course works as written.
 
 You need a free GitHub account. That is all.
 
+A free account includes 120 hours of Codespaces a month, which is enough for
+this course. If you apply for [GitHub Education](github-education.md) you get
+180. Apply in week 1, because verification takes a few days.
+
 ---
 
 ## 1. Start your Codespace

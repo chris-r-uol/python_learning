@@ -62,6 +62,10 @@ Note that you used it, so a later problem has an explanation.
 [`codespaces.md`](codespaces.md). Nothing to install. A browser and a free
 GitHub account are all you need.
 
+If this is your route through the course, apply for
+[GitHub Education](github-education.md) in week 1. It raises your Codespaces
+allowance from 120 hours a month to 180.
+
 ## Option 5 — Colab
 
 [`colab-fallback.md`](colab-fallback.md). Use this if you cannot have a

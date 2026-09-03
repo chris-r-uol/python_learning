@@ -228,6 +228,11 @@ The ten-minute rule from week 1 applies.
 The assistant is your main tool. Use any capable one, in any language you
 prefer. See [`setup/chinese-services.md`](../setup/chinese-services.md).
 
+If you have not applied for [GitHub Education](../setup/github-education.md),
+do it now. It gives you GitHub Copilot free and more Codespaces hours. It is
+not required, and it takes a few days, so it helps most if you applied in
+week 1.
+
 [`data_sources.md`](data_sources.md) lists the problems we already know
 about.
 
