@@ -49,6 +49,13 @@ fails" notes under that step. If 30 minutes pass and it is still broken, use
     Use this if you cannot have a GitHub account. The differences are listed
     at the end of the guide.
 
+-   :material-school-outline: **[GitHub Education](github-education.md)**
+
+    ---
+
+    Free Copilot and more Codespaces hours for verified students. Apply in
+    week 1: verification takes a few days.
+
 -   :material-translate: **[Using Chinese services](chinese-services.md)**
 
     ---

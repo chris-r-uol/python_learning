@@ -23,7 +23,18 @@ on the other.
 
 ## Before week 1
 
-Set up your machine. This takes about 45 minutes.
+!!! tip "Apply for GitHub Education on day one"
+
+    GitHub gives verified students **GitHub Copilot for free** and **180
+    Codespaces hours a month** instead of 120. Both are used in this course.
+
+    Verification is not instant. It can take a few days. Apply in week 1, not
+    in week 4.
+
+    **Apply: <https://github.com/education>** —
+    [what to prepare](setup/github-education.md)
+
+Then set up your machine. This takes about 45 minutes.
 
 <div class="grid cards" markdown>
 

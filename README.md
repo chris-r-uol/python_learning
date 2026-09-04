@@ -11,7 +11,12 @@ not work.
 
 ## Start here
 
-Set up your machine before week 1. This takes about 45 minutes.
+**Do this first: apply for GitHub Education at <https://github.com/education>.**
+It is free for students and gives you GitHub Copilot at no cost and more
+Codespaces hours. Verification takes a few days, so apply in week 1, not in
+week 4. Instructions: [`setup/github-education.md`](setup/github-education.md).
+
+Then set up your machine before week 1. This takes about 45 minutes.
 
 1. Follow the guide for your machine:
    - Windows → [`setup/windows.md`](setup/windows.md)
